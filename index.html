@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Msmapwr | Personal Space
+    </title>
+
+
+    <meta name="description"
+          content="Msmapwr - Minecraft Creator and C# Developer">
+
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- Fluent Light Background -->
+
+<canvas id="fluent-light"></canvas>
+
+
+
+
+<!-- Navigation -->
+
+<header class="navigation acrylic">
+
+
+    <div class="nav-container">
+
+
+        <a class="brand"
+           href="#home">
+
+            Msmapwr
+
+        </a>
+
+
+
+        <nav class="nav-links">
+
+
+            <a href="#about">
+                About
+            </a>
+
+
+            <a href="#skills">
+                Skills
+            </a>
+
+
+            <a href="#projects">
+                Projects
+            </a>
+
+
+        </nav>
+
+
+
+
+        <button id="theme-toggle"
+                class="fluent-button"
+                aria-label="Toggle theme">
+
+            ◐
+
+        </button>
+
+
+    </div>
+
+
+</header>
+
+
+
+
+
+
+<main>
+
+
+
+
+
+<!-- Hero Window -->
+
+
+<section id="home"
+         class="hero-window window acrylic">
+
+
+    <div class="hero-content">
+
+
+
+        <div class="avatar-card acrylic reveal">
+
+
+            <img src="https://zh.minecraft.wiki/images/Enchanted_Golden_Apple_JE2_BE2.gif"
+                 alt="Minecraft Golden Apple Avatar">
+
+
+        </div>
+
+
+
+
+
+        <h1>
+
+            Msmapwr
+
+        </h1>
+
+
+
+
+
+        <p class="hero-title">
+
+            Crafting worlds with code.
+
+        </p>
+
+
+
+
+
+        <p class="hero-description">
+
+            Minecraft Creator ·
+            C# Developer ·
+            Windows Application Explorer
+
+        </p>
+
+
+
+
+
+        <div class="technology-tags">
+
+
+            <span>
+                Minecraft
+            </span>
+
+
+            <span>
+                C#
+            </span>
+
+
+            <span>
+                WPF
+            </span>
+
+
+            <span>
+                WinUI
+            </span>
+
+
+            <span>
+                Git
+            </span>
+
+
+
+        </div>
+
+
+
+
+
+
+        <button class="primary-button"
+                onclick="scrollToProjects()">
+
+
+            View Projects
+
+
+        </button>
+
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- About -->
+
+
+<section id="about"
+         class="section-window window">
+
+
+    <h2>
+
+        About Me
+
+    </h2>
+
+
+
+
+
+    <div class="panel acrylic reveal">
+
+
+        <p>
+
+            我喜欢创造。
+
+            从 Minecraft 世界到 Windows 应用，
+            用代码实现自己的想法。
+
+            探索技术，
+            也创造属于自己的数字空间。
+
+
+        </p>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Skills -->
+
+
+<section id="skills"
+         class="section-window window">
+
+
+    <h2>
+
+        Skills
+
+    </h2>
+
+
+
+
+
+    <div class="skill-grid">
+
+
+
+        <article class="skill-tile acrylic reveal">
+
+
+            <h3>
+                Minecraft
+            </h3>
+
+
+            <p>
+                Building worlds and experiences
+            </p>
+
+
+        </article>
+
+
+
+
+
+
+        <article class="skill-tile acrylic reveal">
+
+
+            <h3>
+                C#
+            </h3>
+
+
+            <p>
+                Application development
+            </p>
+
+
+        </article>
+
+
+
+
+
+
+        <article class="skill-tile acrylic reveal">
+
+
+            <h3>
+                WPF
+            </h3>
+
+
+            <p>
+                Windows desktop UI
+            </p>
+
+
+        </article>
+
+
+
+
+
+
+        <article class="skill-tile acrylic reveal">
+
+
+            <h3>
+                WinUI
+            </h3>
+
+
+            <p>
+                Modern Fluent applications
+            </p>
+
+
+        </article>
+
+
+
+
+
+
+        <article class="skill-tile acrylic reveal">
+
+
+            <h3>
+                Git
+            </h3>
+
+
+            <p>
+                Version control
+            </p>
+
+
+        </article>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Projects -->
+
+
+<section id="projects"
+         class="section-window window">
+
+
+
+    <h2>
+
+        Projects
+
+    </h2>
+
+
+
+
+
+    <div class="project-filter">
+
+
+        <button class="filter-button active"
+                data-filter="all">
+
+            All
+
+        </button>
+
+
+
+        <button class="filter-button"
+                data-filter="minecraft">
+
+            Minecraft
+
+        </button>
+
+
+
+        <button class="filter-button"
+                data-filter="csharp">
+
+            C#
+
+        </button>
+
+
+
+        <button class="filter-button"
+                data-filter="web">
+
+            Web
+
+        </button>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="project-list">
+
+
+
+
+
+
+        <!-- The Second Oasis -->
+
+
+        <article class="project-item acrylic reveal"
+                 data-category="minecraft">
+
+
+            <h3>
+
+                msmapwr/the-second-oasis
+
+            </h3>
+
+
+
+            <p>
+
+                Minecraft related project.
+                README description will be added here.
+
+            </p>
+
+
+
+
+            <span>
+
+                Minecraft · C#
+
+            </span>
+
+
+
+
+
+            <a class="project-detail"
+               href="https://github.com/msmapwr/the-second-oasis"
+               target="_blank"
+               rel="noopener">
+
+
+                View Repository →
+
+            </a>
+
+
+
+        </article>
+
+
+
+
+
+
+
+
+
+        <!-- Personal Website -->
+
+
+
+        <article class="project-item acrylic reveal"
+                 data-category="web">
+
+
+
+            <h3>
+
+                msmapwr/personal-website
+
+            </h3>
+
+
+
+
+            <p>
+
+                A lightweight Fluent Design personal website.
+
+                Built with pure HTML, CSS and JavaScript.
+
+            </p>
+
+
+
+
+
+            <span>
+
+                HTML · CSS · JavaScript · Fluent Design
+
+            </span>
+
+
+
+
+
+
+            <a class="project-detail"
+               href="https://github.com/msmapwr/personal-website"
+               target="_blank"
+               rel="noopener">
+
+
+                View Repository →
+
+            </a>
+
+
+
+
+        </article>
+
+
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+<!-- Project Dialog -->
+
+
+<dialog id="project-dialog"
+        class="project-dialog acrylic">
+
+
+    <h2>
+
+        Project
+
+    </h2>
+
+
+
+    <p id="dialog-content">
+
+        Project information.
+
+    </p>
+
+
+
+
+    <button id="dialog-close"
+            class="fluent-button">
+
+
+        Close
+
+
+    </button>
+
+
+
+</dialog>
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+
+    <p>
+
+        Made with ❤️ and curiosity
+
+    </p>
+
+
+
+
+    <p>
+
+        © 2026 Msmapwr
+
+    </p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+
+</html>
