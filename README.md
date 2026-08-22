@@ -50,12 +50,16 @@ npm run build    # 生产构建到 dist/
 
 所有页面文字都在 `content/content.xml`，每段文字含 `<zh>`（中文）与 `<en>`（英文）两个节点。改完刷新页面即生效，无需改代码。
 
-新增项目：在 `content.xml` 的 `<projects>` 节点下添加一个 `<project>` 即可（含名称、简介、技术标签、链接）。
+新增项目：见 [docs/add-project.md](docs/add-project.md)。
 
 ## 部署
 
-- 目标地址：<https://msmapwr.github.io/>
-- 由 GitHub Actions 自动构建部署。
+由 `.github/workflows/deploy.yml` 在 push 到 `main` 时自动构建并部署到 GitHub Pages。
+
+- 项目站点（默认）：<https://msmapwr.github.io/personal-website/>
+- 根地址（用户站点）：<https://msmapwr.github.io/> —— 需将仓库重命名为 `msmapwr.github.io`，或在仓库 Settings → Pages 配置自定义域名。
+
+首次部署需在仓库 **Settings → Pages → Source** 选择 **GitHub Actions**。
 
 ## 版本
 

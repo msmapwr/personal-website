@@ -17,4 +17,6 @@
 - AppShell 布局、Hash 路由与双语导航
 - 五个区块内容（Hero 亚克力、关于我、项目卡片、技能分组、联系方式）
 - 动效（滚动入场、Hero 入场、卡片悬停）与响应式（移动端汉堡菜单、reduced-motion 支持）
+- 代码分割（vendor 分包 + 路由懒加载）与 GitHub Actions 自动部署
+- 「添加新项目」维护文档 `docs/add-project.md`
 - 开发计划 `docs/PLAN.md`

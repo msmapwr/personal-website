@@ -1,0 +1,60 @@
+# 自动构建并部署到 GitHub Pages
+#
+# 部署地址说明：
+# - 本仓库（personal-website）作为「项目站点」，默认部署到
+#   https://msmapwr.github.io/personal-website/
+# - 若需部署到根地址 https://msmapwr.github.io/（用户站点），
+#   需将本仓库重命名为 msmapwr.github.io，或在仓库
+#   Settings → Pages 中配置自定义域名。
+# - 站点使用相对 base + Hash 路由，两种部署路径都能正常工作。
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
