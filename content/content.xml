@@ -4,7 +4,7 @@
   ============================================
   - <languages> 列出可用语言（id + 显示名）；新增语言时在此加一条，并加一个 <locale id="..."> 块。
   - 每个 <locale> 是一个完整、自包含的语言快照，文本为纯文本。
-  - 网页根据当前语言读取对应的 <locale>。
+  - <ui> 是界面文案（按钮/徽章/aria 标签）；<posts> 是博客文章。
   - level 取值：proficient（掌握）/ learning（学习中）
 -->
 
@@ -31,12 +31,22 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>在线演示</demo>
+      <learning>学习中</learning>
+      <switchLanguage>切换语言</switchLanguage>
+      <switchTheme>切换主题</switchTheme>
+      <menu>菜单</menu>
+      <close>关闭</close>
+      <skipToContent>跳到主内容</skipToContent>
+    </ui>
     <nav>
       <item id="home">首页</item>
       <item id="about">关于我</item>
       <item id="projects">项目</item>
       <item id="skills">技能</item>
       <item id="contact">联系</item>
+      <item id="blog">博客</item>
     </nav>
     <hero>
       <tagline>Minecraft 创作者 &amp; C# 开发者</tagline>
@@ -119,6 +129,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>博客</title>
+      <post id="about-this-site">
+        <title>关于这个网站</title>
+        <date>2026-08-22</date>
+        <excerpt>这个个人网站的技术栈、功能，以及博客板块的介绍。</excerpt>
+        <body>这个网站是我的个人作品集，用 React 和 Fluent UI React 构建，支持 13 种语言。我用这个博客记录开发过程和想法，之后会在这里分享更多 Minecraft 创作和 C# 开发的内容。</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="en">
@@ -126,12 +145,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>Live Demo</demo>
+      <learning>Learning</learning>
+      <switchLanguage>Switch language</switchLanguage>
+      <switchTheme>Switch theme</switchTheme>
+      <menu>Menu</menu>
+    
+      <close>Close</close>
+      <skipToContent>Skip to main content</skipToContent>
+    </ui>
     <nav>
       <item id="home">Home</item>
       <item id="about">About</item>
       <item id="projects">Projects</item>
       <item id="skills">Skills</item>
       <item id="contact">Contact</item>
+      <item id="blog">Blog</item>
     </nav>
     <hero>
       <tagline>Minecraft Creator &amp; C# Developer</tagline>
@@ -214,6 +244,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>Blog</title>
+      <post id="about-this-site">
+        <title>About This Site</title>
+        <date>2026-08-22</date>
+        <excerpt>The tech stack, features, and blog section of this personal site.</excerpt>
+        <body>This site is my personal portfolio, built with React and Fluent UI React, supporting 13 languages. I use this blog to record my development journey and ideas, and I'll share more Minecraft creations and C# development here.</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="zh-HK">
@@ -221,12 +260,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>在線演示</demo>
+      <learning>學習中</learning>
+      <switchLanguage>切換語言</switchLanguage>
+      <switchTheme>切換主題</switchTheme>
+      <menu>選單</menu>
+    
+      <close>關閉</close>
+      <skipToContent>跳至主要內容</skipToContent>
+    </ui>
     <nav>
       <item id="home">首頁</item>
       <item id="about">關於我</item>
       <item id="projects">項目</item>
       <item id="skills">技能</item>
       <item id="contact">聯絡</item>
+      <item id="blog">博客</item>
     </nav>
     <hero>
       <tagline>Minecraft 創作者 &amp; C# 開發者</tagline>
@@ -309,6 +359,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>博客</title>
+      <post id="about-this-site">
+        <title>關於呢個網站</title>
+        <date>2026-08-22</date>
+        <excerpt>呢個個人網站嘅技術棧、功能，同博客板塊嘅介紹。</excerpt>
+        <body>呢個網站係我嘅個人作品集，用 React 同 Fluent UI React 搭建，支援 13 種語言。我用呢個博客記錄開發過程同諗法，之後會喺度分享更多 Minecraft 創作同 C# 開發嘅內容。</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="zh-TW">
@@ -316,12 +375,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>線上展示</demo>
+      <learning>學習中</learning>
+      <switchLanguage>切換語言</switchLanguage>
+      <switchTheme>切換主題</switchTheme>
+      <menu>選單</menu>
+    
+      <close>關閉</close>
+      <skipToContent>跳到主要內容</skipToContent>
+    </ui>
     <nav>
       <item id="home">首頁</item>
       <item id="about">關於我</item>
       <item id="projects">專案</item>
       <item id="skills">技能</item>
       <item id="contact">聯絡</item>
+      <item id="blog">部落格</item>
     </nav>
     <hero>
       <tagline>Minecraft 創作者 &amp; C# 開發者</tagline>
@@ -404,6 +474,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>部落格</title>
+      <post id="about-this-site">
+        <title>關於這個網站</title>
+        <date>2026-08-22</date>
+        <excerpt>這個個人網站的技術棧、功能，以及部落格板塊的介紹。</excerpt>
+        <body>這個網站是我的個人作品集，用 React 和 Fluent UI React 建置，支援 13 種語言。我用這個部落格記錄開發過程和想法，之後會在這裡分享更多 Minecraft 創作和 C# 開發的內容。</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="fr">
@@ -411,12 +490,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>Démo en ligne</demo>
+      <learning>En apprentissage</learning>
+      <switchLanguage>Changer de langue</switchLanguage>
+      <switchTheme>Changer de thème</switchTheme>
+      <menu>Menu</menu>
+    
+      <close>Fermer</close>
+      <skipToContent>Aller au contenu principal</skipToContent>
+    </ui>
     <nav>
       <item id="home">Accueil</item>
       <item id="about">À propos</item>
       <item id="projects">Projets</item>
       <item id="skills">Compétences</item>
       <item id="contact">Contact</item>
+      <item id="blog">Blog</item>
     </nav>
     <hero>
       <tagline>Créateur Minecraft &amp; Développeur C#</tagline>
@@ -499,6 +589,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>Blog</title>
+      <post id="about-this-site">
+        <title>À propos de ce site</title>
+        <date>2026-08-22</date>
+        <excerpt>La stack technique, les fonctionnalités et la section blog de ce site personnel.</excerpt>
+        <body>Ce site est mon portfolio personnel, construit avec React et Fluent UI React, disponible en 13 langues. J'utilise ce blog pour documenter mon parcours de développement, et j'y partagerai davantage de créations Minecraft et de développement C#.</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="de">
@@ -506,12 +605,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>Live-Demo</demo>
+      <learning>Lernen</learning>
+      <switchLanguage>Sprache wechseln</switchLanguage>
+      <switchTheme>Design wechseln</switchTheme>
+      <menu>Menü</menu>
+    
+      <close>Schließen</close>
+      <skipToContent>Zum Hauptinhalt springen</skipToContent>
+    </ui>
     <nav>
       <item id="home">Start</item>
       <item id="about">Über mich</item>
       <item id="projects">Projekte</item>
       <item id="skills">Fähigkeiten</item>
       <item id="contact">Kontakt</item>
+      <item id="blog">Blog</item>
     </nav>
     <hero>
       <tagline>Minecraft-Ersteller &amp; C#-Entwickler</tagline>
@@ -594,6 +704,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>Blog</title>
+      <post id="about-this-site">
+        <title>Über diese Website</title>
+        <date>2026-08-22</date>
+        <excerpt>Die Technik, Funktionen und der Blog-Bereich dieser persönlichen Website.</excerpt>
+        <body>Diese Website ist mein persönliches Portfolio, gebaut mit React und Fluent UI React, in 13 Sprachen. Ich nutze diesen Blog, um meinen Entwicklungsweg festzuhalten, und teile hier weitere Minecraft-Kreationen und C#-Entwicklung.</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="ru">
@@ -601,12 +720,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>Демо</demo>
+      <learning>Изучаю</learning>
+      <switchLanguage>Сменить язык</switchLanguage>
+      <switchTheme>Сменить тему</switchTheme>
+      <menu>Меню</menu>
+    
+      <close>Закрыть</close>
+      <skipToContent>Перейти к содержимому</skipToContent>
+    </ui>
     <nav>
       <item id="home">Главная</item>
       <item id="about">Обо мне</item>
       <item id="projects">Проекты</item>
       <item id="skills">Навыки</item>
       <item id="contact">Контакты</item>
+      <item id="blog">Блог</item>
     </nav>
     <hero>
       <tagline>Создатель контента Minecraft &amp; разработчик C#</tagline>
@@ -689,6 +819,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>Блог</title>
+      <post id="about-this-site">
+        <title>Об этом сайте</title>
+        <date>2026-08-22</date>
+        <excerpt>Технологии, функции и раздел блога этого личного сайта.</excerpt>
+        <body>Этот сайт — моё личное портфолио, созданное на React и Fluent UI React, доступное на 13 языках. Я веду этот блог, чтобы документировать свой путь разработки, и поделюсь здесь ещё Minecraft-творчеством и разработкой на C#.</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="ja">
@@ -696,12 +835,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>オンラインデモ</demo>
+      <learning>学習中</learning>
+      <switchLanguage>言語を切り替え</switchLanguage>
+      <switchTheme>テーマを切り替え</switchTheme>
+      <menu>メニュー</menu>
+    
+      <close>閉じる</close>
+      <skipToContent>メインコンテンツへスキップ</skipToContent>
+    </ui>
     <nav>
       <item id="home">ホーム</item>
       <item id="about">私について</item>
       <item id="projects">プロジェクト</item>
       <item id="skills">スキル</item>
       <item id="contact">連絡先</item>
+      <item id="blog">ブログ</item>
     </nav>
     <hero>
       <tagline>Minecraft クリエイター &amp; C# 開発者</tagline>
@@ -784,6 +934,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>ブログ</title>
+      <post id="about-this-site">
+        <title>このサイトについて</title>
+        <date>2026-08-22</date>
+        <excerpt>この個人サイトの技術スタック、機能、ブログセクションの紹介。</excerpt>
+        <body>このサイトは私の個人ポートフォリオで、React と Fluent UI React で構築し、13 言語に対応しています。このブログで開発の歩みとアイデアを記録し、今後 Minecraft の創作や C# 開発を共有していきます。</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="ko">
@@ -791,12 +950,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>온라인 데모</demo>
+      <learning>학습 중</learning>
+      <switchLanguage>언어 전환</switchLanguage>
+      <switchTheme>테마 전환</switchTheme>
+      <menu>메뉴</menu>
+    
+      <close>닫기</close>
+      <skipToContent>본문으로 건너뛰기</skipToContent>
+    </ui>
     <nav>
       <item id="home">홈</item>
       <item id="about">소개</item>
       <item id="projects">프로젝트</item>
       <item id="skills">기술</item>
       <item id="contact">연락처</item>
+      <item id="blog">블로그</item>
     </nav>
     <hero>
       <tagline>Minecraft 크리에이터 &amp; C# 개발자</tagline>
@@ -879,6 +1049,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>블로그</title>
+      <post id="about-this-site">
+        <title>이 사이트에 대하여</title>
+        <date>2026-08-22</date>
+        <excerpt>이 개인 사이트의 기술 스택, 기능, 그리고 블로그 섹션 소개.</excerpt>
+        <body>이 사이트는 React와 Fluent UI React로 만든 제 개인 포트폴리오이며, 13개 언어를 지원합니다. 이 블로그로 개발 여정과 아이디어를 기록하고, 앞으로 Minecraft 창작과 C# 개발을 공유하겠습니다.</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="lzh">
@@ -886,12 +1065,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>在線演示</demo>
+      <learning>學中</learning>
+      <switchLanguage>易言</switchLanguage>
+      <switchTheme>易色</switchTheme>
+      <menu>選單</menu>
+    
+      <close>闔</close>
+      <skipToContent>跳至主文</skipToContent>
+    </ui>
     <nav>
       <item id="home">首</item>
       <item id="about">吾</item>
       <item id="projects">所作</item>
       <item id="skills">技</item>
       <item id="contact">通</item>
+      <item id="blog">誌</item>
     </nav>
     <hero>
       <tagline>Minecraft 之匠 &amp; C# 之工</tagline>
@@ -974,6 +1164,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>誌</title>
+      <post id="about-this-site">
+        <title>關於此站</title>
+        <date>2026-08-22</date>
+        <excerpt>此個人之站之技術、功能，與誌之說。</excerpt>
+        <body>此站乃吾個人作品集，以 React 與 Fluent UI React 築之，通十三語。吾以誌記開發之程與思，後當於此分享更多 Minecraft 之作與 C# 之工。</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="pt">
@@ -981,12 +1180,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>Demo ao vivo</demo>
+      <learning>Aprendendo</learning>
+      <switchLanguage>Trocar idioma</switchLanguage>
+      <switchTheme>Trocar tema</switchTheme>
+      <menu>Menu</menu>
+    
+      <close>Fechar</close>
+      <skipToContent>Ir para o conteúdo principal</skipToContent>
+    </ui>
     <nav>
       <item id="home">Início</item>
       <item id="about">Sobre</item>
       <item id="projects">Projetos</item>
       <item id="skills">Habilidades</item>
       <item id="contact">Contato</item>
+      <item id="blog">Blog</item>
     </nav>
     <hero>
       <tagline>Criador de Minecraft &amp; Desenvolvedor C#</tagline>
@@ -1069,6 +1279,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>Blog</title>
+      <post id="about-this-site">
+        <title>Sobre este site</title>
+        <date>2026-08-22</date>
+        <excerpt>A stack técnica, os recursos e a seção de blog deste site pessoal.</excerpt>
+        <body>Este site é meu portfólio pessoal, construído com React e Fluent UI React, com suporte a 13 idiomas. Uso este blog para registrar minha jornada de desenvolvimento, e compartilharei aqui mais criações de Minecraft e desenvolvimento em C#.</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="es">
@@ -1076,12 +1295,23 @@
       <name>Msmapwr</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>Demo en vivo</demo>
+      <learning>Aprendiendo</learning>
+      <switchLanguage>Cambiar idioma</switchLanguage>
+      <switchTheme>Cambiar tema</switchTheme>
+      <menu>Menú</menu>
+    
+      <close>Cerrar</close>
+      <skipToContent>Ir al contenido principal</skipToContent>
+    </ui>
     <nav>
       <item id="home">Inicio</item>
       <item id="about">Sobre mí</item>
       <item id="projects">Proyectos</item>
       <item id="skills">Habilidades</item>
       <item id="contact">Contacto</item>
+      <item id="blog">Blog</item>
     </nav>
     <hero>
       <tagline>Creador de Minecraft &amp; Desarrollador C#</tagline>
@@ -1164,6 +1394,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>Blog</title>
+      <post id="about-this-site">
+        <title>Sobre este sitio</title>
+        <date>2026-08-22</date>
+        <excerpt>La pila técnica, las funciones y la sección de blog de este sitio personal.</excerpt>
+        <body>Este sitio es mi portafolio personal, construido con React y Fluent UI React, compatible con 13 idiomas. Uso este blog para registrar mi trayectoria de desarrollo, y compartiré aquí más creaciones de Minecraft y desarrollo en C#.</body>
+      </post>
+    </posts>
   </locale>
 
   <locale id="alien">
@@ -1171,12 +1410,23 @@
       <name>ᛗᛋᛗᚨᛈᚹᚱ</name>
       <avatar>images/head.png</avatar>
     </meta>
+    <ui>
+      <demo>ᛚᚨᚢᚾ</demo>
+      <learning>ᚾᚨᛗᚨ</learning>
+      <switchLanguage>ᛗᚨᛚ ᛋᚲᛁᛈᛏᚨ</switchLanguage>
+      <switchTheme>ᚦᛖᛗᚨ ᛋᚲᛁᛈᛏᚨ</switchTheme>
+      <menu>ᚹᚨᛚ</menu>
+    
+      <close>ᚱᚨᚢᚾᛞ</close>
+      <skipToContent>ᛚᛖᛁᚦ</skipToContent>
+    </ui>
     <nav>
       <item id="home">ᚱᚨᚷᚾ</item>
       <item id="about">ᛖᚷ ᛗᛁᚲ</item>
       <item id="projects">ᚹᛖᚱᚲ</item>
       <item id="skills">ᛁᚦᚱᛟᛏᛏ</item>
       <item id="contact">ᛊᚨᛗᛒᚨᚾᛞ</item>
+      <item id="blog">ᛊᚨᚷᚨ</item>
     </nav>
     <hero>
       <tagline>ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛊᚲᚨᛈᚨᚱᛁ &amp; ᚲ# ᚺᛟᚾᚾᚢᚦᛁ</tagline>
@@ -1259,6 +1509,15 @@
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
     </projects>
+    <posts>
+      <title>ᛊᚨᚷᚨ</title>
+      <post id="about-this-site">
+        <title>ᚢᛗ ᚦᛖᛊᛊᚨ ᛊᛁᛞᚨ</title>
+        <date>2026-08-22</date>
+        <excerpt>ᛏᛖᚲᚾᛁ ᛟᚷ ᛖᛁᚷᛁᚾᛚᛖᛁᚲᚨᚱ ᚦᛖᛊᛊᚨᚱ ᛊᛁᛞᚢ</excerpt>
+        <body>ᚦᛖᛊᛊᛁ ᛊᛁᛞᚨ ᛖᚱ ᛈᛖᚱᛊᛟᚾᚢᛚᛖᚷ ᛈᛟᚱᛏᚠᛟᛚᛁᛟ ᛒᚢᛁᛚᛏ ᛗᛖᛞ ᚱᛖᚨᚲᛏ ᛟᚷ ᚠᛚᚢᛖᚾᛏ ᚢᛁ ᚱᛖᚨᚲᛏ ᛗᛖᛞ ᛏᚱᛖᛏᛏᚨᚾ ᛏᚢᚾᚷᚢᛗᚨᛚ ᛖᚷ ᛊᚲᚱᛁᚠᚨ ᚺᛖᚱ ᚢᛗ ᚦᚱᛟᚢᚾ ᛗᛁᚾᚨ ᚺᚢᚷᛗᛁᚾᛞᛁᚱ</body>
+      </post>
+    </posts>
   </locale>
 
 </site>

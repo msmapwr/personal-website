@@ -3,6 +3,16 @@ export interface Language {
   label: string;
 }
 
+export interface UiStrings {
+  demo: string;
+  learning: string;
+  switchLanguage: string;
+  switchTheme: string;
+  menu: string;
+  close: string;
+  skipToContent: string;
+}
+
 export interface NavItem {
   id: string;
   label: string;
@@ -68,16 +78,31 @@ export interface ProjectsContent {
   projects: Project[];
 }
 
+export interface BlogPost {
+  id: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  body: string;
+}
+
+export interface PostsContent {
+  title: string;
+  posts: BlogPost[];
+}
+
 /** 单个语言下的完整内容快照 */
 export interface LocaleContent {
   name: string;
   avatar?: string;
+  ui: UiStrings;
   nav: NavItem[];
   hero: HeroContent;
   about: AboutContent;
   skills: SkillsContent;
   contact: ContactContent;
   projects: ProjectsContent;
+  posts: PostsContent;
 }
 
 export interface SiteContent {

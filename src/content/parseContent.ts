@@ -1,4 +1,5 @@
 import type {
+  BlogPost,
   ContactItem,
   Language,
   LocaleContent,
@@ -7,6 +8,7 @@ import type {
   SiteContent,
   SkillGroup,
   SkillLevel,
+  UiStrings,
 } from "./types";
 
 function single(el: Element, tag: string): Element {
@@ -23,6 +25,17 @@ const opt = (s: string) => (s === "" ? undefined : s);
 
 function parseLocale(loc: Element): LocaleContent {
   const meta = single(loc, "meta");
+
+  const ui = single(loc, "ui");
+  const uiStrings: UiStrings = {
+    demo: firstText(ui, "demo"),
+    learning: firstText(ui, "learning"),
+    switchLanguage: firstText(ui, "switchLanguage"),
+    switchTheme: firstText(ui, "switchTheme"),
+    menu: firstText(ui, "menu"),
+    close: firstText(ui, "close"),
+    skipToContent: firstText(ui, "skipToContent"),
+  };
 
   const nav: NavItem[] = Array.from(
     single(loc, "nav").getElementsByTagName("item"),
@@ -80,9 +93,21 @@ function parseLocale(loc: Element): LocaleContent {
     demo: opt(firstText(p, "demo")),
   }));
 
+  const postsEl = single(loc, "posts");
+  const posts: BlogPost[] = Array.from(
+    postsEl.getElementsByTagName("post"),
+  ).map((p) => ({
+    id: p.getAttribute("id") ?? "",
+    title: firstText(p, "title"),
+    date: firstText(p, "date"),
+    excerpt: firstText(p, "excerpt"),
+    body: firstText(p, "body"),
+  }));
+
   return {
     name: firstText(meta, "name"),
     avatar: opt(firstText(meta, "avatar")),
+    ui: uiStrings,
     nav,
     hero: {
       tagline: firstText(hero, "tagline"),
@@ -96,6 +121,7 @@ function parseLocale(loc: Element): LocaleContent {
     skills: { title: firstText(skills, "title"), groups },
     contact: { title: firstText(contact, "title"), items },
     projects: { title: firstText(projectsEl, "title"), projects },
+    posts: { title: firstText(postsEl, "title"), posts },
   };
 }
 

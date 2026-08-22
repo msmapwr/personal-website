@@ -4,6 +4,7 @@ import { AppShell } from "./components/AppShell";
 import { useThemeMode } from "./hooks/useThemeMode";
 import { LanguageProvider } from "./i18n/LanguageContext";
 import { About } from "./pages/About";
+import { Blog } from "./pages/Blog";
 import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 import { Projects } from "./pages/Projects";
@@ -24,6 +25,7 @@ export function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="*" element={<Home />} />
             </Route>
           </Routes>

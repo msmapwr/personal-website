@@ -90,7 +90,7 @@ export function Navigation() {
         <MenuTrigger disableButtonEnhancement>
           <MenuButton
             icon={<Navigation20Regular />}
-            aria-label="菜单"
+            aria-label={t.ui.menu}
             className={styles.hamburger}
           />
         </MenuTrigger>

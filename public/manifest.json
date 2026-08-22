@@ -1,0 +1,18 @@
+{
+  "name": "Msmapwr · 个人网站",
+  "short_name": "Msmapwr",
+  "description": "Msmapwr 的个人作品集与博客",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0078d4",
+  "icons": [
+    {
+      "src": "./images/app.png",
+      "sizes": "480x480",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
-import { Link, Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { ThemeMode } from "../hooks/useThemeMode";
 import { useT } from "../i18n/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -18,6 +19,29 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     backgroundColor: tokens.colorNeutralBackground1,
+  },
+  skipLink: {
+    position: "absolute",
+    left: "-9999px",
+    top: "auto",
+    width: "1px",
+    height: "1px",
+    overflow: "hidden",
+    whiteSpace: "nowrap",
+    ":focus": {
+      position: "fixed",
+      top: "8px",
+      left: "8px",
+      width: "auto",
+      height: "auto",
+      padding: "8px 16px",
+      borderRadius: "6px",
+      backgroundColor: tokens.colorNeutralBackground1,
+      color: tokens.colorBrandForeground1,
+      boxShadow: tokens.shadow4,
+      textDecoration: "none",
+      zIndex: "200",
+    },
   },
   progress: {
     position: "fixed",
@@ -73,6 +97,7 @@ const useStyles = makeStyles({
 export function AppShell({ mode, onModeChange }: AppShellProps) {
   const styles = useStyles();
   const t = useT();
+  const location = useLocation();
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -82,9 +107,22 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
   });
   const progress = reduce ? scrollYProgress : scaleX;
 
+  useEffect(() => {
+    const route = location.pathname.replace("/", "");
+    const item = t.nav.find((n) => n.id === route);
+    document.title = item ? `${item.label} · ${t.name}` : t.name;
+  }, [location, t]);
+
   return (
     <div className={styles.root}>
-      <motion.div className={styles.progress} style={{ scaleX: progress }} />
+      <a href="#main" className={styles.skipLink}>
+        {t.ui.skipToContent}
+      </a>
+      <motion.div
+        className={styles.progress}
+        style={{ scaleX: progress }}
+        aria-hidden="true"
+      />
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link to="/" className={styles.brand}>
@@ -95,7 +133,7 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
           <ThemeSwitcher mode={mode} onModeChange={onModeChange} />
         </div>
       </header>
-      <main className={styles.main}>
+      <main id="main" className={styles.main}>
         <Outlet />
       </main>
       <footer className={styles.footer}>

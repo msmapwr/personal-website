@@ -2,7 +2,21 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/) 规范，版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)。
 
-当前版本 **1.3.0**。
+当前版本 **1.4.0**。
+
+## [1.4.0] - 2026-08-22
+
+### 新增
+
+- 博客板块（`#/blog`，含一篇「关于这个网站」文章，13 语言）
+- 项目卡片配图（CardPreview + 项目截图）
+- 项目详情弹窗（点击卡片查看全部截图与信息）
+- PWA（manifest + service worker，可离线/安装）
+- SEO（meta/OG/动态页面标题/sitemap.xml）
+- 无障碍（跳到主内容链接、aria-hidden、landmark）
+- 主题切换过渡动画
+- 访问统计占位代码（`src/analytics.ts`，留空未启用）
+- i18n 完整化（在线演示/学习中/切换按钮 aria-label 等 UI 文案收入 `content.xml`）
 
 ## [1.3.0] - 2026-08-22
 

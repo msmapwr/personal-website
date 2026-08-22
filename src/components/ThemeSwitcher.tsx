@@ -12,6 +12,7 @@ import {
   WeatherSunny20Regular,
 } from "@fluentui/react-icons";
 import { ThemeMode } from "../hooks/useThemeMode";
+import { useT } from "../i18n/LanguageContext";
 
 interface ThemeSwitcherProps {
   mode: ThemeMode;
@@ -27,10 +28,11 @@ const currentIcon = {
 } as const;
 
 export function ThemeSwitcher({ mode, onModeChange }: ThemeSwitcherProps) {
+  const { ui } = useT();
   return (
     <Menu>
       <MenuTrigger disableButtonEnhancement>
-        <MenuButton icon={currentIcon[mode]} aria-label="切换主题" />
+        <MenuButton icon={currentIcon[mode]} aria-label={ui.switchTheme} />
       </MenuTrigger>
       <MenuPopover>
         <MenuList

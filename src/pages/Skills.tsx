@@ -37,7 +37,8 @@ const useStyles = makeStyles({
 
 export function Skills() {
   const styles = useStyles();
-  const { title, groups } = useT().skills;
+  const { ui, skills } = useT();
+  const { title, groups } = skills;
 
   return (
     <section className={styles.root}>
@@ -54,7 +55,7 @@ export function Skills() {
                   <Body1>{it.label}</Body1>
                   {it.level === "learning" && (
                     <Badge appearance="tint" color="warning">
-                      学习中 · Learning
+                      {ui.learning}
                     </Badge>
                   )}
                 </div>

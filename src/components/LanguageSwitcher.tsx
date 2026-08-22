@@ -10,7 +10,7 @@ import {
 } from "@fluentui/react-components";
 import { Globe20Regular } from "@fluentui/react-icons";
 import { content } from "../content";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage, useT } from "../i18n/LanguageContext";
 
 const useStyles = makeStyles({
   menuList: {
@@ -21,13 +21,14 @@ const useStyles = makeStyles({
 
 export function LanguageSwitcher() {
   const { lang, setLang } = useLanguage();
+  const { ui } = useT();
   const current = content.languages.find((l) => l.id === lang);
   const styles = useStyles();
 
   return (
     <Menu>
       <MenuTrigger disableButtonEnhancement>
-        <MenuButton icon={<Globe20Regular />} aria-label="切换语言">
+        <MenuButton icon={<Globe20Regular />} aria-label={ui.switchLanguage}>
           {current?.label ?? lang}
         </MenuButton>
       </MenuTrigger>
