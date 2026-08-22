@@ -11,6 +11,10 @@ export interface NavItem {
 export interface HeroContent {
   tagline: LocalizedText;
   subtitle: LocalizedText;
+  actions: {
+    primary: LocalizedText;
+    secondary: LocalizedText;
+  };
 }
 
 export interface AboutContent {

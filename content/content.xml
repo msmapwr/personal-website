@@ -30,6 +30,10 @@
       <zh>爱玩 Minecraft/CS：GO，喜欢建筑和 PVP，平时也用 C# 写桌面程序。这里是我的作品。</zh>
       <en>Hi, I'm msmapwr. I play Minecraft, mostly building and PVP, and I write desktop programs in C#. Here are my projects.</en>
     </subtitle>
+    <actions>
+      <primary><zh>查看项目</zh><en>View Projects</en></primary>
+      <secondary><zh>联系我</zh><en>Contact Me</en></secondary>
+    </actions>
   </hero>
 
   <about>
@@ -86,12 +90,12 @@
         <en>Desktop Development</en>
       </label>
       <item level="learning">
-        <zh>WPF（学习中）</zh>
-        <en>WPF (Learning)</en>
+        <zh>WPF</zh>
+        <en>WPF</en>
       </item>
       <item level="learning">
-        <zh>WinUI（学习中）</zh>
-        <en>WinUI (Learning)</en>
+        <zh>WinUI</zh>
+        <en>WinUI</en>
       </item>
     </group>
     <group name="tools">

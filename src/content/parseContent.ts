@@ -95,6 +95,10 @@ export function parseContent(xml: string): SiteContent {
     hero: {
       tagline: localized(single(hero, "tagline")),
       subtitle: localized(single(hero, "subtitle")),
+      actions: {
+        primary: localized(single(single(hero, "actions"), "primary")),
+        secondary: localized(single(single(hero, "actions"), "secondary")),
+      },
     },
     about: { title: localized(single(about, "title")), paragraphs },
     skills: { title: localized(single(skills, "title")), groups },

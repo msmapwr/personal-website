@@ -15,4 +15,5 @@
 - 中英双语文案内容源 `content/content.xml`
 - 内容加载层（解析 `content.xml` 为结构化数据）
 - AppShell 布局、Hash 路由与双语导航
+- 五个区块内容（Hero 亚克力、关于我、项目卡片、技能分组、联系方式）
 - 开发计划 `docs/PLAN.md`

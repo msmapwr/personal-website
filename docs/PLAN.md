@@ -110,7 +110,7 @@ personal-website-main/
 | 2 | Fluent 主题接入 + 品牌色 + 明暗切换 | ✅ 完成 |
 | 3 | 内容加载层（解析 `content.xml`） | ✅ 完成 |
 | 4 | AppShell 布局 + Hash 路由 + 导航 | ✅ 完成 |
-| 5 | 五个区块组件（Hero/About/Projects/Skills/Contact） | ⬜ 待做 |
+| 5 | 五个区块组件（Hero/About/Projects/Skills/Contact） | ✅ 完成 |
 | 6 | 动效 + 响应式 | ⬜ 待做 |
 | 7 | 构建 + GitHub Pages 部署 | ⬜ 待做 |
 | 8 | 验收 + 后续调整 | ⬜ 待做 |
@@ -122,6 +122,7 @@ personal-website-main/
 - [ ] 项目卡片配图：the-second-oasis / personal-website 暂无配图，先用品占位图，有截图再替换。
 - [ ] 部署后核对 GitHub Pages 的 base path（仓库名为 `personal-website`，需配置 `base` 或自定义域名）。
 - [ ] 后续如需博客/动态板块，可基于 `content.xml` 扩展 `<posts>` 节点。
+- [ ] 优化打包体积：Fluent UI v9 + 图标使单 chunk 超过 500KB（gzip ~154KB），可 code-split / manualChunks 或按需导入。
 
 ---
 
