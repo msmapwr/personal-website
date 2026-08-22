@@ -32,7 +32,9 @@ export function parseContent(xml: string): SiteContent {
 
   const site = doc.documentElement;
 
-  const name = firstText(single(site, "meta"), "name");
+  const meta = single(site, "meta");
+  const name = firstText(meta, "name");
+  const avatar = opt(firstText(meta, "avatar"));
 
   const nav: NavItem[] = Array.from(
     single(site, "nav").getElementsByTagName("item"),
@@ -91,6 +93,7 @@ export function parseContent(xml: string): SiteContent {
 
   return {
     name,
+    avatar,
     nav,
     hero: {
       tagline: localized(single(hero, "tagline")),

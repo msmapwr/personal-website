@@ -7,18 +7,24 @@ import {
   Subtitle2,
   Title3,
   makeStyles,
+  mergeClasses,
   tokens,
 } from "@fluentui/react-components";
 import { ArrowUpRight20Regular, Code20Regular } from "@fluentui/react-icons";
+import { useRef, useState, type MouseEvent } from "react";
 import type { Project } from "../content/types";
 
 const useStyles = makeStyles({
-  card: {
+  wrap: {
+    position: "relative",
     height: "100%",
     transition: "transform 0.2s ease",
     ":hover": {
       transform: "translateY(-4px)",
     },
+  },
+  card: {
+    height: "100%",
   },
   body: {
     display: "flex",
@@ -51,54 +57,88 @@ const useStyles = makeStyles({
       textDecoration: "underline",
     },
   },
+  spotlight: {
+    position: "absolute",
+    inset: "0",
+    borderRadius: "12px",
+    background:
+      "radial-gradient(320px circle at var(--fx, 50%) var(--fy, 50%), rgba(0,120,212,0.10), transparent 60%)",
+    opacity: "0",
+    transition: "opacity 0.25s ease",
+    pointerEvents: "none",
+  },
+  spotlightOn: {
+    opacity: "1",
+  },
 });
 
 export function ProjectCard({ project }: { project: Project }) {
   const styles = useStyles();
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(false);
+
+  const handleMove = (e: MouseEvent<HTMLDivElement>) => {
+    const el = rootRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    el.style.setProperty("--fx", `${e.clientX - r.left}px`);
+    el.style.setProperty("--fy", `${e.clientY - r.top}px`);
+  };
 
   return (
-    <Card className={styles.card}>
-      <CardHeader
-        header={<Title3>{project.name.zh}</Title3>}
-        description={project.name.en}
-      />
-      <div className={styles.body}>
-        <div>
-          <Subtitle2>{project.tagline.zh}</Subtitle2>
-          <Body1 className={styles.taglineEn}>{project.tagline.en}</Body1>
+    <div
+      ref={rootRef}
+      className={styles.wrap}
+      onMouseMove={handleMove}
+      onMouseEnter={() => setActive(true)}
+      onMouseLeave={() => setActive(false)}
+    >
+      <Card className={styles.card}>
+        <CardHeader
+          header={<Title3>{project.name.zh}</Title3>}
+          description={project.name.en}
+        />
+        <div className={styles.body}>
+          <div>
+            <Subtitle2>{project.tagline.zh}</Subtitle2>
+            <Body1 className={styles.taglineEn}>{project.tagline.en}</Body1>
+          </div>
+          <Body1>{project.description.zh}</Body1>
+          <Body1 className={styles.descriptionEn}>{project.description.en}</Body1>
+          <div className={styles.tags}>
+            {project.tags.map((t) => (
+              <Badge key={t} appearance="tint">
+                {t}
+              </Badge>
+            ))}
+          </div>
         </div>
-        <Body1>{project.description.zh}</Body1>
-        <Body1 className={styles.descriptionEn}>{project.description.en}</Body1>
-        <div className={styles.tags}>
-          {project.tags.map((t) => (
-            <Badge key={t} appearance="tint">
-              {t}
-            </Badge>
-          ))}
-        </div>
-      </div>
-      <CardFooter>
-        <div className={styles.links}>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.link}
-          >
-            <Code20Regular /> GitHub
-          </a>
-          {project.demo && (
+        <CardFooter>
+          <div className={styles.links}>
             <a
-              href={project.demo}
+              href={project.link}
               target="_blank"
               rel="noreferrer"
               className={styles.link}
             >
-              <ArrowUpRight20Regular /> 在线演示
+              <Code20Regular /> GitHub
             </a>
-          )}
-        </div>
-      </CardFooter>
-    </Card>
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.link}
+              >
+                <ArrowUpRight20Regular /> 在线演示
+              </a>
+            )}
+          </div>
+        </CardFooter>
+      </Card>
+      <div
+        className={mergeClasses(styles.spotlight, active && styles.spotlightOn)}
+      />
+    </div>
   );
 }

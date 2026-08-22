@@ -38,8 +38,10 @@ const useStyles = makeStyles({
     backgroundColor: tokens.colorNeutralBackground2,
     color: tokens.colorNeutralForeground1,
     textDecoration: "none",
+    transition: "background-color 0.15s ease, transform 0.15s ease",
     ":hover": {
       backgroundColor: tokens.colorNeutralBackground2Hover,
+      transform: "translateX(4px)",
     },
   },
   icon: {

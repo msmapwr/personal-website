@@ -70,6 +70,7 @@ export interface ProjectsContent {
 
 export interface SiteContent {
   name: string;
+  avatar?: string;
   nav: NavItem[];
   hero: HeroContent;
   about: AboutContent;

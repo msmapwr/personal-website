@@ -32,10 +32,12 @@ const useStyles = makeStyles({
     borderRadius: "6px",
     textDecoration: "none",
     color: tokens.colorNeutralForeground2,
-    transition: "background-color 0.15s ease, color 0.15s ease",
+    transition:
+      "background-color 0.15s ease, color 0.15s ease, transform 0.15s ease",
     ":hover": {
       backgroundColor: tokens.colorNeutralBackground2,
       color: tokens.colorNeutralForeground1,
+      transform: "translateY(-1px)",
     },
   },
   zh: {
@@ -51,9 +53,11 @@ const useStyles = makeStyles({
   active: {
     color: tokens.colorBrandForeground1,
     backgroundColor: tokens.colorBrandBackground2,
+    boxShadow: `inset 0 -2px 0 ${tokens.colorBrandForeground1}`,
     ":hover": {
       color: tokens.colorBrandForeground1,
       backgroundColor: tokens.colorBrandBackground2,
+      transform: "none",
     },
   },
   hamburger: {

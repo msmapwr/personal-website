@@ -7,7 +7,7 @@ import {
   tokens,
 } from "@fluentui/react-components";
 import { ArrowRight20Regular, Mail20Regular } from "@fluentui/react-icons";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { Link } from "react-router-dom";
 import { content } from "../content";
 import { brandRamp } from "../theme/fluentTheme";
@@ -17,10 +17,11 @@ const useStyles = makeStyles({
     position: "relative",
     overflow: "hidden",
     borderRadius: "16px",
-    padding: "64px 48px",
+    padding: "56px 48px",
     background: `linear-gradient(150deg, ${brandRamp[130]} 0%, ${brandRamp[150]} 50%, ${tokens.colorNeutralBackground1} 100%)`,
     display: "flex",
     flexDirection: "column",
+    alignItems: "flex-start",
     gap: "16px",
   },
   blob: {
@@ -35,9 +36,18 @@ const useStyles = makeStyles({
     filter: "blur(70px)",
     pointerEvents: "none",
   },
+  avatar: {
+    width: "96px",
+    height: "96px",
+    borderRadius: "50%",
+    objectFit: "cover",
+    border: `3px solid ${tokens.colorBrandForeground1}`,
+    boxShadow: tokens.shadow16,
+    position: "relative",
+    zIndex: "1",
+  },
   name: {
     color: tokens.colorBrandForeground1,
-    position: "relative",
   },
   taglineEn: {
     color: tokens.colorNeutralForeground2,
@@ -54,36 +64,61 @@ const useStyles = makeStyles({
     display: "flex",
     gap: "12px",
     marginTop: "8px",
-    position: "relative",
   },
   link: {
     textDecoration: "none",
   },
 });
 
+const container: Variants = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.05 },
+  },
+};
+
+const item: Variants = {
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 export function Home() {
   const styles = useStyles();
   const reduce = useReducedMotion();
-  const { name, hero } = content;
+  const { name, hero, avatar } = content;
 
   return (
     <motion.div
       className={styles.hero}
-      initial={reduce ? false : { opacity: 0, y: 16 }}
-      animate={reduce ? undefined : { opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      variants={container}
+      initial={reduce ? false : "hidden"}
+      animate={reduce ? undefined : "show"}
     >
       <motion.div
         className={styles.blob}
         animate={reduce ? undefined : { scale: [1, 1.2, 1] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
       />
-      <Display className={styles.name}>{name}</Display>
-      <Title3>{hero.tagline.zh}</Title3>
-      <Title3 className={styles.taglineEn}>{hero.tagline.en}</Title3>
-      <Body1 className={styles.subtitle}>{hero.subtitle.zh}</Body1>
-      <Body1 className={styles.subtitleEn}>{hero.subtitle.en}</Body1>
-      <div className={styles.actions}>
+      {avatar && (
+        <motion.img
+          src={avatar}
+          alt={name}
+          className={styles.avatar}
+          variants={item}
+        />
+      )}
+      <motion.div variants={item}>
+        <Display className={styles.name}>{name}</Display>
+      </motion.div>
+      <motion.div variants={item}>
+        <Title3>{hero.tagline.zh}</Title3>
+        <Title3 className={styles.taglineEn}>{hero.tagline.en}</Title3>
+      </motion.div>
+      <motion.div variants={item}>
+        <Body1 className={styles.subtitle}>{hero.subtitle.zh}</Body1>
+        <Body1 className={styles.subtitleEn}>{hero.subtitle.en}</Body1>
+      </motion.div>
+      <motion.div variants={item} className={styles.actions}>
         <Link to="/projects" className={styles.link}>
           <Button appearance="primary" icon={<ArrowRight20Regular />}>
             {hero.actions.primary.zh}
@@ -94,7 +129,7 @@ export function Home() {
             {hero.actions.secondary.zh}
           </Button>
         </Link>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
