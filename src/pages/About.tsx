@@ -1,10 +1,5 @@
-import {
-  Body1,
-  Divider,
-  Title2,
-  makeStyles,
-  tokens,
-} from "@fluentui/react-components";
+import { Body1, Divider, Title2, makeStyles, tokens } from "@fluentui/react-components";
+import { Reveal } from "../components/Reveal";
 import { content } from "../content";
 
 const useStyles = makeStyles({
@@ -33,16 +28,18 @@ export function About() {
 
   return (
     <section className={styles.root}>
-      <div>
+      <Reveal>
         <Title2>{title.zh}</Title2>
         <Body1 className={styles.titleEn}>{title.en}</Body1>
-      </div>
+      </Reveal>
       <Divider />
       {paragraphs.map((p, i) => (
-        <div key={i} className={styles.paragraph}>
-          <Body1>{p.zh}</Body1>
-          <Body1 className={styles.en}>{p.en}</Body1>
-        </div>
+        <Reveal key={i} delay={i * 0.08}>
+          <div className={styles.paragraph}>
+            <Body1>{p.zh}</Body1>
+            <Body1 className={styles.en}>{p.en}</Body1>
+          </div>
+        </Reveal>
       ))}
     </section>
   );

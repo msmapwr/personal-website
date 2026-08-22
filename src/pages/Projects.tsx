@@ -1,5 +1,6 @@
 import { Body1, Title2, makeStyles, tokens } from "@fluentui/react-components";
 import { ProjectCard } from "../components/ProjectCard";
+import { Reveal } from "../components/Reveal";
 import { content } from "../content";
 
 const useStyles = makeStyles({
@@ -16,6 +17,9 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
     gap: "20px",
   },
+  cardReveal: {
+    height: "100%",
+  },
 });
 
 export function Projects() {
@@ -24,13 +28,15 @@ export function Projects() {
 
   return (
     <section className={styles.root}>
-      <div>
+      <Reveal>
         <Title2>{title.zh}</Title2>
         <Body1 className={styles.titleEn}>{title.en}</Body1>
-      </div>
+      </Reveal>
       <div className={styles.grid}>
-        {projects.map((p) => (
-          <ProjectCard key={p.id} project={p} />
+        {projects.map((p, i) => (
+          <Reveal key={p.id} delay={i * 0.1} className={styles.cardReveal}>
+            <ProjectCard project={p} />
+          </Reveal>
         ))}
       </div>
     </section>

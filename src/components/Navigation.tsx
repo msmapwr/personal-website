@@ -1,9 +1,16 @@
 import {
   makeStyles,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  MenuPopover,
+  MenuTrigger,
   mergeClasses,
   tokens,
 } from "@fluentui/react-components";
-import { NavLink } from "react-router-dom";
+import { Navigation20Regular } from "@fluentui/react-icons";
+import { NavLink, useNavigate } from "react-router-dom";
 import { content } from "../content";
 
 const routeFor = (id: string) => (id === "home" ? "/" : `/${id}`);
@@ -13,6 +20,9 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     gap: "4px",
+    "@media (max-width: 767px)": {
+      display: "none",
+    },
   },
   link: {
     display: "flex",
@@ -46,26 +56,57 @@ const useStyles = makeStyles({
       backgroundColor: tokens.colorBrandBackground2,
     },
   },
+  hamburger: {
+    display: "none",
+    "@media (max-width: 767px)": {
+      display: "inline-flex",
+    },
+  },
 });
 
 export function Navigation() {
   const styles = useStyles();
+  const navigate = useNavigate();
 
   return (
-    <nav className={styles.nav}>
-      {content.nav.map((item) => (
-        <NavLink
-          key={item.id}
-          to={routeFor(item.id)}
-          end={item.id === "home"}
-          className={({ isActive }) =>
-            mergeClasses(styles.link, isActive && styles.active)
-          }
-        >
-          <span className={styles.zh}>{item.label.zh}</span>
-          <span className={styles.en}>{item.label.en}</span>
-        </NavLink>
-      ))}
-    </nav>
+    <>
+      <nav className={styles.nav}>
+        {content.nav.map((item) => (
+          <NavLink
+            key={item.id}
+            to={routeFor(item.id)}
+            end={item.id === "home"}
+            className={({ isActive }) =>
+              mergeClasses(styles.link, isActive && styles.active)
+            }
+          >
+            <span className={styles.zh}>{item.label.zh}</span>
+            <span className={styles.en}>{item.label.en}</span>
+          </NavLink>
+        ))}
+      </nav>
+
+      <Menu>
+        <MenuTrigger disableButtonEnhancement>
+          <MenuButton
+            icon={<Navigation20Regular />}
+            aria-label="菜单"
+            className={styles.hamburger}
+          />
+        </MenuTrigger>
+        <MenuPopover>
+          <MenuList>
+            {content.nav.map((item) => (
+              <MenuItem
+                key={item.id}
+                onClick={() => navigate(routeFor(item.id))}
+              >
+                {item.label.zh} · {item.label.en}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </MenuPopover>
+      </Menu>
+    </>
   );
 }

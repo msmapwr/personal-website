@@ -111,7 +111,7 @@ personal-website-main/
 | 3 | 内容加载层（解析 `content.xml`） | ✅ 完成 |
 | 4 | AppShell 布局 + Hash 路由 + 导航 | ✅ 完成 |
 | 5 | 五个区块组件（Hero/About/Projects/Skills/Contact） | ✅ 完成 |
-| 6 | 动效 + 响应式 | ⬜ 待做 |
+| 6 | 动效 + 响应式 | ✅ 完成 |
 | 7 | 构建 + GitHub Pages 部署 | ⬜ 待做 |
 | 8 | 验收 + 后续调整 | ⬜ 待做 |
 

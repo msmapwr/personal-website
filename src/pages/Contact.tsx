@@ -4,6 +4,7 @@ import {
   Mail20Regular,
   Play20Regular,
 } from "@fluentui/react-icons";
+import { Reveal } from "../components/Reveal";
 import { content } from "../content";
 import type { ContactItem } from "../content/types";
 
@@ -66,45 +67,49 @@ function valueFor(item: ContactItem): string {
   return item.url ?? "";
 }
 
+function ContactRow({ item }: { item: ContactItem }) {
+  const styles = useStyles();
+  const href = hrefFor(item);
+  const inner = (
+    <>
+      <span className={styles.icon}>{kindIcon[item.kind]}</span>
+      <span className={styles.label}>{item.label}</span>
+      <span className={styles.value}>{valueFor(item)}</span>
+    </>
+  );
+
+  if (!href) {
+    return <div className={styles.row}>{inner}</div>;
+  }
+
+  const external = item.kind !== "email";
+  return (
+    <a
+      href={href}
+      className={styles.row}
+      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+    >
+      {inner}
+    </a>
+  );
+}
+
 export function Contact() {
   const styles = useStyles();
   const { title, items } = content.contact;
 
   return (
     <section className={styles.root}>
-      <div>
+      <Reveal>
         <Title2>{title.zh}</Title2>
         <Body1 className={styles.titleEn}>{title.en}</Body1>
-      </div>
+      </Reveal>
       <div className={styles.list}>
-        {items.map((item) => {
-          const href = hrefFor(item);
-          const inner = (
-            <>
-              <span className={styles.icon}>{kindIcon[item.kind]}</span>
-              <span className={styles.label}>{item.label}</span>
-              <span className={styles.value}>{valueFor(item)}</span>
-            </>
-          );
-          if (!href) {
-            return (
-              <div key={item.kind} className={styles.row}>
-                {inner}
-              </div>
-            );
-          }
-          const external = item.kind !== "email";
-          return (
-            <a
-              key={item.kind}
-              href={href}
-              className={styles.row}
-              {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-            >
-              {inner}
-            </a>
-          );
-        })}
+        {items.map((item, i) => (
+          <Reveal key={item.kind} delay={i * 0.08}>
+            <ContactRow item={item} />
+          </Reveal>
+        ))}
       </div>
     </section>
   );

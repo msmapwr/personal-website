@@ -16,4 +16,5 @@
 - 内容加载层（解析 `content.xml` 为结构化数据）
 - AppShell 布局、Hash 路由与双语导航
 - 五个区块内容（Hero 亚克力、关于我、项目卡片、技能分组、联系方式）
+- 动效（滚动入场、Hero 入场、卡片悬停）与响应式（移动端汉堡菜单、reduced-motion 支持）
 - 开发计划 `docs/PLAN.md`

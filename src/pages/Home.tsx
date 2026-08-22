@@ -7,6 +7,7 @@ import {
   tokens,
 } from "@fluentui/react-components";
 import { ArrowRight20Regular, Mail20Regular } from "@fluentui/react-icons";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { content } from "../content";
 import { brandRamp } from "../theme/fluentTheme";
@@ -62,11 +63,21 @@ const useStyles = makeStyles({
 
 export function Home() {
   const styles = useStyles();
+  const reduce = useReducedMotion();
   const { name, hero } = content;
 
   return (
-    <div className={styles.hero}>
-      <div className={styles.blob} />
+    <motion.div
+      className={styles.hero}
+      initial={reduce ? false : { opacity: 0, y: 16 }}
+      animate={reduce ? undefined : { opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <motion.div
+        className={styles.blob}
+        animate={reduce ? undefined : { scale: [1, 1.2, 1] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+      />
       <Display className={styles.name}>{name}</Display>
       <Title3>{hero.tagline.zh}</Title3>
       <Title3 className={styles.taglineEn}>{hero.tagline.en}</Title3>
@@ -84,6 +95,6 @@ export function Home() {
           </Button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

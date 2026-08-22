@@ -15,6 +15,10 @@ import type { Project } from "../content/types";
 const useStyles = makeStyles({
   card: {
     height: "100%",
+    transition: "transform 0.2s ease",
+    ":hover": {
+      transform: "translateY(-4px)",
+    },
   },
   body: {
     display: "flex",
