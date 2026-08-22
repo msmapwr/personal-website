@@ -1,6 +1,7 @@
 import type {
   ContactItem,
-  LocalizedText,
+  Language,
+  LocaleContent,
   NavItem,
   Project,
   SiteContent,
@@ -18,51 +19,39 @@ function firstText(el: Element, tag: string): string {
   return el.getElementsByTagName(tag)[0]?.textContent?.trim() ?? "";
 }
 
-function localized(el: Element): LocalizedText {
-  return { zh: firstText(el, "zh"), en: firstText(el, "en") };
-}
-
 const opt = (s: string) => (s === "" ? undefined : s);
 
-export function parseContent(xml: string): SiteContent {
-  const doc = new DOMParser().parseFromString(xml, "application/xml");
-  if (doc.getElementsByTagName("parsererror").length > 0) {
-    throw new Error("content.xml 解析失败，请检查 XML 格式");
-  }
-
-  const site = doc.documentElement;
-
-  const meta = single(site, "meta");
-  const name = firstText(meta, "name");
-  const avatar = opt(firstText(meta, "avatar"));
+function parseLocale(loc: Element): LocaleContent {
+  const meta = single(loc, "meta");
 
   const nav: NavItem[] = Array.from(
-    single(site, "nav").getElementsByTagName("item"),
+    single(loc, "nav").getElementsByTagName("item"),
   ).map((it) => ({
     id: it.getAttribute("id") ?? "",
-    label: localized(it),
+    label: it.textContent?.trim() ?? "",
   }));
 
-  const hero = single(site, "hero");
+  const hero = single(loc, "hero");
+  const actions = single(hero, "actions");
 
-  const about = single(site, "about");
+  const about = single(loc, "about");
   const paragraphs = Array.from(about.getElementsByTagName("paragraph")).map(
-    localized,
+    (p) => p.textContent?.trim() ?? "",
   );
 
-  const skills = single(site, "skills");
+  const skills = single(loc, "skills");
   const groups: SkillGroup[] = Array.from(
     skills.getElementsByTagName("group"),
   ).map((g) => ({
     name: g.getAttribute("name") ?? "",
-    label: localized(single(g, "label")),
+    label: firstText(g, "label"),
     items: Array.from(g.getElementsByTagName("item")).map((it) => ({
       level: (it.getAttribute("level") as SkillLevel) ?? "proficient",
-      label: localized(it),
+      label: it.textContent?.trim() ?? "",
     })),
   }));
 
-  const contact = single(site, "contact");
+  const contact = single(loc, "contact");
   const items: ContactItem[] = (["github", "email", "bilibili"] as const).map(
     (kind) => {
       const el = single(contact, kind);
@@ -76,14 +65,14 @@ export function parseContent(xml: string): SiteContent {
     },
   );
 
-  const projectsEl = single(site, "projects");
+  const projectsEl = single(loc, "projects");
   const projects: Project[] = Array.from(
     projectsEl.getElementsByTagName("project"),
   ).map((p) => ({
     id: p.getAttribute("id") ?? "",
-    name: localized(single(p, "name")),
-    tagline: localized(single(p, "tagline")),
-    description: localized(single(p, "description")),
+    name: firstText(p, "name"),
+    tagline: firstText(p, "tagline"),
+    description: firstText(p, "description"),
     tags: Array.from(p.getElementsByTagName("tag")).map(
       (t) => t.textContent?.trim() ?? "",
     ),
@@ -92,23 +81,44 @@ export function parseContent(xml: string): SiteContent {
   }));
 
   return {
-    name,
-    avatar,
+    name: firstText(meta, "name"),
+    avatar: opt(firstText(meta, "avatar")),
     nav,
     hero: {
-      tagline: localized(single(hero, "tagline")),
-      subtitle: localized(single(hero, "subtitle")),
+      tagline: firstText(hero, "tagline"),
+      subtitle: firstText(hero, "subtitle"),
       actions: {
-        primary: localized(single(single(hero, "actions"), "primary")),
-        secondary: localized(single(single(hero, "actions"), "secondary")),
+        primary: firstText(actions, "primary"),
+        secondary: firstText(actions, "secondary"),
       },
     },
-    about: { title: localized(single(about, "title")), paragraphs },
-    skills: { title: localized(single(skills, "title")), groups },
-    contact: { title: localized(single(contact, "title")), items },
-    projects: {
-      title: localized(single(projectsEl, "title")),
-      projects,
-    },
+    about: { title: firstText(about, "title"), paragraphs },
+    skills: { title: firstText(skills, "title"), groups },
+    contact: { title: firstText(contact, "title"), items },
+    projects: { title: firstText(projectsEl, "title"), projects },
   };
+}
+
+export function parseContent(xml: string): SiteContent {
+  const doc = new DOMParser().parseFromString(xml, "application/xml");
+  if (doc.getElementsByTagName("parsererror").length > 0) {
+    throw new Error("content.xml 解析失败，请检查 XML 格式");
+  }
+
+  const site = doc.documentElement;
+
+  const languages: Language[] = Array.from(
+    site.getElementsByTagName("language"),
+  ).map((l) => ({
+    id: l.getAttribute("id") ?? "",
+    label: l.textContent?.trim() ?? "",
+  }));
+
+  const locales: Record<string, LocaleContent> = {};
+  for (const loc of Array.from(site.getElementsByTagName("locale"))) {
+    const id = loc.getAttribute("id");
+    if (id) locales[id] = parseLocale(loc);
+  }
+
+  return { languages, locales };
 }

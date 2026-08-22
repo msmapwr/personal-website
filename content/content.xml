@@ -1,189 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  个人网站文案内容源（中英双语）
+  个人网站文案内容源（按语言排列，为 i18n 准备）
   ============================================
-  网页会从这里读取所有文字；修改本文件后刷新网页即可看到效果。
-  约定：每个文本节点包含 <zh>（中文）和 <en>（英文）两个子节点。
-  level 取值：proficient（掌握）/ learning（学习中）
+  - <languages> 列出可用语言（id + 显示名）；新增语言时在此加一条，并加一个 <locale id="..."> 块。
+  - 每个 <locale> 是一个完整、自包含的语言快照，文本为纯文本（不再用 <zh>/<en> 包裹）。
+  - 网页根据当前语言读取对应的 <locale>。
+  - level 取值：proficient（掌握）/ learning（学习中）
 -->
 
 <site>
 
-  <meta>
-    <name>Msmapwr</name>
-    <avatar>images/head.png</avatar>
-  </meta>
+  <languages>
+    <language id="zh" label="中文" />
+    <language id="en" label="English" />
+  </languages>
 
-  <nav>
-    <item id="home"><zh>首页</zh><en>Home</en></item>
-    <item id="about"><zh>关于我</zh><en>About</en></item>
-    <item id="projects"><zh>项目</zh><en>Projects</en></item>
-    <item id="skills"><zh>技能</zh><en>Skills</en></item>
-    <item id="contact"><zh>联系</zh><en>Contact</en></item>
-  </nav>
+  <locale id="zh">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">首页</item>
+      <item id="about">关于我</item>
+      <item id="projects">项目</item>
+      <item id="skills">技能</item>
+      <item id="contact">联系</item>
+    </nav>
+    <hero>
+      <tagline>Minecraft 创作者 &amp; C# 开发者</tagline>
+      <subtitle>爱玩 Minecraft/CS：GO，喜欢建筑和 PVP，平时也用 C# 写桌面程序。这里是我的作品。</subtitle>
+      <actions>
+        <primary>查看项目</primary>
+        <secondary>联系我</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>关于我</title>
+      <paragraph>我是 Msmapwr，一名学生，平时喜欢做游戏和桌面程序。</paragraph>
+      <paragraph>我玩 Minecraft，主要做建筑和场景，也打 PVP。编程上我用 C#，最近在学 WPF 和 WinUI。</paragraph>
+      <paragraph>我用AI做了网页策略桌游《第二绿洲》，从玩法到代码都是AI搞定。我喜欢把想法做成能跑起来的东西，然后继续学新的。</paragraph>
+    </about>
+    <skills>
+      <title>技能 / 技术栈</title>
+      <group name="game">
+        <label>游戏与创作</label>
+        <item level="proficient">Minecraft 建筑与场景设计</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>编程语言</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>桌面开发</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>工具链</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>联系方式</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>邮箱</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>哔哩哔哩</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>项目展示</title>
+      <project id="the-second-oasis">
+        <name>第二绿洲</name>
+        <tagline>月球领土争夺 · 回合制网页策略桌游 · 2～4 人对战</tagline>
+        <description>《第二绿洲》是一款以月球殖民为背景的回合制网页策略游戏。玩家扮演不同国家的月球开发势力，在有限资源、随机事件与其他玩家的竞争中建立自己的领土。通过风险选择、开发链、抢夺与崩坏等机制，在终局结算中成为最大的月球势力。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>个人网站</name>
+        <tagline>Fluent Design 风格的个人作品集网站</tagline>
+        <description>你现在看到的这个网站。用微软 Fluent Design 风格做中英双语作品集，用 React 和 Fluent UI React 搭建，托管在 GitHub Pages。</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
 
-  <hero>
-    <tagline>
-      <zh>Minecraft 创作者 &amp; C# 开发者</zh>
-      <en>Minecraft Creator &amp; C# Developer</en>
-    </tagline>
-    <subtitle>
-      <zh>爱玩 Minecraft/CS：GO，喜欢建筑和 PVP，平时也用 C# 写桌面程序。这里是我的作品。</zh>
-      <en>Hi, I'm Msmapwr. I play Minecraft, mostly building and PVP, and I write desktop programs in C#. Here are my projects.</en>
-    </subtitle>
-    <actions>
-      <primary><zh>查看项目</zh><en>View Projects</en></primary>
-      <secondary><zh>联系我</zh><en>Contact Me</en></secondary>
-    </actions>
-  </hero>
-
-  <about>
-    <title>
-      <zh>关于我</zh>
-      <en>About Me</en>
-    </title>
-    <paragraph>
-      <zh>我是 Msmapwr，一名学生，平时喜欢做游戏和桌面程序。</zh>
-      <en>I'm Msmapwr, a student who likes making games and desktop programs.</en>
-    </paragraph>
-    <paragraph>
-      <zh>我玩 Minecraft，主要做建筑和场景，也打 PVP。编程上我用 C#，最近在学 WPF 和 WinUI。</zh>
-      <en>I play Minecraft, mostly building and scene work, plus some PVP. I program in C#, and I'm learning WPF and WinUI.</en>
-    </paragraph>
-    <paragraph>
-      <zh>我用AI做了网页策略桌游《第二绿洲》，从玩法到代码都是AI搞定。我喜欢把想法做成能跑起来的东西，然后继续学新的。</zh>
-      <en>I made The Second Oasis, a web strategy board game, on my own, from the rules to the code. I like turning ideas into things that run, then learning what's next.</en>
-    </paragraph>
-  </about>
-
-  <skills>
-    <title>
-      <zh>技能 / 技术栈</zh>
-      <en>Skills</en>
-    </title>
-    <group name="game">
-      <label>
-        <zh>游戏与创作</zh>
-        <en>Game &amp; Creation</en>
-      </label>
-      <item level="proficient">
-        <zh>Minecraft 建筑与场景设计</zh>
-        <en>Minecraft Building &amp; Scene Design</en>
-      </item>
-      <item level="proficient">
-        <zh>Minecraft PVP</zh>
-        <en>Minecraft PVP</en>
-      </item>
-    </group>
-    <group name="languages">
-      <label>
-        <zh>编程语言</zh>
-        <en>Languages</en>
-      </label>
-      <item level="proficient">
-        <zh>C#</zh>
-        <en>C#</en>
-      </item>
-    </group>
-    <group name="desktop">
-      <label>
-        <zh>桌面开发</zh>
-        <en>Desktop Development</en>
-      </label>
-      <item level="learning">
-        <zh>WPF</zh>
-        <en>WPF</en>
-      </item>
-      <item level="learning">
-        <zh>WinUI</zh>
-        <en>WinUI</en>
-      </item>
-    </group>
-    <group name="tools">
-      <label>
-        <zh>工具链</zh>
-        <en>Tools</en>
-      </label>
-      <item level="proficient">
-        <zh>Git</zh>
-        <en>Git</en>
-      </item>
-      <item level="proficient">
-        <zh>Visual Studio</zh>
-        <en>Visual Studio</en>
-      </item>
-    </group>
-  </skills>
-
-  <contact>
-    <title>
-      <zh>联系方式</zh>
-      <en>Contact</en>
-    </title>
-    <github>
-      <label>GitHub</label>
-      <url>https://github.com/msmapwr</url>
-    </github>
-    <email>
-      <label>Email</label>
-      <value>msmapwr@outlook.com</value>
-    </email>
-    <bilibili>
-      <label>Bilibili</label>
-      <name>一只附魔金苹果_yee</name>
-      <url>https://space.bilibili.com/1602924292</url>
-    </bilibili>
-  </contact>
-
-  <projects>
-    <title>
-      <zh>项目展示</zh>
-      <en>Projects</en>
-    </title>
-    <project id="the-second-oasis">
-      <name>
-        <zh>第二绿洲</zh>
-        <en>The Second Oasis</en>
-      </name>
-      <tagline>
-        <zh>月球领土争夺 · 回合制网页策略桌游 · 2～4 人对战</zh>
-        <en>Lunar territory · turn-based web strategy board game · 2 to 4 players</en>
-      </tagline>
-      <description>
-        <zh>《第二绿洲》是一款以月球殖民为背景的回合制网页策略游戏。玩家扮演不同国家的月球开发势力，在有限资源、随机事件与其他玩家的竞争中建立自己的领土。通过风险选择、开发链、抢夺与崩坏等机制，在终局结算中成为最大的月球势力。</zh>
-        <en>The Second Oasis is a turn-based web strategy game about colonizing the moon. Each player runs a nation's lunar program, building territory with limited resources, random events, and other players in the way. Risk choices, development chains, and seize-and-collapse mechanics shape the game, and the largest lunar power wins at final settlement.</en>
-      </description>
-      <tags>
-        <tag>TypeScript</tag>
-        <tag>Vite</tag>
-        <tag>Canvas 2D</tag>
-        <tag>WebSocket</tag>
-        <tag>Vitest</tag>
-      </tags>
-      <link>https://github.com/msmapwr/the-second-oasis</link>
-      <demo>https://msmapwr.github.io/the-second-oasis/</demo>
-    </project>
-    <project id="personal-website">
-      <name>
-        <zh>个人网站</zh>
-        <en>Personal Website</en>
-      </name>
-      <tagline>
-        <zh>Fluent Design 风格的个人作品集网站</zh>
-        <en>A Fluent Design personal portfolio website</en>
-      </tagline>
-      <description>
-        <zh>你现在看到的这个网站。用微软 Fluent Design 风格做中英双语作品集，用 React 和 Fluent UI React 搭建，托管在 GitHub Pages。</zh>
-        <en>The site you're looking at. A bilingual portfolio in Microsoft's Fluent Design style, built with React and Fluent UI React and hosted on GitHub Pages.</en>
-      </description>
-      <tags>
-        <tag>React</tag>
-        <tag>Fluent UI</tag>
-        <tag>Vite</tag>
-        <tag>TypeScript</tag>
-      </tags>
-      <link>https://github.com/msmapwr/personal-website</link>
-    </project>
-  </projects>
+  <locale id="en">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">Home</item>
+      <item id="about">About</item>
+      <item id="projects">Projects</item>
+      <item id="skills">Skills</item>
+      <item id="contact">Contact</item>
+    </nav>
+    <hero>
+      <tagline>Minecraft Creator &amp; C# Developer</tagline>
+      <subtitle>Hi, I'm Msmapwr. I play Minecraft, mostly building and PVP, and I write desktop programs in C#. Here are my projects.</subtitle>
+      <actions>
+        <primary>View Projects</primary>
+        <secondary>Contact Me</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>About Me</title>
+      <paragraph>I'm Msmapwr, a student who likes making games and desktop programs.</paragraph>
+      <paragraph>I play Minecraft, mostly building and scene work, plus some PVP. I program in C#, and I'm learning WPF and WinUI.</paragraph>
+      <paragraph>I made The Second Oasis, a web strategy board game, on my own, from the rules to the code. I like turning ideas into things that run, then learning what's next.</paragraph>
+    </about>
+    <skills>
+      <title>Skills</title>
+      <group name="game">
+        <label>Game &amp; Creation</label>
+        <item level="proficient">Minecraft Building &amp; Scene Design</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>Languages</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>Desktop Development</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>Tools</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>Contact</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>Email</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>Projects</title>
+      <project id="the-second-oasis">
+        <name>The Second Oasis</name>
+        <tagline>Lunar territory · turn-based web strategy board game · 2 to 4 players</tagline>
+        <description>The Second Oasis is a turn-based web strategy game about colonizing the moon. Each player runs a nation's lunar program, building territory with limited resources, random events, and other players in the way. Risk choices, development chains, and seize-and-collapse mechanics shape the game, and the largest lunar power wins at final settlement.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>Personal Website</name>
+        <tagline>A Fluent Design personal portfolio website</tagline>
+        <description>The site you're looking at. A bilingual portfolio in Microsoft's Fluent Design style, built with React and Fluent UI React and hosted on GitHub Pages.</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
 
 </site>

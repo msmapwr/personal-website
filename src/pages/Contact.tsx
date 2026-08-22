@@ -1,12 +1,12 @@
-import { Body1, Title2, makeStyles, tokens } from "@fluentui/react-components";
+import { Title2, makeStyles, tokens } from "@fluentui/react-components";
 import {
   Code20Regular,
   Mail20Regular,
   Play20Regular,
 } from "@fluentui/react-icons";
 import { Reveal } from "../components/Reveal";
-import { content } from "../content";
 import type { ContactItem } from "../content/types";
+import { useT } from "../i18n/LanguageContext";
 
 const kindIcon = {
   github: <Code20Regular />,
@@ -20,9 +20,6 @@ const useStyles = makeStyles({
     flexDirection: "column",
     gap: "16px",
     maxWidth: "560px",
-  },
-  titleEn: {
-    color: tokens.colorNeutralForeground3,
   },
   list: {
     display: "flex",
@@ -98,13 +95,12 @@ function ContactRow({ item }: { item: ContactItem }) {
 
 export function Contact() {
   const styles = useStyles();
-  const { title, items } = content.contact;
+  const { title, items } = useT().contact;
 
   return (
     <section className={styles.root}>
       <Reveal>
-        <Title2>{title.zh}</Title2>
-        <Body1 className={styles.titleEn}>{title.en}</Body1>
+        <Title2>{title}</Title2>
       </Reveal>
       <div className={styles.list}>
         {items.map((item, i) => (

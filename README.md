@@ -16,7 +16,7 @@
 
 - Fluent Design 风格，品牌色微软蓝 `#0078D4`
 - 跟随系统明暗主题，支持手动切换（浅色 / 深色 / 跟随系统）
-- 中英双语文案，集中管理于 `content/content.xml`
+- 中英双语，支持语言切换，文案集中管理于 `content/content.xml`
 - 桌面优先，移动端可用
 
 ## 快速开始
@@ -48,9 +48,9 @@ npm run build    # 生产构建到 dist/
 
 ## 编辑文案
 
-所有页面文字都在 `content/content.xml`，每段文字含 `<zh>`（中文）与 `<en>`（英文）两个节点。改完刷新页面即生效，无需改代码。
+所有页面文字都在 `content/content.xml`，**按语言分块**：`<languages>` 列出可用语言，每个 `<locale id="...">` 是该语言的完整文案快照。当前语言选择会保存到 localStorage，改完文案刷新页面即生效，无需改代码。
 
-新增项目：见 [docs/add-project.md](docs/add-project.md)。
+新增语言：在 `<languages>` 加一条，再复制一个 `<locale>` 块翻译即可。新增项目：见 [docs/add-project.md](docs/add-project.md)。
 
 ## 部署
 

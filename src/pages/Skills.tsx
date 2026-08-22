@@ -7,7 +7,7 @@ import {
   tokens,
 } from "@fluentui/react-components";
 import { Reveal } from "../components/Reveal";
-import { content } from "../content";
+import { useT } from "../i18n/LanguageContext";
 
 const useStyles = makeStyles({
   root: {
@@ -15,16 +15,10 @@ const useStyles = makeStyles({
     flexDirection: "column",
     gap: "28px",
   },
-  titleEn: {
-    color: tokens.colorNeutralForeground3,
-  },
   group: {
     display: "flex",
     flexDirection: "column",
     gap: "10px",
-  },
-  groupLabelEn: {
-    color: tokens.colorNeutralForeground3,
   },
   items: {
     display: "grid",
@@ -39,33 +33,25 @@ const useStyles = makeStyles({
     borderRadius: "8px",
     backgroundColor: tokens.colorNeutralBackground2,
   },
-  itemEn: {
-    color: tokens.colorNeutralForeground3,
-  },
 });
 
 export function Skills() {
   const styles = useStyles();
-  const { title, groups } = content.skills;
+  const { title, groups } = useT().skills;
 
   return (
     <section className={styles.root}>
       <Reveal>
-        <Title2>{title.zh}</Title2>
-        <Body1 className={styles.titleEn}>{title.en}</Body1>
+        <Title2>{title}</Title2>
       </Reveal>
       {groups.map((g, i) => (
         <Reveal key={g.name} delay={i * 0.08}>
           <div className={styles.group}>
-            <div>
-              <Subtitle2>{g.label.zh}</Subtitle2>
-              <Body1 className={styles.groupLabelEn}>{g.label.en}</Body1>
-            </div>
+            <Subtitle2>{g.label}</Subtitle2>
             <div className={styles.items}>
               {g.items.map((it, j) => (
                 <div key={j} className={styles.item}>
-                  <Body1>{it.label.zh}</Body1>
-                  <Body1 className={styles.itemEn}>{it.label.en}</Body1>
+                  <Body1>{it.label}</Body1>
                   {it.level === "learning" && (
                     <Badge appearance="tint" color="warning">
                       学习中 · Learning

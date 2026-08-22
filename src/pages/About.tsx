@@ -1,6 +1,6 @@
-import { Body1, Divider, Title2, makeStyles, tokens } from "@fluentui/react-components";
+import { Body1, Divider, Title2, makeStyles } from "@fluentui/react-components";
 import { Reveal } from "../components/Reveal";
-import { content } from "../content";
+import { useT } from "../i18n/LanguageContext";
 
 const useStyles = makeStyles({
   root: {
@@ -9,36 +9,21 @@ const useStyles = makeStyles({
     gap: "16px",
     maxWidth: "720px",
   },
-  titleEn: {
-    color: tokens.colorNeutralForeground3,
-  },
-  paragraph: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "4px",
-  },
-  en: {
-    color: tokens.colorNeutralForeground2,
-  },
 });
 
 export function About() {
   const styles = useStyles();
-  const { title, paragraphs } = content.about;
+  const { title, paragraphs } = useT().about;
 
   return (
     <section className={styles.root}>
       <Reveal>
-        <Title2>{title.zh}</Title2>
-        <Body1 className={styles.titleEn}>{title.en}</Body1>
+        <Title2>{title}</Title2>
       </Reveal>
       <Divider />
       {paragraphs.map((p, i) => (
         <Reveal key={i} delay={i * 0.08}>
-          <div className={styles.paragraph}>
-            <Body1>{p.zh}</Body1>
-            <Body1 className={styles.en}>{p.en}</Body1>
-          </div>
+          <Body1>{p}</Body1>
         </Reveal>
       ))}
     </section>

@@ -1,8 +1,9 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Link, Outlet } from "react-router-dom";
-import { content } from "../content";
 import { ThemeMode } from "../hooks/useThemeMode";
+import { useT } from "../i18n/LanguageContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Navigation } from "./Navigation";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
@@ -44,7 +45,7 @@ const useStyles = makeStyles({
     height: "56px",
     display: "flex",
     alignItems: "center",
-    gap: "16px",
+    gap: "12px",
   },
   brand: {
     fontSize: "20px",
@@ -71,6 +72,7 @@ const useStyles = makeStyles({
 
 export function AppShell({ mode, onModeChange }: AppShellProps) {
   const styles = useStyles();
+  const t = useT();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -84,9 +86,10 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link to="/" className={styles.brand}>
-            {content.name}
+            {t.name}
           </Link>
           <Navigation />
+          <LanguageSwitcher />
           <ThemeSwitcher mode={mode} onModeChange={onModeChange} />
         </div>
       </header>
@@ -94,7 +97,7 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
         <Outlet />
       </main>
       <footer className={styles.footer}>
-        © {new Date().getFullYear()} {content.name}
+        © {new Date().getFullYear()} {t.name}
       </footer>
     </div>
   );

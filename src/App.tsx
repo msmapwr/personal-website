@@ -7,6 +7,7 @@ import { lazy, Suspense } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { AppShell } from "./components/AppShell";
 import { useThemeMode } from "./hooks/useThemeMode";
+import { LanguageProvider } from "./i18n/LanguageContext";
 import { darkTheme, lightTheme } from "./theme/fluentTheme";
 
 const Home = lazy(() => import("./pages/Home").then((m) => ({ default: m.Home })));
@@ -38,20 +39,22 @@ export function App() {
 
   return (
     <FluentProvider theme={resolved === "dark" ? darkTheme : lightTheme}>
-      <HashRouter>
-        <Suspense fallback={<PageLoading />}>
-          <Routes>
-            <Route element={<AppShell mode={mode} onModeChange={setMode} />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<Home />} />
-            </Route>
-          </Routes>
-        </Suspense>
-      </HashRouter>
+      <LanguageProvider>
+        <HashRouter>
+          <Suspense fallback={<PageLoading />}>
+            <Routes>
+              <Route element={<AppShell mode={mode} onModeChange={setMode} />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<Home />} />
+              </Route>
+            </Routes>
+          </Suspense>
+        </HashRouter>
+      </LanguageProvider>
     </FluentProvider>
   );
 }

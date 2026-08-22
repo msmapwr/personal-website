@@ -1,42 +1,42 @@
-export interface LocalizedText {
-  zh: string;
-  en: string;
+export interface Language {
+  id: string;
+  label: string;
 }
 
 export interface NavItem {
   id: string;
-  label: LocalizedText;
+  label: string;
 }
 
 export interface HeroContent {
-  tagline: LocalizedText;
-  subtitle: LocalizedText;
+  tagline: string;
+  subtitle: string;
   actions: {
-    primary: LocalizedText;
-    secondary: LocalizedText;
+    primary: string;
+    secondary: string;
   };
 }
 
 export interface AboutContent {
-  title: LocalizedText;
-  paragraphs: LocalizedText[];
+  title: string;
+  paragraphs: string[];
 }
 
 export type SkillLevel = "proficient" | "learning";
 
 export interface SkillItem {
   level: SkillLevel;
-  label: LocalizedText;
+  label: string;
 }
 
 export interface SkillGroup {
   name: string;
-  label: LocalizedText;
+  label: string;
   items: SkillItem[];
 }
 
 export interface SkillsContent {
-  title: LocalizedText;
+  title: string;
   groups: SkillGroup[];
 }
 
@@ -49,26 +49,27 @@ export interface ContactItem {
 }
 
 export interface ContactContent {
-  title: LocalizedText;
+  title: string;
   items: ContactItem[];
 }
 
 export interface Project {
   id: string;
-  name: LocalizedText;
-  tagline: LocalizedText;
-  description: LocalizedText;
+  name: string;
+  tagline: string;
+  description: string;
   tags: string[];
   link: string;
   demo?: string;
 }
 
 export interface ProjectsContent {
-  title: LocalizedText;
+  title: string;
   projects: Project[];
 }
 
-export interface SiteContent {
+/** 单个语言下的完整内容快照 */
+export interface LocaleContent {
   name: string;
   avatar?: string;
   nav: NavItem[];
@@ -77,4 +78,9 @@ export interface SiteContent {
   skills: SkillsContent;
   contact: ContactContent;
   projects: ProjectsContent;
+}
+
+export interface SiteContent {
+  languages: Language[];
+  locales: Record<string, LocaleContent>;
 }

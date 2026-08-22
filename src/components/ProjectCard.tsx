@@ -32,12 +32,6 @@ const useStyles = makeStyles({
     gap: "12px",
     padding: "0 20px 16px",
   },
-  taglineEn: {
-    color: tokens.colorNeutralForeground3,
-  },
-  descriptionEn: {
-    color: tokens.colorNeutralForeground2,
-  },
   tags: {
     display: "flex",
     flexWrap: "wrap",
@@ -94,17 +88,10 @@ export function ProjectCard({ project }: { project: Project }) {
       onMouseLeave={() => setActive(false)}
     >
       <Card className={styles.card}>
-        <CardHeader
-          header={<Title3>{project.name.zh}</Title3>}
-          description={project.name.en}
-        />
+        <CardHeader header={<Title3>{project.name}</Title3>} />
         <div className={styles.body}>
-          <div>
-            <Subtitle2>{project.tagline.zh}</Subtitle2>
-            <Body1 className={styles.taglineEn}>{project.tagline.en}</Body1>
-          </div>
-          <Body1>{project.description.zh}</Body1>
-          <Body1 className={styles.descriptionEn}>{project.description.en}</Body1>
+          <Subtitle2>{project.tagline}</Subtitle2>
+          <Body1>{project.description}</Body1>
           <div className={styles.tags}>
             {project.tags.map((t) => (
               <Badge key={t} appearance="tint">

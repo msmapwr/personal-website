@@ -1,16 +1,13 @@
-import { Body1, Title2, makeStyles, tokens } from "@fluentui/react-components";
+import { Title2, makeStyles } from "@fluentui/react-components";
 import { ProjectCard } from "../components/ProjectCard";
 import { Reveal } from "../components/Reveal";
-import { content } from "../content";
+import { useT } from "../i18n/LanguageContext";
 
 const useStyles = makeStyles({
   root: {
     display: "flex",
     flexDirection: "column",
     gap: "16px",
-  },
-  titleEn: {
-    color: tokens.colorNeutralForeground3,
   },
   grid: {
     display: "grid",
@@ -24,13 +21,12 @@ const useStyles = makeStyles({
 
 export function Projects() {
   const styles = useStyles();
-  const { title, projects } = content.projects;
+  const { title, projects } = useT().projects;
 
   return (
     <section className={styles.root}>
       <Reveal>
-        <Title2>{title.zh}</Title2>
-        <Body1 className={styles.titleEn}>{title.en}</Body1>
+        <Title2>{title}</Title2>
       </Reveal>
       <div className={styles.grid}>
         {projects.map((p, i) => (
