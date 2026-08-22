@@ -1,5 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { Link, Outlet } from "react-router-dom";
 import { ThemeMode } from "../hooks/useThemeMode";
 import { useT } from "../i18n/LanguageContext";
@@ -73,16 +73,18 @@ const useStyles = makeStyles({
 export function AppShell({ mode, onModeChange }: AppShellProps) {
   const styles = useStyles();
   const t = useT();
+  const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
   });
+  const progress = reduce ? scrollYProgress : scaleX;
 
   return (
     <div className={styles.root}>
-      <motion.div className={styles.progress} style={{ scaleX }} />
+      <motion.div className={styles.progress} style={{ scaleX: progress }} />
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link to="/" className={styles.brand}>
