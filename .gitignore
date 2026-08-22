@@ -1,5 +1,6 @@
 node_modules
 .npm-cache
+_tmp
 dist
 dist-ssr
 *.local
