@@ -10,8 +10,8 @@
 <site>
 
   <meta>
-    <name>msmapwr</name>
-    <avatar>https://zh.minecraft.wiki/index.php?curid=47618</avatar>
+    <name>Msmapwr</name>
+    <avatar>https://zh.minecraft.wiki/images/head.gif</avatar>
   </meta>
 
   <nav>
@@ -29,7 +29,7 @@
     </tagline>
     <subtitle>
       <zh>爱玩 Minecraft/CS：GO，喜欢建筑和 PVP，平时也用 C# 写桌面程序。这里是我的作品。</zh>
-      <en>Hi, I'm msmapwr. I play Minecraft, mostly building and PVP, and I write desktop programs in C#. Here are my projects.</en>
+      <en>Hi, I'm Msmapwr. I play Minecraft, mostly building and PVP, and I write desktop programs in C#. Here are my projects.</en>
     </subtitle>
     <actions>
       <primary><zh>查看项目</zh><en>View Projects</en></primary>
@@ -43,8 +43,8 @@
       <en>About Me</en>
     </title>
     <paragraph>
-      <zh>我是 msmapwr，一名学生，平时喜欢做游戏和桌面程序。</zh>
-      <en>I'm msmapwr, a student who likes making games and desktop programs.</en>
+      <zh>我是 Msmapwr，一名学生，平时喜欢做游戏和桌面程序。</zh>
+      <en>I'm Msmapwr, a student who likes making games and desktop programs.</en>
     </paragraph>
     <paragraph>
       <zh>我玩 Minecraft，主要做建筑和场景，也打 PVP。编程上我用 C#，最近在学 WPF 和 WinUI。</zh>
