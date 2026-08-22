@@ -25,6 +25,9 @@ const useStyles = makeStyles({
     },
   },
   link: {
+    display: "inline-flex",
+    alignItems: "center",
+    minHeight: "44px",
     padding: "6px 12px",
     borderRadius: "6px",
     textDecoration: "none",

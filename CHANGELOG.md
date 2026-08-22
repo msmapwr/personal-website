@@ -2,7 +2,14 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/) 规范，版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)。
 
-当前版本 **1.2.0**。
+当前版本 **1.2.1**。
+
+## [1.2.1] - 2026-08-22
+
+### 优化
+
+- 正文字号 14px → 15px（对齐 Fluent 正文 15-16px 建议）
+- 导航链接触控目标提升到 ≥44px
 
 ## [1.2.0] - 2026-08-22
 

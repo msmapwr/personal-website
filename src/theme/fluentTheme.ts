@@ -24,5 +24,13 @@ export const brandRamp: BrandVariants = {
   160: "#f5f9fd",
 };
 
-export const lightTheme = createLightTheme(brandRamp);
-export const darkTheme = createDarkTheme(brandRamp);
+export const lightTheme = {
+  ...createLightTheme(brandRamp),
+  fontSizeBase300: "15px",
+  lineHeightBase300: "22px",
+};
+export const darkTheme = {
+  ...createDarkTheme(brandRamp),
+  fontSizeBase300: "15px",
+  lineHeightBase300: "22px",
+};
