@@ -111,7 +111,7 @@ export function parseContent(xml: string): SiteContent {
     site.getElementsByTagName("language"),
   ).map((l) => ({
     id: l.getAttribute("id") ?? "",
-    label: l.textContent?.trim() ?? "",
+    label: l.getAttribute("label") ?? l.textContent?.trim() ?? "",
   }));
 
   const locales: Record<string, LocaleContent> = {};
