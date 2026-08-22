@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  个人网站文案内容源（按语言排列，为 i18n 准备）
+  个人网站文案内容源（按语言排列，i18n）
   ============================================
   - <languages> 列出可用语言（id + 显示名）；新增语言时在此加一条，并加一个 <locale id="..."> 块。
-  - 每个 <locale> 是一个完整、自包含的语言快照，文本为纯文本（不再用 <zh>/<en> 包裹）。
+  - 每个 <locale> 是一个完整、自包含的语言快照，文本为纯文本。
   - 网页根据当前语言读取对应的 <locale>。
   - level 取值：proficient（掌握）/ learning（学习中）
 -->
@@ -13,6 +13,17 @@
   <languages>
     <language id="zh" label="中文" />
     <language id="en" label="English" />
+    <language id="zh-HK" label="繁體中文（香港/澳門）" />
+    <language id="zh-TW" label="繁體中文（臺灣）" />
+    <language id="fr" label="Français" />
+    <language id="de" label="Deutsch" />
+    <language id="ru" label="Русский" />
+    <language id="ja" label="日本語" />
+    <language id="ko" label="한국어" />
+    <language id="lzh" label="文言" />
+    <language id="pt" label="Português" />
+    <language id="es" label="Español" />
+    <language id="alien" label="外星文" />
   </languages>
 
   <locale id="zh">
@@ -194,6 +205,1051 @@
         <name>Personal Website</name>
         <tagline>A Fluent Design personal portfolio website</tagline>
         <description>The site you're looking at. A bilingual portfolio in Microsoft's Fluent Design style, built with React and Fluent UI React and hosted on GitHub Pages.</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="zh-HK">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">首頁</item>
+      <item id="about">關於我</item>
+      <item id="projects">項目</item>
+      <item id="skills">技能</item>
+      <item id="contact">聯絡</item>
+    </nav>
+    <hero>
+      <tagline>Minecraft 創作者 &amp; C# 開發者</tagline>
+      <subtitle>鍾意玩 Minecraft／CS:GO，鍾意建築同 PVP，平時都用 C# 寫桌面程式。呢度係我嘅作品。</subtitle>
+      <actions>
+        <primary>查看項目</primary>
+        <secondary>聯絡我</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>關於我</title>
+      <paragraph>我係 Msmapwr，一名學生，鍾意整遊戲同桌面程式。</paragraph>
+      <paragraph>我玩 Minecraft，主要做建築同場景，亦打 PVP。編程用 C#，最近學緊 WPF 同 WinUI。</paragraph>
+      <paragraph>我用 AI 整咗網頁策略桌遊《第二綠洲》，由玩法到代碼都係 AI 搞掂。我鍾意將諗法變成行得郁嘅嘢，然後繼續學新嘢。</paragraph>
+    </about>
+    <skills>
+      <title>技能 / 技術棧</title>
+      <group name="game">
+        <label>遊戲與創作</label>
+        <item level="proficient">Minecraft 建築與場景設計</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>程式語言</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>桌面開發</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>工具鏈</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>聯絡方式</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>電郵</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>項目展示</title>
+      <project id="the-second-oasis">
+        <name>第二綠洲</name>
+        <tagline>月球領土爭奪 · 回合制網頁策略桌遊 · 2～4 人對戰</tagline>
+        <description>《第二綠洲》係一款以月球殖民為背景嘅回合制網頁策略遊戲。玩家扮演唔同國家嘅月球開發勢力，喺有限資源、隨機事件同其他玩家嘅競爭中建立自己嘅領土。透過風險選擇、開發鏈、搶奪與崩壞等機制，喺終局結算中成為最大嘅月球勢力。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>個人網站</name>
+        <tagline>Fluent Design 風格嘅個人作品集網站</tagline>
+        <description>你而家睇到嘅呢個網站。用微軟 Fluent Design 風格做中英雙語作品集，用 React 同 Fluent UI React 搭建，託管喺 GitHub Pages。</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="zh-TW">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">首頁</item>
+      <item id="about">關於我</item>
+      <item id="projects">專案</item>
+      <item id="skills">技能</item>
+      <item id="contact">聯絡</item>
+    </nav>
+    <hero>
+      <tagline>Minecraft 創作者 &amp; C# 開發者</tagline>
+      <subtitle>喜歡玩 Minecraft／CS:GO，喜歡建築和 PVP，平常也用 C# 寫桌面程式。這裡是我的作品。</subtitle>
+      <actions>
+        <primary>查看專案</primary>
+        <secondary>聯絡我</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>關於我</title>
+      <paragraph>我是 Msmapwr，一名學生，喜歡製作遊戲和桌面程式。</paragraph>
+      <paragraph>我玩 Minecraft，主要做建築和場景，也打 PVP。程式方面我用 C#，最近在學 WPF 和 WinUI。</paragraph>
+      <paragraph>我用 AI 做了網頁策略桌遊《第二綠洲》，從玩法到程式碼都是 AI 完成。我喜歡把想法變成能跑起來的東西，然後繼續學習新的事物。</paragraph>
+    </about>
+    <skills>
+      <title>技能 / 技術棧</title>
+      <group name="game">
+        <label>遊戲與創作</label>
+        <item level="proficient">Minecraft 建築與場景設計</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>程式語言</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>桌面開發</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>工具鏈</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>聯絡方式</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>電子郵件</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>專案展示</title>
+      <project id="the-second-oasis">
+        <name>第二綠洲</name>
+        <tagline>月球領土爭奪 · 回合制網頁策略桌遊 · 2～4 人對戰</tagline>
+        <description>《第二綠洲》是一款以月球殖民為背景的回合制網頁策略遊戲。玩家扮演不同國家的月球開發勢力，在有限資源、隨機事件與其他玩家的競爭中建立自己的領土。透過風險選擇、開發鏈、搶奪與崩壞等機制，在終局結算中成為最大的月球勢力。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>個人網站</name>
+        <tagline>Fluent Design 風格的個人作品集網站</tagline>
+        <description>你現在看到的這個網站。用微軟 Fluent Design 風格做中英雙語作品集，用 React 和 Fluent UI React 搭建，託管在 GitHub Pages。</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="fr">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">Accueil</item>
+      <item id="about">À propos</item>
+      <item id="projects">Projets</item>
+      <item id="skills">Compétences</item>
+      <item id="contact">Contact</item>
+    </nav>
+    <hero>
+      <tagline>Créateur Minecraft &amp; Développeur C#</tagline>
+      <subtitle>Salut, je suis Msmapwr. Je joue à Minecraft, surtout construction et PVP, et j'écris des programmes de bureau en C#. Voici mes projets.</subtitle>
+      <actions>
+        <primary>Voir les projets</primary>
+        <secondary>Me contacter</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>À propos de moi</title>
+      <paragraph>Je suis Msmapwr, un étudiant qui aime créer des jeux et des programmes de bureau.</paragraph>
+      <paragraph>Je joue à Minecraft, surtout de la construction et des décors, plus un peu de PVP. Je programme en C#, et j'apprends WPF et WinUI.</paragraph>
+      <paragraph>J'ai créé The Second Oasis, un jeu de stratégie web, par moi-même, des règles au code. J'aime transformer des idées en choses qui fonctionnent, puis apprendre la suite.</paragraph>
+    </about>
+    <skills>
+      <title>Compétences</title>
+      <group name="game">
+        <label>Jeu &amp; Création</label>
+        <item level="proficient">Construction et décors Minecraft</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>Langages</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>Développement bureau</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>Outils</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>Contact</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>E-mail</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>Projets</title>
+      <project id="the-second-oasis">
+        <name>The Second Oasis</name>
+        <tagline>Territoire lunaire · jeu de plateau web stratégique au tour par tour · 2 à 4 joueurs</tagline>
+        <description>The Second Oasis est un jeu de stratégie web au tour par tour sur la colonisation de la Lune. Chaque joueur dirige le programme lunaire d'une nation, en bâtissant un territoire avec des ressources limitées, des événements aléatoires et d'autres joueurs. Les choix de risque, les chaînes de développement et la mécanique de saisie et d'effondrement façonnent la partie, et la plus grande puissance lunaire gagne au décompte final.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>Site personnel</name>
+        <tagline>Un portfolio personnel au style Fluent Design</tagline>
+        <description>Le site que vous regardez. Un portfolio bilingue dans le style Fluent Design de Microsoft, construit avec React et Fluent UI React, hébergé sur GitHub Pages.</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="de">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">Start</item>
+      <item id="about">Über mich</item>
+      <item id="projects">Projekte</item>
+      <item id="skills">Fähigkeiten</item>
+      <item id="contact">Kontakt</item>
+    </nav>
+    <hero>
+      <tagline>Minecraft-Ersteller &amp; C#-Entwickler</tagline>
+      <subtitle>Hi, ich bin Msmapwr. Ich spiele Minecraft, hauptsächlich Bauen und PVP, und schreibe Desktop-Programme in C#. Hier sind meine Projekte.</subtitle>
+      <actions>
+        <primary>Projekte ansehen</primary>
+        <secondary>Kontakt aufnehmen</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>Über mich</title>
+      <paragraph>Ich bin Msmapwr, ein Student, der gern Spiele und Desktop-Programme macht.</paragraph>
+      <paragraph>Ich spiele Minecraft, hauptsächlich Bauen und Szenerie, dazu etwas PVP. Ich programmiere in C# und lerne WPF und WinUI.</paragraph>
+      <paragraph>Ich habe The Second Oasis, ein Web-Strategiespiel, selbst gemacht, von den Regeln bis zum Code. Ich verwandle Ideen gern in Dinge, die laufen, und lerne dann weiter.</paragraph>
+    </about>
+    <skills>
+      <title>Fähigkeiten</title>
+      <group name="game">
+        <label>Spiel &amp; Kreation</label>
+        <item level="proficient">Minecraft-Bau und Szenengestaltung</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>Sprachen</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>Desktop-Entwicklung</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>Werkzeuge</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>Kontakt</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>E-Mail</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>Projekte</title>
+      <project id="the-second-oasis">
+        <name>The Second Oasis</name>
+        <tagline>Mondterritorium · rundenbasiertes Web-Strategiespiel · 2 bis 4 Spieler</tagline>
+        <description>The Second Oasis ist ein rundenbasiertes Web-Strategiespiel über die Besiedlung des Mondes. Jeder Spieler leitet das Mondprogramm einer Nation und baut ein Territorium mit begrenzten Ressourcen, zufälligen Ereignissen und anderen Spielern auf. Risikoentscheidungen, Entwicklungsketten und die Erobern-und-Zusammenbruch-Mechanik prägen das Spiel, und die größte Mondmacht gewinnt bei der Endabrechnung.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>Persönliche Website</name>
+        <tagline>Ein persönliches Portfolio im Fluent-Design-Stil</tagline>
+        <description>Die Website, die du gerade ansiehst. Ein zweisprachiges Portfolio im Fluent-Design-Stil von Microsoft, gebaut mit React und Fluent UI React, gehostet auf GitHub Pages.</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="ru">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">Главная</item>
+      <item id="about">Обо мне</item>
+      <item id="projects">Проекты</item>
+      <item id="skills">Навыки</item>
+      <item id="contact">Контакты</item>
+    </nav>
+    <hero>
+      <tagline>Создатель контента Minecraft &amp; разработчик C#</tagline>
+      <subtitle>Привет, я Msmapwr. Играю в Minecraft, в основном строю и PVP, а также пишу десктопные программы на C#. Вот мои проекты.</subtitle>
+      <actions>
+        <primary>Смотреть проекты</primary>
+        <secondary>Связаться со мной</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>Обо мне</title>
+      <paragraph>Я Msmapwr, студент, который любит делать игры и десктопные программы.</paragraph>
+      <paragraph>Я играю в Minecraft, в основном строю и оформляю сцены, плюс немного PVP. Программирую на C# и учу WPF и WinUI.</paragraph>
+      <paragraph>Я сам сделал The Second Oasis, веб-стратегию, от правил до кода. Мне нравится превращать идеи в работающие вещи, а затем учиться дальше.</paragraph>
+    </about>
+    <skills>
+      <title>Навыки</title>
+      <group name="game">
+        <label>Игра и творчество</label>
+        <item level="proficient">Строительство и сцены в Minecraft</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>Языки</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>Десктоп-разработка</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>Инструменты</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>Контакты</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>Эл. почта</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>Проекты</title>
+      <project id="the-second-oasis">
+        <name>The Second Oasis</name>
+        <tagline>Лунная территория · пошаговая веб-стратегия · 2–4 игрока</tagline>
+        <description>The Second Oasis — пошаговая веб-стратегия о колонизации Луны. Каждый игрок руководит лунной программой своей страны, строя территорию в условиях ограниченных ресурсов, случайных событий и конкуренции других игроков. Выбор риска, цепочки развития и механика захвата и краха определяют игру, а побеждает крупнейшая лунная держава при финальном подсчёте.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>Личный сайт</name>
+        <tagline>Личное портфолио в стиле Fluent Design</tagline>
+        <description>Сайт, который вы сейчас смотрите. Двуязычное портфолио в стиле Fluent Design от Microsoft, созданное на React и Fluent UI React, размещённое на GitHub Pages.</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="ja">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">ホーム</item>
+      <item id="about">私について</item>
+      <item id="projects">プロジェクト</item>
+      <item id="skills">スキル</item>
+      <item id="contact">連絡先</item>
+    </nav>
+    <hero>
+      <tagline>Minecraft クリエイター &amp; C# 開発者</tagline>
+      <subtitle>こんにちは、Msmapwr です。Minecraft を遊び、主に建築と PVP をしています。C# でデスクトップアプリも書いています。こちらが私の作品です。</subtitle>
+      <actions>
+        <primary>プロジェクトを見る</primary>
+        <secondary>連絡する</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>私について</title>
+      <paragraph>私は Msmapwr、ゲームとデスクトップアプリを作るのが好きな学生です。</paragraph>
+      <paragraph>Minecraft を遊び、主に建築とシーン作り、それに少し PVP も。プログラミングは C# で、WPF と WinUI を勉強中です。</paragraph>
+      <paragraph>Web 戦略ボードゲーム『The Second Oasis』を、ルールからコードまで自分で作りました。アイデアを動くものにするのが好きで、その後も学び続けています。</paragraph>
+    </about>
+    <skills>
+      <title>スキル</title>
+      <group name="game">
+        <label>ゲーム・創作</label>
+        <item level="proficient">Minecraft 建築・シーン制作</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>言語</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>デスクトップ開発</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>ツール</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>連絡先</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>メール</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>プロジェクト</title>
+      <project id="the-second-oasis">
+        <name>The Second Oasis</name>
+        <tagline>月面領土争い · ターン制 Web 戦略ボードゲーム · 2〜4人対戦</tagline>
+        <description>『The Second Oasis』は、月面植民を舞台にしたターン制の Web 戦略ゲームです。各プレイヤーは異なる国の月開発勢力を率い、限られた資源・ランダムイベント・他プレイヤーとの競争の中で領土を築きます。リスク選択、開発チェーン、奪取と崩壊の仕組みがゲームを形作り、最終決算で最大の月面勢力となった者が勝利します。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>個人サイト</name>
+        <tagline>Fluent Design スタイルの個人ポートフォリオサイト</tagline>
+        <description>今ご覧のこのサイト。Microsoft の Fluent Design スタイルで作ったバイリンガルのポートフォリオで、React と Fluent UI React で構築し、GitHub Pages で公開しています。</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="ko">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">홈</item>
+      <item id="about">소개</item>
+      <item id="projects">프로젝트</item>
+      <item id="skills">기술</item>
+      <item id="contact">연락처</item>
+    </nav>
+    <hero>
+      <tagline>Minecraft 크리에이터 &amp; C# 개발자</tagline>
+      <subtitle>안녕하세요, Msmapwr입니다. Minecraft를 주로 건축과 PVP로 즐기고, C#으로 데스크톱 프로그램도 만듭니다. 여기 제 작품들이 있습니다.</subtitle>
+      <actions>
+        <primary>프로젝트 보기</primary>
+        <secondary>연락하기</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>소개</title>
+      <paragraph>저는 Msmapwr, 게임과 데스크톱 프로그램을 만드는 걸 좋아하는 학생입니다.</paragraph>
+      <paragraph>Minecraft를 주로 건축과 장면 작업으로 즐기고, PVP도 합니다. 프로그래밍은 C#을 쓰고, WPF와 WinUI를 배우는 중입니다.</paragraph>
+      <paragraph>웹 전략 보드게임 《The Second Oasis》를 규칙부터 코드까지 직접 만들었습니다. 아이디어를 실제로 돌아가는 것으로 만드는 걸 좋아하고, 계속 새로운 것을 배웁니다.</paragraph>
+    </about>
+    <skills>
+      <title>기술</title>
+      <group name="game">
+        <label>게임・창작</label>
+        <item level="proficient">Minecraft 건축・장면 제작</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>언어</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>데스크톱 개발</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>도구</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>연락처</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>이메일</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>프로젝트</title>
+      <project id="the-second-oasis">
+        <name>The Second Oasis</name>
+        <tagline>달 영토 쟁탈 · 턴제 웹 전략 보드게임 · 2~4인 대전</tagline>
+        <description>《The Second Oasis》는 달 식민지를 배경으로 한 턴제 웹 전략 게임입니다. 각 플레이어는 서로 다른 국가의 달 개발 세력을 이끌며, 제한된 자원·무작위 이벤트·다른 플레이어와의 경쟁 속에서 영토를 건설합니다. 리스크 선택, 개발 체인, 탈취와 붕괴 메커니즘이 게임을 만들고, 최종 정산에서 가장 큰 달 세력이 승리합니다.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>개인 웹사이트</name>
+        <tagline>Fluent Design 스타일의 개인 포트폴리오 사이트</tagline>
+        <description>지금 보고 있는 이 사이트. Microsoft의 Fluent Design 스타일로 만든 이중 언어 포트폴리오로, React와 Fluent UI React로 구축해 GitHub Pages에 호스팅했습니다.</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="lzh">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">首</item>
+      <item id="about">吾</item>
+      <item id="projects">所作</item>
+      <item id="skills">技</item>
+      <item id="contact">通</item>
+    </nav>
+    <hero>
+      <tagline>Minecraft 之匠 &amp; C# 之工</tagline>
+      <subtitle>好 Minecraft 與 CS:GO，善築與戰，亦以 C# 製桌面之程。此吾所作也。</subtitle>
+      <actions>
+        <primary>觀所作</primary>
+        <secondary>通於吾</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>關於吾</title>
+      <paragraph>吾乃 Msmapwr，學子也，好製遊戲與桌面之程。</paragraph>
+      <paragraph>吾玩 Minecraft，主築與景，亦戰於 PVP。程式用 C#，近習 WPF 與 WinUI。</paragraph>
+      <paragraph>吾以 AI 製網頁策略桌遊《第二綠洲》，自玩法至代碼皆 AI 成之。吾好使所思為可行之物，復學新者。</paragraph>
+    </about>
+    <skills>
+      <title>技藝</title>
+      <group name="game">
+        <label>遊戲與創作</label>
+        <item level="proficient">Minecraft 建築與場景</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>程式語言</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>桌面開發</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>工具</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>通問</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>郵</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>所作</title>
+      <project id="the-second-oasis">
+        <name>第二綠洲</name>
+        <tagline>月土之爭 · 回合網頁策略桌遊 · 二至四人對戰</tagline>
+        <description>《第二綠洲》者，以月球殖民為景之回合網頁策略遊戲也。玩家各主一國之月事，於資源有限、事機無常、群雄相爭之間，建其疆土。以風險之擇、開發之鏈、搶奪與崩壞之制，終局結算，月土最廣者勝。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>個人之站</name>
+        <tagline>Fluent Design 風格之個人作品集網站</tagline>
+        <description>今君所見之站也。以微軟 Fluent Design 之風，作中英雙語作品集，用 React 與 Fluent UI React 築之，託於 GitHub Pages。</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="pt">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">Início</item>
+      <item id="about">Sobre</item>
+      <item id="projects">Projetos</item>
+      <item id="skills">Habilidades</item>
+      <item id="contact">Contato</item>
+    </nav>
+    <hero>
+      <tagline>Criador de Minecraft &amp; Desenvolvedor C#</tagline>
+      <subtitle>Oi, eu sou Msmapwr. Jogo Minecraft, principalmente construção e PVP, e escrevo programas de desktop em C#. Aqui estão meus projetos.</subtitle>
+      <actions>
+        <primary>Ver projetos</primary>
+        <secondary>Fale comigo</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>Sobre mim</title>
+      <paragraph>Sou Msmapwr, um estudante que gosta de fazer jogos e programas de desktop.</paragraph>
+      <paragraph>Jogo Minecraft, principalmente construção e cenários, além de um pouco de PVP. Programo em C# e estou aprendendo WPF e WinUI.</paragraph>
+      <paragraph>Fiz The Second Oasis, um jogo de estratégia web, sozinho, das regras ao código. Gosto de transformar ideias em coisas que funcionam e depois aprender o que vem a seguir.</paragraph>
+    </about>
+    <skills>
+      <title>Habilidades</title>
+      <group name="game">
+        <label>Jogo &amp; Criação</label>
+        <item level="proficient">Construção e cenários no Minecraft</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>Linguagens</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>Desenvolvimento desktop</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>Ferramentas</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>Contato</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>E-mail</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>Projetos</title>
+      <project id="the-second-oasis">
+        <name>The Second Oasis</name>
+        <tagline>Território lunar · jogo de tabuleiro web estratégico por turnos · 2 a 4 jogadores</tagline>
+        <description>The Second Oasis é um jogo de estratégia web por turnos sobre a colonização da Lua. Cada jogador comanda o programa lunar de uma nação, construindo território com recursos limitados, eventos aleatórios e outros jogadores. Escolhas de risco, cadeias de desenvolvimento e a mecânica de tomada e colapso moldam o jogo, e a maior potência lunar vence na contagem final.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>Site pessoal</name>
+        <tagline>Um portfólio pessoal no estilo Fluent Design</tagline>
+        <description>O site que você está vendo. Um portfólio bilíngue no estilo Fluent Design da Microsoft, construído com React e Fluent UI React, hospedado no GitHub Pages.</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="es">
+    <meta>
+      <name>Msmapwr</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">Inicio</item>
+      <item id="about">Sobre mí</item>
+      <item id="projects">Proyectos</item>
+      <item id="skills">Habilidades</item>
+      <item id="contact">Contacto</item>
+    </nav>
+    <hero>
+      <tagline>Creador de Minecraft &amp; Desarrollador C#</tagline>
+      <subtitle>Hola, soy Msmapwr. Juego a Minecraft, sobre todo construcción y PVP, y escribo programas de escritorio en C#. Aquí están mis proyectos.</subtitle>
+      <actions>
+        <primary>Ver proyectos</primary>
+        <secondary>Contactarme</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>Sobre mí</title>
+      <paragraph>Soy Msmapwr, un estudiante al que le gusta hacer juegos y programas de escritorio.</paragraph>
+      <paragraph>Juego a Minecraft, sobre todo construcción y escenas, más algo de PVP. Programo en C# y estoy aprendiendo WPF y WinUI.</paragraph>
+      <paragraph>Hice The Second Oasis, un juego de estrategia web, yo mismo, de las reglas al código. Me gusta convertir ideas en cosas que funcionan y luego aprender lo que sigue.</paragraph>
+    </about>
+    <skills>
+      <title>Habilidades</title>
+      <group name="game">
+        <label>Juego y creación</label>
+        <item level="proficient">Construcción y escenas de Minecraft</item>
+        <item level="proficient">Minecraft PVP</item>
+      </group>
+      <group name="languages">
+        <label>Lenguajes</label>
+        <item level="proficient">C#</item>
+      </group>
+      <group name="desktop">
+        <label>Desarrollo de escritorio</label>
+        <item level="learning">WPF</item>
+        <item level="learning">WinUI</item>
+      </group>
+      <group name="tools">
+        <label>Herramientas</label>
+        <item level="proficient">Git</item>
+        <item level="proficient">Visual Studio</item>
+      </group>
+    </skills>
+    <contact>
+      <title>Contacto</title>
+      <github>
+        <label>GitHub</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>Correo</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>Bilibili</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>Proyectos</title>
+      <project id="the-second-oasis">
+        <name>The Second Oasis</name>
+        <tagline>Territorio lunar · juego de mesa web estratégico por turnos · 2 a 4 jugadores</tagline>
+        <description>The Second Oasis es un juego de estrategia web por turnos sobre la colonización de la Luna. Cada jugador dirige el programa lunar de una nación, construyendo territorio con recursos limitados, eventos aleatorios y otros jugadores. Las elecciones de riesgo, las cadenas de desarrollo y la mecánica de captura y colapso dan forma al juego, y la mayor potencia lunar gana en el recuento final.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>Sitio personal</name>
+        <tagline>Un portafolio personal en estilo Fluent Design</tagline>
+        <description>El sitio que estás viendo. Un portafolio bilingüe en el estilo Fluent Design de Microsoft, construido con React y Fluent UI React, alojado en GitHub Pages.</description>
+        <tags>
+          <tag>React</tag>
+          <tag>Fluent UI</tag>
+          <tag>Vite</tag>
+          <tag>TypeScript</tag>
+        </tags>
+        <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+    </projects>
+  </locale>
+
+  <locale id="alien">
+    <meta>
+      <name>ᛗᛋᛗᚨᛈᚹᚱ</name>
+      <avatar>images/head.png</avatar>
+    </meta>
+    <nav>
+      <item id="home">ᚱᚨᚷᚾ</item>
+      <item id="about">ᛖᚷ ᛗᛁᚲ</item>
+      <item id="projects">ᚹᛖᚱᚲ</item>
+      <item id="skills">ᛁᚦᚱᛟᛏᛏ</item>
+      <item id="contact">ᛊᚨᛗᛒᚨᚾᛞ</item>
+    </nav>
+    <hero>
+      <tagline>ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛊᚲᚨᛈᚨᚱᛁ &amp; ᚲ# ᚺᛟᚾᚾᚢᚦᛁ</tagline>
+      <subtitle>ᚺᛖᛁᛚᛚ ᛖᚷ ᛖᚱ ᛗᛋᛗᚨᛈᚹᚱ ᛖᚷ ᛊᛈᛁᛚᚨ ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛒᛁᚷᚷᛁ ᛟᚷ ᛈᚹᛈ ᛟᚷ ᛊᚲᚱᛁᚠᚨ ᛞᛖᛊᚲᛏᛟᛈᛈ ᛈᚱᛟᚷᚱᛟᛗ ᛁ ᚲ# ᚺᛖᚱ ᛖᚱᚢ ᚹᛖᚱᚲ ᛗᛁᚾ</subtitle>
+      <actions>
+        <primary>ᛊᛃᚨ ᚹᛖᚱᚲ</primary>
+        <secondary>ᚺᚨᚠᚨ ᛊᚨᛗᛒᚨᚾᛞ</secondary>
+      </actions>
+    </hero>
+    <about>
+      <title>ᚢᛗ ᛗᛁᚷ</title>
+      <paragraph>ᛖᚷ ᛖᚱ ᛗᛋᛗᚨᛈᚹᚱ ᚾᛖᛗᚨᚾᛞᛁ ᛊᛖᛗ ᚷᛖᚱᚨᛉ ᛚᛖᛁᚲᛁ ᛟᚷ ᛞᛖᛊᚲᛏᛟᛈᛈ ᛈᚱᛟᚷᚱᛟᛗ</paragraph>
+      <paragraph>ᛖᚷ ᛊᛈᛁᛚᚨ ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛒᛁᚷᚷᛁ ᛟᚷ ᛊᛖᚾᚨ ᛟᚷ ᛈᚹᛈ ᛖᚷ ᚲᛟᛞᚨ ᛁ ᚲ# ᛟᚷ ᛚᚨᛖᚱᛁ ᚹᛈᚠ ᛟᚷ ᚹᛁᚾᚢᛁ</paragraph>
+      <paragraph>ᛖᚷ ᛒᛃᛟ ᛏᛁᛚ ᚦᛖ ᛊᛖᚲᛟᚾᛞ ᛟᚨᛊᛁᛊ ᚹᛖᛒ ᛊᛏᛖᚠᚾᚢ ᛗᛖᛞ ᚨᛁ ᚠᚱᚨ ᚱᛖᚷᛚᚢᛗ ᛏᛁᛚ ᚲᛟᛞᚨ ᛖᚷ ᚷᛖᚱᛁ ᚺᚢᚷᛗᛁᚾᛞ ᚨᛞ ᚺᛚᚢᛏᚢᛗ ᛋᛖᛗ ᚲᛖᛁᚱᛁᚱ ᛟᚷ ᛚᚨᛖᚱᛁ ᛋᛁᛞᚨᚾ ᚾᛁᛏᛏ</paragraph>
+    </about>
+    <skills>
+      <title>ᚠᛖᚱᚾᛁ</title>
+      <group name="game">
+        <label>ᛚᛖᛁᚲᚢᚱ ᛟᚷ ᛊᚲᛟᛈᚢᚾ</label>
+        <item level="proficient">ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛒᛁᚷᚷᛁ ᛟᚷ ᛊᛖᚾᚨ</item>
+        <item level="proficient">ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛈᚹᛈ</item>
+      </group>
+      <group name="languages">
+        <label>ᛏᚢᚾᚷᚢᛗᚨᛚ</label>
+        <item level="proficient">ᚲ#</item>
+      </group>
+      <group name="desktop">
+        <label>ᛞᛖᛊᚲᛏᛟᛈᛈ ᚦᚱᛟᚢᚾ</label>
+        <item level="learning">ᚹᛈᚠ</item>
+        <item level="learning">ᚹᛁᚾᚢᛁ</item>
+      </group>
+      <group name="tools">
+        <label>ᚹᛖᚱᚲᚠᚨᛖᚱᛁ</label>
+        <item level="proficient">ᚷᛁᛏ</item>
+        <item level="proficient">ᚹᛁᛊᚢᚨᛚ ᛊᛏᚢᛞᛁᛟ</item>
+      </group>
+    </skills>
+    <contact>
+      <title>ᛊᚨᛗᛒᚨᚾᛞ</title>
+      <github>
+        <label>ᚷᛁᛏᚺᚢᛒ</label>
+        <url>https://github.com/msmapwr</url>
+      </github>
+      <email>
+        <label>ᛏᛟᛚᚹᛈᛟᛊᛏ</label>
+        <value>msmapwr@outlook.com</value>
+      </email>
+      <bilibili>
+        <label>ᛒᛁᛚᛁᛒᛁᛚᛁ</label>
+        <name>一只附魔金苹果_yee</name>
+        <url>https://space.bilibili.com/1602924292</url>
+      </bilibili>
+    </contact>
+    <projects>
+      <title>ᚹᛖᚱᚲ</title>
+      <project id="the-second-oasis">
+        <name>ᚦᛖ ᛊᛖᚲᛟᚾᛞ ᛟᚨᛊᛁᛊ</name>
+        <tagline>ᛏᚢᚾᚷᛚ ᛚᚨᚾᛞ · ᚹᛖᛒ ᛊᛏᛖᚠᚾᚢ · 2–4 ᛊᛈᛁᛚᚨᚱᚨᚱ</tagline>
+        <description>ᚦᛖ ᛊᛖᚲᛟᚾᛞ ᛟᚨᛊᛁᛊ ᛖᚱ ᚹᛖᛒ ᛊᛏᛖᚠᚾᚢ ᚢᛗ ᛏᚢᚾᚷᛚᛁᚾᚾ ᚺᚹᛖᚱ ᛊᛈᛁᛚᚨᚱᛁ ᛊᛏᛃᛟᚱᚾᚨ ᛚᚨᚾᛞᛊᛟᚺᚾᚢᚦᛁ ᛗᛖᛞ ᛏᚨᚲᛗᛟᚱᚲᚢᛞᛁᚱ ᚨᚢᛞᛚᛁᚾᛞ ᛏᛁᛚᚹᛁᛚᛃᚢᚾᚨᛞᛁ ᚨᛏᛒᚢᚱᚦᛁᚱ ᛟᚷ ᚨᛞᚱᛁᚱ ᛊᛈᛁᛚᚨᚱᚨᚱ</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>Canvas 2D</tag>
+          <tag>WebSocket</tag>
+          <tag>Vitest</tag>
+        </tags>
+        <link>https://github.com/msmapwr/the-second-oasis</link>
+        <demo>https://msmapwr.github.io/the-second-oasis/</demo>
+      </project>
+      <project id="personal-website">
+        <name>ᛈᛖᚱᛊᛟᚾᚢᛚᛖᚷ ᚹᛖᛒᛊᛁᛞᚨ</name>
+        <tagline>ᚠᛚᚢᛖᚾᛏ ᛞᛖᛊᛁᚷᚾ ᛈᛟᚱᛏᚠᛟᛚᛁᛟ</tagline>
+        <description>ᚦᛖᛊᛊᛁ ᚹᛖᛒᛊᛁᛞᚨ ᛊᛖᛗ ᚦᚢ ᛊᛖᚱᚦ ᛏᚹᛁᛗᚨᛚᛊ ᛈᛟᚱᛏᚠᛟᛚᛁᛟ ᛁ ᚠᛚᚢᛖᚾᛏ ᛞᛖᛊᛁᚷᚾ ᛒᚢᛁᛚᛏ ᛗᛖᛞ ᚱᛖᚨᚲᛏ ᛟᚷ ᚠᛚᚢᛖᚾᛏ ᚢᛁ ᚱᛖᚨᚲᛏ ᚺᛟᛊᛏᛖᛞ ᚨ ᚷᛁᛏᚺᚢᛒ ᛈᚨᚷᛖᛊ</description>
         <tags>
           <tag>React</tag>
           <tag>Fluent UI</tag>
