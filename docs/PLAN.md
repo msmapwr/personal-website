@@ -109,7 +109,7 @@ personal-website-main/
 | 1 | Vite + React + TS 脚手架，装依赖 | ✅ 完成 |
 | 2 | Fluent 主题接入 + 品牌色 + 明暗切换 | ✅ 完成 |
 | 3 | 内容加载层（解析 `content.xml`） | ✅ 完成 |
-| 4 | AppShell 布局 + Hash 路由 + 导航 | ⬜ 待做 |
+| 4 | AppShell 布局 + Hash 路由 + 导航 | ✅ 完成 |
 | 5 | 五个区块组件（Hero/About/Projects/Skills/Contact） | ⬜ 待做 |
 | 6 | 动效 + 响应式 | ⬜ 待做 |
 | 7 | 构建 + GitHub Pages 部署 | ⬜ 待做 |

@@ -14,4 +14,5 @@
 - 主题切换（跟随系统 / 浅色 / 深色，localStorage 持久化）
 - 中英双语文案内容源 `content/content.xml`
 - 内容加载层（解析 `content.xml` 为结构化数据）
+- AppShell 布局、Hash 路由与双语导航
 - 开发计划 `docs/PLAN.md`
