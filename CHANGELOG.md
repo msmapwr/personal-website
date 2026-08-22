@@ -2,7 +2,17 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/) 规范，版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)。
 
-当前版本 **1.1.1**。
+当前版本 **1.2.0**。
+
+## [1.2.0] - 2026-08-22
+
+### 优化
+
+- 动效时长对齐 Fluent 规范（≤200ms：Reveal/入场 500ms→200ms，blob 呼吸放缓）
+- 按钮/卡片按下 `scale` 触觉反馈（按钮 0.97、卡片 0.98）
+- 自定义链接（导航/联系/卡片）补 `focus-visible` 焦点态
+- 卡片 Reveal 边框增亮、联系图标悬停缩放
+- Hero 圆角 16px → 12px
 
 ## [1.1.1] - 2026-08-22
 

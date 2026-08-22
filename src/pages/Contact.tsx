@@ -40,10 +40,18 @@ const useStyles = makeStyles({
       backgroundColor: tokens.colorNeutralBackground2Hover,
       transform: "translateX(4px)",
     },
+    ":focus-visible": {
+      outline: `2px solid ${tokens.colorBrandForeground1}`,
+      outlineOffset: "2px",
+    },
   },
   icon: {
     display: "flex",
     color: tokens.colorBrandForeground1,
+    transition: "transform 0.15s ease",
+    ":hover": {
+      transform: "scale(1.1)",
+    },
   },
   label: {
     color: tokens.colorNeutralForeground2,

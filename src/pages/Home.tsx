@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   hero: {
     position: "relative",
     overflow: "hidden",
-    borderRadius: "16px",
+    borderRadius: "12px",
     padding: "56px 48px",
     background: `linear-gradient(150deg, ${brandRamp[130]} 0%, ${brandRamp[150]} 50%, ${tokens.colorNeutralBackground1} 100%)`,
     display: "flex",
@@ -66,13 +66,13 @@ const useStyles = makeStyles({
 const container: Variants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.12, delayChildren: 0.05 },
+    transition: { staggerChildren: 0.05, delayChildren: 0.03 },
   },
 };
 
 const item: Variants = {
   hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.2, ease: "easeOut" } },
 };
 
 export function Home() {
@@ -89,8 +89,8 @@ export function Home() {
     >
       <motion.div
         className={styles.blob}
-        animate={reduce ? undefined : { scale: [1, 1.2, 1] }}
-        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        animate={reduce ? undefined : { scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       {avatar && (
         <motion.img

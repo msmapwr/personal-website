@@ -57,10 +57,7 @@ npm run build    # 生产构建到 dist/
 由 `.github/workflows/deploy.yml` 在 push 到 `main` 时自动构建并部署到 GitHub Pages。
 
 - 项目站点（默认）：<https://msmapwr.github.io/personal-website/>
-- 根地址（用户站点）：<https://msmapwr.github.io/> —— 需将仓库重命名为 `msmapwr.github.io`，或在仓库 Settings → Pages 配置自定义域名。
-
-首次部署需在仓库 **Settings → Pages → Source** 选择 **GitHub Actions**。
 
 ## 版本
 
-当前版本 **1.0.0**。详见 [CHANGELOG.md](CHANGELOG.md)。
+当前版本详见 [CHANGELOG.md](CHANGELOG.md)。

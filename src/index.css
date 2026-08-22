@@ -14,3 +14,7 @@ body {
   font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "PingFang SC",
     "Microsoft YaHei", sans-serif;
 }
+
+button:active {
+  transform: scale(0.97);
+}

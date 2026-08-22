@@ -38,6 +38,10 @@ const useStyles = makeStyles({
       color: tokens.colorNeutralForeground1,
       transform: "translateY(-1px)",
     },
+    ":focus-visible": {
+      outline: `2px solid ${tokens.colorBrandForeground1}`,
+      outlineOffset: "2px",
+    },
   },
   active: {
     color: tokens.colorBrandForeground1,

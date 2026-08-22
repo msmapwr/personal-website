@@ -22,6 +22,9 @@ const useStyles = makeStyles({
     ":hover": {
       transform: "translateY(-4px)",
     },
+    ":active": {
+      transform: "scale(0.98)",
+    },
   },
   card: {
     height: "100%",
@@ -50,6 +53,10 @@ const useStyles = makeStyles({
     ":hover": {
       textDecoration: "underline",
     },
+    ":focus-visible": {
+      outline: `2px solid ${tokens.colorBrandForeground1}`,
+      outlineOffset: "2px",
+    },
   },
   spotlight: {
     position: "absolute",
@@ -57,12 +64,14 @@ const useStyles = makeStyles({
     borderRadius: "12px",
     background:
       "radial-gradient(320px circle at var(--fx, 50%) var(--fy, 50%), rgba(0,120,212,0.10), transparent 60%)",
+    boxShadow: "inset 0 0 0 1px rgba(0,120,212,0)",
     opacity: "0",
-    transition: "opacity 0.25s ease",
+    transition: "opacity 0.2s ease, box-shadow 0.2s ease",
     pointerEvents: "none",
   },
   spotlightOn: {
     opacity: "1",
+    boxShadow: "inset 0 0 0 1px rgba(0,120,212,0.35)",
   },
 });
 
