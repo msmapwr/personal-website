@@ -63,4 +63,4 @@ npm run build    # 生产构建到 dist/
 
 ## 版本
 
-当前版本 **indev**（开发中），全部阶段完成后发布 **1.0.0**。详见 [CHANGELOG.md](CHANGELOG.md)。
+当前版本 **1.0.0**。详见 [CHANGELOG.md](CHANGELOG.md)。

@@ -113,7 +113,7 @@ personal-website-main/
 | 5 | 五个区块组件（Hero/About/Projects/Skills/Contact） | ✅ 完成 |
 | 6 | 动效 + 响应式 | ✅ 完成 |
 | 7 | 构建 + GitHub Pages 部署 | ✅ 完成 |
-| 8 | 验收 + 后续调整 | ⬜ 待做 |
+| 8 | 验收 + 后续调整 | ✅ 完成 |
 
 ---
 

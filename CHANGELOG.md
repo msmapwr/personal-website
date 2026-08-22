@@ -2,9 +2,9 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/) 规范，版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)。
 
-当前版本 **indev**（开发中），全部阶段完成后发布 **1.0.0**。
+当前版本 **1.0.0**。
 
-## [indev]
+## [1.0.0] - 2026-08-22
 
 ### 新增
 
