@@ -7,6 +7,7 @@ import {
   tokens,
 } from "@fluentui/react-components";
 import { Reveal } from "../components/Reveal";
+import { Link } from "react-router-dom";
 import { useT } from "../i18n/LanguageContext";
 
 const useStyles = makeStyles({
@@ -33,6 +34,10 @@ const useStyles = makeStyles({
     borderRadius: "8px",
     backgroundColor: tokens.colorNeutralBackground2,
   },
+  itemLink: {
+    textDecoration: "none",
+    color: "inherit",
+  },
 });
 
 export function Skills() {
@@ -51,14 +56,16 @@ export function Skills() {
             <Subtitle2>{g.label}</Subtitle2>
             <div className={styles.items}>
               {g.items.map((it, j) => (
-                <div key={j} className={styles.item}>
-                  <Body1>{it.label}</Body1>
-                  {it.level === "learning" && (
-                    <Badge appearance="tint" color="warning">
-                      {ui.learning}
-                    </Badge>
-                  )}
-                </div>
+                <Link key={j} to={`/skills/${it.id}`} className={styles.itemLink}>
+                  <div className={styles.item}>
+                    <Body1>{it.label}</Body1>
+                    {it.level === "learning" && (
+                      <Badge appearance="tint" color="warning">
+                        {ui.learning}
+                      </Badge>
+                    )}
+                  </div>
+                </Link>
               ))}
             </div>
           </div>

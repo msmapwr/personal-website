@@ -2,7 +2,7 @@
 <!--
   个人网站文案内容源（按语言排列，i18n）
   ============================================
-  - <languages> 列出可用语言（id + 显示名）；新增语言时在此加一条，并加一个 <locale id="..."> 块。
+  - <languages> 列出可用语言（id + 显示名）；新增语言时在此加一条，并加一个 locale 节点。
   - 每个 <locale> 是一个完整、自包含的语言快照，文本为纯文本。
   - <ui> 是界面文案（按钮/徽章/aria 标签）；<posts> 是博客文章。
   - level 取值：proficient（掌握）/ learning（学习中）
@@ -66,22 +66,43 @@
       <title>技能 / 技术栈</title>
       <group name="game">
         <label>游戏与创作</label>
-        <item level="proficient">Minecraft 建筑与场景设计</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+          <label>Minecraft 建筑与场景设计</label>
+          <description>我擅长在 Minecraft 里搭建筑、做场景，把想法变成能走进去的空间。</description>
+        </item>
+        <item id="mc-pvp" level="proficient">
+          <label>Minecraft PVP</label>
+          <description>常打 PVP 对战，熟悉走位、连招和战斗节奏。</description>
+        </item>
       </group>
       <group name="languages">
         <label>编程语言</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+          <label>C#</label>
+          <description>用 C# 写桌面程序和游戏逻辑，熟悉面向对象开发。</description>
+        </item>
       </group>
       <group name="desktop">
         <label>桌面开发</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+          <label>WPF</label>
+          <description>正在学 WPF 桌面开发，练 XAML 界面和 MVVM 结构。</description>
+        </item>
+        <item id="winui" level="learning">
+          <label>WinUI</label>
+          <description>正在学 WinUI 3，想做 Fluent 风格的 Windows 应用。</description>
+        </item>
       </group>
       <group name="tools">
         <label>工具链</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+          <label>Git</label>
+          <description>用 Git 管版本，日常提交、分支、回滚都顺手。</description>
+        </item>
+        <item id="visual-studio" level="proficient">
+          <label>Visual Studio</label>
+          <description>平时的主力编辑器，调试和重构用得最多。</description>
+        </item>
       </group>
     </skills>
     <contact>
@@ -137,6 +158,18 @@
         <excerpt>这个个人网站的技术栈、功能，以及博客板块的介绍。</excerpt>
         <body>这个网站是我的个人作品集，用 React 和 Fluent UI React 构建，支持 13 种语言。我用这个博客记录开发过程和想法，之后会在这里分享更多 Minecraft 创作和 C# 开发的内容。</body>
       </post>
+      <post id="site-changelog">
+        <title>这个网站是怎么一步步做出来的</title>
+        <date>2026-08-22</date>
+        <excerpt>从脚手架到 13 种语言、PWA，这个网站一路走来的过程。</excerpt>
+        <body>这个网站从零开始到现在，一共走过了六个大版本。一开始它只是一个 React 脚手架，我接进 Fluent UI 主题和微软蓝，网站就有了基本的骨架。接着我做了中英文切换，后来干脆扩到 13 种语言，连文言文和外星文都安排上了。
+
+中间踩过一些小坑，比如语言菜单点开没字，查了半天是解析器把 label 属性读成了文本，改一行就好了。样式方面也花了不少功夫：动效时长压到 200 毫秒以内，按钮按下去有缩放反馈，键盘用户能看到清楚的焦点框。
+
+从 1.3 版开始，网站改为进入时一次性加载所有页面，切换不再闪一下。1.4 版加了博客、项目截图和详情弹窗，还做成 PWA，可以装到手机桌面、离线打开。
+
+以后大概会继续优化性能和加新内容。这个网站会一直更新下去。</body>
+      </post>
     </posts>
   </locale>
 
@@ -181,22 +214,43 @@
       <title>Skills</title>
       <group name="game">
         <label>Game &amp; Creation</label>
-        <item level="proficient">Minecraft Building &amp; Scene Design</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Minecraft Building &amp; Scene Design</label>
+        <description>I enjoy building structures and scenes in Minecraft, turning ideas into walkable spaces.</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>I play a lot of PVP, comfortable with positioning, combos, and combat tempo.</description>
+      </item>
       </group>
       <group name="languages">
         <label>Languages</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>I write desktop programs and game logic in C#, comfortable with object-oriented code.</description>
+      </item>
       </group>
       <group name="desktop">
         <label>Desktop Development</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>Learning WPF desktop development, practicing XAML and MVVM.</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>Learning WinUI 3, aiming to make Fluent-style Windows apps.</description>
+      </item>
       </group>
       <group name="tools">
         <label>Tools</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>I use Git for version control, daily commits, branches, and rollbacks.</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>My main editor, mostly for debugging and refactoring.</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -252,6 +306,18 @@
         <excerpt>The tech stack, features, and blog section of this personal site.</excerpt>
         <body>This site is my personal portfolio, built with React and Fluent UI React, supporting 13 languages. I use this blog to record my development journey and ideas, and I'll share more Minecraft creations and C# development here.</body>
       </post>
+          <post id="site-changelog">
+        <title>How this site came together</title>
+        <date>2026-08-22</date>
+        <excerpt>From a bare scaffold to 13 languages and a PWA, here is how the site grew.</excerpt>
+        <body>This site started from an empty folder and went through six major versions. At first it was just a React scaffold; I wired in Fluent UI and the Microsoft blue, and the site got its basic shape. Then I added a Chinese/English toggle, and later expanded it to 13 languages, even classical Chinese and an alien script.
+
+There were small bugs along the way. The language menu once opened with no text because the parser read the label attribute as element text; one line fixed it. The styling took a while too: animations stay under 200ms, buttons shrink slightly when pressed, and keyboard users get a clear focus ring.
+
+Since 1.3, the site loads all pages at once, so switching feels instant. In 1.4 I added a blog, project screenshots and detail dialogs, and made it a PWA you can install on your phone and open offline.
+
+I will keep optimizing and adding content. This site will keep growing.</body>
+      </post>
     </posts>
   </locale>
 
@@ -296,22 +362,43 @@
       <title>技能 / 技術棧</title>
       <group name="game">
         <label>遊戲與創作</label>
-        <item level="proficient">Minecraft 建築與場景設計</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Minecraft 建築與場景設計</label>
+        <description>我擅長喺 Minecraft 度起建築、做場景，將諗法變成行得入去嘅空間。</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>成日打 PVP，熟走位、連技同戰鬥節奏。</description>
+      </item>
       </group>
       <group name="languages">
         <label>程式語言</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>用 C# 寫桌面程式同遊戲邏輯，熟面向對象開發。</description>
+      </item>
       </group>
       <group name="desktop">
         <label>桌面開發</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>學緊 WPF 桌面開發，練 XAML 介面同 MVVM 結構。</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>學緊 WinUI 3，想做 Fluent 風格嘅 Windows 應用。</description>
+      </item>
       </group>
       <group name="tools">
         <label>工具鏈</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>用 Git 管版本，日常提交、分支、回滾都好順手。</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>平時嘅主力編輯器，調試同重構用得最多。</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -411,22 +498,43 @@
       <title>技能 / 技術棧</title>
       <group name="game">
         <label>遊戲與創作</label>
-        <item level="proficient">Minecraft 建築與場景設計</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Minecraft 建築與場景設計</label>
+        <description>我擅長在 Minecraft 裡搭建建築與場景，把想法變成能走進去的空間。</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>常打 PVP 對戰，熟悉走位、連招與戰鬥節奏。</description>
+      </item>
       </group>
       <group name="languages">
         <label>程式語言</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>用 C# 撰寫桌面程式與遊戲邏輯，熟悉物件導向開發。</description>
+      </item>
       </group>
       <group name="desktop">
         <label>桌面開發</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>正在學習 WPF 桌面開發，練習 XAML 介面與 MVVM 結構。</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>正在學習 WinUI 3，想做 Fluent 風格的 Windows 應用程式。</description>
+      </item>
       </group>
       <group name="tools">
         <label>工具鏈</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>使用 Git 管理版本，日常提交、分支、回朔都得心應手。</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>平時的主力編輯器，除錯與重構用得最多。</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -526,22 +634,43 @@
       <title>Compétences</title>
       <group name="game">
         <label>Jeu &amp; Création</label>
-        <item level="proficient">Construction et décors Minecraft</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Construction et décors Minecraft</label>
+        <description>Je construis des bâtiments et des décors dans Minecraft, des idées qui deviennent des lieux.</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>Je joue beaucoup en PVP, à l'aise avec le placement, les combos et le rythme.</description>
+      </item>
       </group>
       <group name="languages">
         <label>Langages</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>J'écris des programmes de bureau et de la logique de jeu en C#, à l'aise avec l'orienté objet.</description>
+      </item>
       </group>
       <group name="desktop">
         <label>Développement bureau</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>J'apprends le développement bureau avec WPF, en pratiquant XAML et MVVM.</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>J'apprends WinUI 3, pour créer des apps Windows au style Fluent.</description>
+      </item>
       </group>
       <group name="tools">
         <label>Outils</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>J'utilise Git pour le versionnage, commits, branches et retours en arrière.</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>Mon éditeur principal, surtout pour le débogage et le refactoring.</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -641,22 +770,43 @@
       <title>Fähigkeiten</title>
       <group name="game">
         <label>Spiel &amp; Kreation</label>
-        <item level="proficient">Minecraft-Bau und Szenengestaltung</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Minecraft-Bau und Szenengestaltung</label>
+        <description>Ich baue Gebäude und Szenen in Minecraft und mache aus Ideen begehbare Räume.</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>Ich spiele viel PVP, mit Positionierung, Kombos und Kampftempo.</description>
+      </item>
       </group>
       <group name="languages">
         <label>Sprachen</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>Ich schreibe Desktop-Programme und Spiellogik in C#, fit in objektorientiertem Code.</description>
+      </item>
       </group>
       <group name="desktop">
         <label>Desktop-Entwicklung</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>Ich lerne WPF-Desktop-Entwicklung, mit XAML und MVVM.</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>Ich lerne WinUI 3, um Windows-Apps im Fluent-Stil zu bauen.</description>
+      </item>
       </group>
       <group name="tools">
         <label>Werkzeuge</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>Ich nutze Git für Versionierung, Commits, Branches und Rollbacks.</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>Mein Haupteditor, vor allem zum Debuggen und Refactoring.</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -756,22 +906,43 @@
       <title>Навыки</title>
       <group name="game">
         <label>Игра и творчество</label>
-        <item level="proficient">Строительство и сцены в Minecraft</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Строительство и сцены в Minecraft</label>
+        <description>Строю здания и сцены в Minecraft, превращая идеи в пространства, по которым можно ходить.</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>Много играю в PVP, знаком с позиционированием, комбо и темпом боя.</description>
+      </item>
       </group>
       <group name="languages">
         <label>Языки</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>Пишу десктопные программы и игровую логику на C#, знаком с ООП.</description>
+      </item>
       </group>
       <group name="desktop">
         <label>Десктоп-разработка</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>Учусь десктоп-разработке на WPF, практикую XAML и MVVM.</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>Учу WinUI 3, чтобы делать приложения Windows в стиле Fluent.</description>
+      </item>
       </group>
       <group name="tools">
         <label>Инструменты</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>Использую Git для контроля версий, коммитов, веток и откатов.</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>Мой основной редактор, чаще всего для отладки и рефакторинга.</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -871,22 +1042,43 @@
       <title>スキル</title>
       <group name="game">
         <label>ゲーム・創作</label>
-        <item level="proficient">Minecraft 建築・シーン制作</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Minecraft 建築・シーン制作</label>
+        <description>Minecraft で建築やシーンを作るのが得意で、アイデアを歩ける空間にします。</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>PVP をよくやり、立ち回りやコンボ、戦闘のテンポに慣れています。</description>
+      </item>
       </group>
       <group name="languages">
         <label>言語</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>C# でデスクトップアプリとゲームロジックを書き、オブジェクト指向に慣れています。</description>
+      </item>
       </group>
       <group name="desktop">
         <label>デスクトップ開発</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>WPF のデスクトップ開発を学び、XAML と MVVM を練習中です。</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>WinUI 3 を学び、Fluent スタイルの Windows アプリを作りたいです。</description>
+      </item>
       </group>
       <group name="tools">
         <label>ツール</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>Git でバージョン管理しており、コミットやブランチ、ロールバックは慣れています。</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>普段使うメインのエディタで、デバッグとリファクタリングが中心です。</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -986,22 +1178,43 @@
       <title>기술</title>
       <group name="game">
         <label>게임・창작</label>
-        <item level="proficient">Minecraft 건축・장면 제작</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Minecraft 건축・장면 제작</label>
+        <description>Minecraft에서 건축과 장면을 만드는 걸 잘하며, 아이디어를 걸어 다닐 수 있는 공간으로 만듭니다.</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>PVP를 자주 하며, 포지셔닝과 콤보, 전투 템포에 익숙합니다.</description>
+      </item>
       </group>
       <group name="languages">
         <label>언어</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>C#으로 데스크톱 프로그램과 게임 로직을 작성하며, 객체 지향에 익숙합니다.</description>
+      </item>
       </group>
       <group name="desktop">
         <label>데스크톱 개발</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>WPF 데스크톱 개발을 배우며, XAML과 MVVM을 연습 중입니다.</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>WinUI 3를 배우며, Fluent 스타일의 Windows 앱을 만들고 싶습니다.</description>
+      </item>
       </group>
       <group name="tools">
         <label>도구</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>Git으로 버전 관리를 하며, 커밋과 브랜치, 롤백이 익숙합니다.</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>평소에 쓰는 주력 에디터로, 디버깅과 리팩토링을 가장 많이 합니다.</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -1101,22 +1314,43 @@
       <title>技藝</title>
       <group name="game">
         <label>遊戲與創作</label>
-        <item level="proficient">Minecraft 建築與場景</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Minecraft 建築與場景</label>
+        <description>吾善築於 Minecraft，化所思為可入之空間。</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>常戰 PVP，熟走位連招之節。</description>
+      </item>
       </group>
       <group name="languages">
         <label>程式語言</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>以 C# 製桌面之程與遊戲之邏，熟面向對象。</description>
+      </item>
       </group>
       <group name="desktop">
         <label>桌面開發</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>習 WPF 桌面之術，練 XAML 與 MVVM。</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>習 WinUI 3，欲製 Fluent 風之 Windows 應用。</description>
+      </item>
       </group>
       <group name="tools">
         <label>工具</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>以 Git 管版本，日常提交分支回退皆順。</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>平日主用之器，多用于除錯與重構。</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -1216,22 +1450,43 @@
       <title>Habilidades</title>
       <group name="game">
         <label>Jogo &amp; Criação</label>
-        <item level="proficient">Construção e cenários no Minecraft</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Construção e cenários no Minecraft</label>
+        <description>Gosto de construir prédios e cenários no Minecraft, transformando ideias em espaços percorríveis.</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>Jogo muito PVP, à vontade com posicionamento, combos e ritmo de combate.</description>
+      </item>
       </group>
       <group name="languages">
         <label>Linguagens</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>Escrevo programas de desktop e lógica de jogos em C#, à vontade com orientação a objetos.</description>
+      </item>
       </group>
       <group name="desktop">
         <label>Desenvolvimento desktop</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>Aprendendo desenvolvimento desktop com WPF, praticando XAML e MVVM.</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>Aprendendo WinUI 3, para criar apps Windows no estilo Fluent.</description>
+      </item>
       </group>
       <group name="tools">
         <label>Ferramentas</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>Uso Git para controle de versão, commits, branches e rollbacks.</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>Meu editor principal, mais usado para depuração e refatoração.</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -1331,22 +1586,43 @@
       <title>Habilidades</title>
       <group name="game">
         <label>Juego y creación</label>
-        <item level="proficient">Construcción y escenas de Minecraft</item>
-        <item level="proficient">Minecraft PVP</item>
+        <item id="mc-building" level="proficient">
+        <label>Construcción y escenas de Minecraft</label>
+        <description>Me gusta construir edificios y escenas en Minecraft, convirtiendo ideas en espacios por los que caminar.</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>Minecraft PVP</label>
+        <description>Juego mucho PVP, cómodo con la posición, los combos y el ritmo.</description>
+      </item>
       </group>
       <group name="languages">
         <label>Lenguajes</label>
-        <item level="proficient">C#</item>
+        <item id="csharp" level="proficient">
+        <label>C#</label>
+        <description>Escribo programas de escritorio y lógica de juegos en C#, cómodo con la orientación a objetos.</description>
+      </item>
       </group>
       <group name="desktop">
         <label>Desarrollo de escritorio</label>
-        <item level="learning">WPF</item>
-        <item level="learning">WinUI</item>
+        <item id="wpf" level="learning">
+        <label>WPF</label>
+        <description>Aprendiendo desarrollo de escritorio con WPF, practicando XAML y MVVM.</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>WinUI</label>
+        <description>Aprendiendo WinUI 3, para hacer apps de Windows en estilo Fluent.</description>
+      </item>
       </group>
       <group name="tools">
         <label>Herramientas</label>
-        <item level="proficient">Git</item>
-        <item level="proficient">Visual Studio</item>
+        <item id="git" level="proficient">
+        <label>Git</label>
+        <description>Uso Git para control de versiones, commits, ramas y rollbacks.</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>Visual Studio</label>
+        <description>Mi editor principal, más usado para depuración y refactorización.</description>
+      </item>
       </group>
     </skills>
     <contact>
@@ -1446,22 +1722,43 @@
       <title>ᚠᛖᚱᚾᛁ</title>
       <group name="game">
         <label>ᛚᛖᛁᚲᚢᚱ ᛟᚷ ᛊᚲᛟᛈᚢᚾ</label>
-        <item level="proficient">ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛒᛁᚷᚷᛁ ᛟᚷ ᛊᛖᚾᚨ</item>
-        <item level="proficient">ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛈᚹᛈ</item>
+        <item id="mc-building" level="proficient">
+        <label>ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛒᛁᚷᚷᛁ ᛟᚷ ᛊᛖᚾᚨ</label>
+        <description>ᛚᛖᛁᚦ ᛏᛁᛚ ᛊᛏᚨᛞᛁᚱ ᛁ ᛗᛁᚾᛖᚲᚱᚨᚠᛏ</description>
+      </item>
+        <item id="mc-pvp" level="proficient">
+        <label>ᛗᛁᚾᛖᚲᚱᚨᚠᛏ ᛈᚹᛈ</label>
+        <description>ᛊᛏᚱᛁᛞᛁ ᛁ ᛈᚹᛈ</description>
+      </item>
       </group>
       <group name="languages">
         <label>ᛏᚢᚾᚷᚢᛗᚨᛚ</label>
-        <item level="proficient">ᚲ#</item>
+        <item id="csharp" level="proficient">
+        <label>ᚲ#</label>
+        <description>ᛏᚱᛟᚲᛟᛞᛁ ᛁ ᚲ#</description>
+      </item>
       </group>
       <group name="desktop">
         <label>ᛞᛖᛊᚲᛏᛟᛈᛈ ᚦᚱᛟᚢᚾ</label>
-        <item level="learning">ᚹᛈᚠ</item>
-        <item level="learning">ᚹᛁᚾᚢᛁ</item>
+        <item id="wpf" level="learning">
+        <label>ᚹᛈᚠ</label>
+        <description>ᛚᚨᛖᚱᛁ ᛚᚨᚷᚨ ᛏᛁᛚ ᛞᛖᛊᚲ</description>
+      </item>
+        <item id="winui" level="learning">
+        <label>ᚹᛁᚾᚢᛁ</label>
+        <description>ᚹᛁᚾᛞᛟᚹᛊ ᚨᛈᛈ ᚹᛁᚦ ᚠᛚᚢᛖᚾᛏ</description>
+      </item>
       </group>
       <group name="tools">
         <label>ᚹᛖᚱᚲᚠᚨᛖᚱᛁ</label>
-        <item level="proficient">ᚷᛁᛏ</item>
-        <item level="proficient">ᚹᛁᛊᚢᚨᛚ ᛊᛏᚢᛞᛁᛟ</item>
+        <item id="git" level="proficient">
+        <label>ᚷᛁᛏ</label>
+        <description>ᛃᛁᛏ ᚷᛁᛏᚺᚢᛒ</description>
+      </item>
+        <item id="visual-studio" level="proficient">
+        <label>ᚹᛁᛊᚢᚨᛚ ᛊᛏᚢᛞᛁᛟ</label>
+        <description>ᛖᛞᛁᛏᛟᚱ ᛖᛞᛁᛏ</description>
+      </item>
       </group>
     </skills>
     <contact>

@@ -59,8 +59,10 @@ function parseLocale(loc: Element): LocaleContent {
     name: g.getAttribute("name") ?? "",
     label: firstText(g, "label"),
     items: Array.from(g.getElementsByTagName("item")).map((it) => ({
+      id: it.getAttribute("id") ?? "",
       level: (it.getAttribute("level") as SkillLevel) ?? "proficient",
-      label: it.textContent?.trim() ?? "",
+      label: firstText(it, "label"),
+      description: firstText(it, "description"),
     })),
   }));
 

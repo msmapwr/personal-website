@@ -35,8 +35,10 @@ export interface AboutContent {
 export type SkillLevel = "proficient" | "learning";
 
 export interface SkillItem {
+  id: string;
   level: SkillLevel;
   label: string;
+  description: string;
 }
 
 export interface SkillGroup {
