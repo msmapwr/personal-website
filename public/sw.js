@@ -1,5 +1,5 @@
-/* Service Worker：先缓存后网络（应用壳 + 静态资源），离线可用 */
-const CACHE = "personal-website-v1";
+/* Service Worker：导航网络优先、静态资源缓存优先，离线可用 */
+const CACHE = "personal-website-v2";
 const SHELL = ["./", "./index.html", "./manifest.json"];
 
 self.addEventListener("install", (event) => {
@@ -26,14 +26,33 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  const req = event.request;
+
+  // 导航请求：网络优先，失败回退缓存（保证拿到最新 HTML 与 JS）
+  if (req.mode === "navigate") {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          const copy = res.clone();
+          caches.open(CACHE).then((cache) => cache.put(req, copy));
+          return res;
+        })
+        .catch(() =>
+          caches.match(req).then((hit) => hit || caches.match("./index.html")),
+        ),
+    );
+    return;
+  }
+
+  // 静态资源：缓存优先，离线可用
   event.respondWith(
-    caches.match(event.request).then((hit) => {
+    caches.match(req).then((hit) => {
       if (hit) return hit;
-      return fetch(event.request)
+      return fetch(req)
         .then((res) => {
           if (res && res.status === 200) {
             const copy = res.clone();
-            caches.open(CACHE).then((cache) => cache.put(event.request, copy));
+            caches.open(CACHE).then((cache) => cache.put(req, copy));
           }
           return res;
         })
