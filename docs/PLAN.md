@@ -296,7 +296,7 @@ docs(site): align deployment and project documentation
 - [ ] 长文增加章节导航或目录；
 - [ ] 统一文章不存在、内容为空和图片加载失败状态；
 - [ ] 为文章补充 title、description、canonical 和 Open Graph；
-- [ ] 评估 RSS/Atom，只有维护成本可接受时加入。
+- [x] 生成 RSS feed；后续可根据维护成本评估 Atom。
 
 #### 验收标准
 

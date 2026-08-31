@@ -7,7 +7,8 @@
     "dev": "vite",
     "typecheck": "tsc --noEmit",
     "check-content": "node scripts/check-content.mjs",
-    "build": "npm run typecheck && npm run check-content && vite build",
+    "generate-feed": "node scripts/generate-feed.mjs",
+    "build": "npm run typecheck && npm run check-content && npm run generate-feed && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

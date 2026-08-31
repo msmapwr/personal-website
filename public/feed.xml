@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Msmapwr · 个人网站</title>
+    <link>https://msmapwr.github.io/personal-website/</link>
+    <description>Msmapwr 的个人作品集与开发记录</description>
+    <language>zh-CN</language>
+    <item>
+      <title>关于这个网站</title>
+      <link>https://msmapwr.github.io/personal-website/#/blog/about-this-site</link>
+      <guid isPermaLink="true">https://msmapwr.github.io/personal-website/#/blog/about-this-site</guid>
+      <pubDate>Fri, 21 Aug 2026 16:00:00 GMT</pubDate>
+      <description>这个个人网站的技术栈、功能，以及博客板块的介绍。</description>
+    </item>
+    <item>
+      <title>这个网站是怎么一步步做出来的</title>
+      <link>https://msmapwr.github.io/personal-website/#/blog/site-changelog</link>
+      <guid isPermaLink="true">https://msmapwr.github.io/personal-website/#/blog/site-changelog</guid>
+      <pubDate>Fri, 21 Aug 2026 16:00:00 GMT</pubDate>
+      <description>从脚手架到 13 种语言、PWA，这个网站一路走来的过程。</description>
+    </item>
+  </channel>
+</rss>

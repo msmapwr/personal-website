@@ -2,6 +2,7 @@ import {
   Button,
   Dropdown,
   Field,
+  Input,
   Option,
   Title2,
   makeStyles,
@@ -39,6 +40,10 @@ const useStyles = makeStyles({
   control: {
     minWidth: "190px",
   },
+  search: {
+    flex: "1 1 260px",
+    minWidth: "240px",
+  },
   empty: {
     padding: "24px",
     borderRadius: "8px",
@@ -54,19 +59,27 @@ export function Projects() {
   const { title, projects } = t.projects;
   const [sort, setSort] = useState<ProjectSort>("featured");
   const [tag, setTag] = useState("all");
+  const [query, setQuery] = useState("");
 
   const tags = useMemo(
     () => Array.from(new Set(projects.flatMap((project) => project.tags))).sort(),
     [projects],
   );
   const visibleProjects = useMemo(() => {
-    const filtered = tag === "all" ? projects : projects.filter((project) => project.tags.includes(tag));
+    const normalizedQuery = query.trim().toLocaleLowerCase();
+    const filtered = projects.filter((project) => {
+      const matchesTag = tag === "all" || project.tags.includes(tag);
+      const searchable = [project.name, project.tagline, project.description, ...project.tags]
+        .join(" ")
+        .toLocaleLowerCase();
+      return matchesTag && (!normalizedQuery || searchable.includes(normalizedQuery));
+    });
     return [...filtered].sort((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
       if (sort === "recent") return b.updated.localeCompare(a.updated);
       return Number(b.featured) - Number(a.featured) || b.updated.localeCompare(a.updated);
     });
-  }, [projects, sort, tag]);
+  }, [projects, query, sort, tag]);
 
   return (
     <section className={styles.root}>
@@ -74,6 +87,14 @@ export function Projects() {
         <Title2>{title}</Title2>
       </Reveal>
       <div className={styles.controls}>
+        <Field className={styles.search} label={t.ui.searchProjects}>
+          <Input
+            value={query}
+            placeholder={t.ui.searchProjects}
+            onChange={(_, data) => setQuery(data.value)}
+            aria-label={t.ui.searchProjects}
+          />
+        </Field>
         <Field className={styles.control} label={t.ui.sortFeatured}>
           <div className={styles.sortButtons} role="group" aria-label={t.ui.sortFeatured}>
             {([
@@ -106,6 +127,11 @@ export function Projects() {
             ))}
           </Dropdown>
         </Field>
+        {(query || tag !== "all") && (
+          <Button appearance="subtle" onClick={() => { setQuery(""); setTag("all"); }}>
+            {t.ui.clearFilters}
+          </Button>
+        )}
       </div>
       <div className={styles.grid}>
         {visibleProjects.map((p, i) => (
@@ -114,7 +140,7 @@ export function Projects() {
           </Reveal>
         ))}
       </div>
-      {visibleProjects.length === 0 && <div className={styles.empty}>{t.ui.allTags}</div>}
+      {visibleProjects.length === 0 && <div className={styles.empty}>{t.ui.noResults}</div>}
     </section>
   );
 }

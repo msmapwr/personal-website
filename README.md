@@ -26,6 +26,8 @@ msmapwr 的个人作品集与开发记录网站。
 - 按项目名称排序；
 - 按技术标签筛选。
 
+博客还提供 RSS feed：<https://msmapwr.github.io/personal-website/feed.xml>。它由构建脚本根据中文文章内容生成。
+
 当前展示的项目包括：
 
 - 第二绿洲：已完成的回合制网页策略桌游项目；
