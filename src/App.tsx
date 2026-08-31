@@ -10,6 +10,7 @@ import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 import { ProjectDetail } from "./pages/ProjectDetail";
 import { Projects } from "./pages/Projects";
+import { NotFound } from "./pages/NotFound";
 import { SkillDetail } from "./pages/SkillDetail";
 import { Skills } from "./pages/Skills";
 import { darkTheme, lightTheme } from "./theme/fluentTheme";
@@ -32,7 +33,7 @@ export function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<BlogPost />} />
-              <Route path="*" element={<Home />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </HashRouter>

@@ -2,9 +2,9 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/) 规范，版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)。
 
-当前版本 **1.5.1**。
+当前版本 **1.6.0**。
 
-## [Unreleased]
+## [1.6.0] - 2026-08-31
 
 ### 变更
 
@@ -13,6 +13,11 @@
 - 首页新增一个精选项目区，项目列表支持状态展示、精选/最近更新/名称排序和标签筛选
 - 新增进行中的 Minecraft 整合包项目 Create: Stratosphere，并加入 GitHub、Modrinth 和项目截图
 - 项目页增加关键词搜索、筛选清除按钮，并生成博客 RSS feed
+- 增加统一的 404 恢复页面、空搜索结果提示和主内容焦点管理
+- 增加 `parseContent` Vitest 单元测试与 Playwright Chromium smoke 测试
+- 增加构建资源体积预算检查，CI 在部署前执行浏览器回归测试
+- 项目图片增加 WebP 版本并切换为优先使用 WebP，保留 PNG 原图回退
+- 将项目版本更新至 1.6.0
 
 ## [1.5.1] - 2026-08-22
 

@@ -29,7 +29,7 @@
   <locale id="zh">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>在线演示</demo>
@@ -206,7 +206,7 @@
   <locale id="en">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>Live Demo</demo>
@@ -384,7 +384,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="zh-HK">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>在線演示</demo>
@@ -550,7 +550,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="zh-TW">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>線上展示</demo>
@@ -716,7 +716,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="fr">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>Démo en ligne</demo>
@@ -882,7 +882,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="de">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>Live-Demo</demo>
@@ -1048,7 +1048,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="ru">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>Демо</demo>
@@ -1214,7 +1214,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="ja">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>オンラインデモ</demo>
@@ -1380,7 +1380,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="ko">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>온라인 데모</demo>
@@ -1546,7 +1546,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="lzh">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>在線演示</demo>
@@ -1712,7 +1712,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="pt">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>Demo ao vivo</demo>
@@ -1878,7 +1878,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="es">
     <meta>
       <name>Msmapwr</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>Demo en vivo</demo>
@@ -2044,7 +2044,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
   <locale id="alien">
     <meta>
       <name>ᛗᛋᛗᚨᛈᚹᚱ</name>
-      <avatar>images/head.png</avatar>
+      <avatar>images/head.webp</avatar>
     </meta>
     <ui>
       <demo>ᛚᚨᚢᚾ</demo>

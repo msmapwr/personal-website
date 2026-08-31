@@ -58,6 +58,8 @@ msmapwr 的个人作品集与开发记录网站。
 - React Router 6，使用 Hash 路由
 - Framer Motion
 - fast-xml-parser，仅用于构建前的内容检查
+- Vitest + jsdom，用于内容解析单元测试
+- Playwright，用于 Chromium 浏览器级 smoke 测试
 - GitHub Actions
 - GitHub Pages
 
@@ -76,6 +78,19 @@ npm run dev
 
 ```bash
 npm run build
+```
+
+构建会自动执行类型检查、内容检查、单元测试、RSS 生成、Vite 打包和资源体积预算检查。单独运行测试：
+
+```bash
+npm run test
+npm run test:browser
+```
+
+首次运行浏览器测试前，需要安装 Chromium：
+
+```bash
+npx playwright install chromium
 ```
 
 构建会依次执行 TypeScript 类型检查、多语言内容检查和 Vite 生产构建。
@@ -131,15 +146,16 @@ src/i18n/LanguageContext.tsx 返回当前语言内容
 
 ## 项目图片
 
-项目图片没有放在 XML 中，因为图片不需要翻译。项目 ID 与图片路径的对应关系集中在 `src/content/projectImages.ts`。
+项目图片没有放在 XML 中，因为图片不需要翻译。项目 ID 与图片路径的对应关系集中在 `src/content/projectImages.ts`。当前页面优先使用 WebP，PNG 原图仍保留，方便兼容、重新压缩或后续生成其他格式。
 
 新增项目图片时：
 
 1. 将图片放入 `public/images/<project-id>/`；
 2. 在 `src/content/projectImages.ts` 中增加相同 ID；
-3. 将项目截图按展示顺序写入数组；
-4. 运行内容检查和生产构建；
-5. 检查图片在浅色、深色和手机布局下的显示效果。
+3. 如需压缩，生成同名 `.webp` 文件并保留 PNG 原图；
+4. 将项目截图按展示顺序写入数组；
+5. 运行内容检查和生产构建；
+6. 检查图片在浅色、深色和手机布局下的显示效果。
 
 当前项目图片包括第二绿洲、个人网站和 Create: Stratosphere 的截图。
 

@@ -5,12 +5,12 @@
  */
 export const projectImages: Record<string, string[]> = {
   "the-second-oasis": [
-    "images/the-second-oasis/mainmenu.png",
-    "images/the-second-oasis/ingame.png",
+    "images/the-second-oasis/mainmenu.webp",
+    "images/the-second-oasis/ingame.webp",
   ],
-  "personal-website": ["images/personal-website/personal-website.png"],
+  "personal-website": ["images/personal-website/personal-website.webp"],
   "create-stratosphere": [
-    "images/create-stratosphere/main.png",
-    "images/create-stratosphere/flight.png",
+    "images/create-stratosphere/main.webp",
+    "images/create-stratosphere/flight.webp",
   ],
 };

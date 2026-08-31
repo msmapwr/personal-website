@@ -1,14 +1,17 @@
 {
   "name": "personal-website",
   "private": true,
-  "version": "1.5.1",
+  "version": "1.6.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "typecheck": "tsc --noEmit",
     "check-content": "node scripts/check-content.mjs",
+    "test": "vitest run src",
+    "test:browser": "playwright test",
     "generate-feed": "node scripts/generate-feed.mjs",
-    "build": "npm run typecheck && npm run check-content && npm run generate-feed && vite build",
+    "check-bundle": "node scripts/check-bundle.mjs",
+    "build": "npm run typecheck && npm run check-content && npm run test && npm run generate-feed && vite build && npm run check-bundle",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -20,11 +23,16 @@
     "react-router-dom": "^6.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^26.4.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^4.0.0",
     "fast-xml-parser": "^5.11.1",
+    "jsdom": "^30.0.1",
     "typescript": "^5.0.0",
-    "vite": "^5.0.0"
+    "vite": "^5.0.0",
+    "vitest": "^4.1.11"
   }
 }

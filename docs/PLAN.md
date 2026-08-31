@@ -500,3 +500,29 @@ git push origin main
 - [ ] 已创建职责清晰的 Conventional Commit；
 - [ ] GitHub Actions 成功运行；
 - [ ] 线上目标地址已完成手动回归。
+
+## 18. 1.6.0 执行记录
+
+本轮改良已按确认范围完成，发布目标为 **1.6.0**：
+
+- [x] 统一项目站点地址、SEO、sitemap、manifest 和 Actions 注释；
+- [x] 首页突出一个精选项目，项目列表支持三种排序、标签筛选、关键词搜索和清除筛选；
+- [x] 补充 Create: Stratosphere 项目、GitHub/Modrinth 链接和两张截图；
+- [x] 统一项目详情、技能详情、博客详情和未知路由的 404 恢复入口；
+- [x] 支持博客标题、列表、链接和代码块等基础富文本结构；
+- [x] 生成中文文章 RSS feed；
+- [x] 增强键盘可达性、主内容焦点、图片懒加载和图片解码提示；
+- [x] 增加 XML 解析单元测试、Chromium smoke 测试和构建资源体积预算；
+- [x] 将项目图片转换为 WebP 并保留 PNG 原图；
+- [x] 保持访问统计关闭；
+- [x] 更新 CHANGELOG、README 和版本号。
+
+本轮验收命令：
+
+```powershell
+npm run build
+npx playwright test --workers=1
+git diff --check
+```
+
+构建体积目前最大的资源约为 528 KiB，低于 600 KiB 预算但仍会给出接近预算的提醒。后续如继续优化，可将 Fluent UI 组件按页面进一步拆分，避免为了压缩体积牺牲现有交互一致性。
