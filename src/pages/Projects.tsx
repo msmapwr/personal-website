@@ -1,4 +1,5 @@
 import {
+  Button,
   Dropdown,
   Field,
   Option,
@@ -29,6 +30,11 @@ const useStyles = makeStyles({
     flexWrap: "wrap",
     gap: "12px",
     alignItems: "end",
+  },
+  sortButtons: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "8px",
   },
   control: {
     minWidth: "190px",
@@ -69,21 +75,22 @@ export function Projects() {
       </Reveal>
       <div className={styles.controls}>
         <Field className={styles.control} label={t.ui.sortFeatured}>
-          <Dropdown
-            value={
-              sort === "featured"
-                ? t.ui.sortFeatured
-                : sort === "recent"
-                  ? t.ui.sortRecent
-                  : t.ui.sortName
-            }
-            selectedOptions={[sort]}
-            onOptionSelect={(_, data) => setSort((data.optionValue as ProjectSort) ?? "featured")}
-          >
-            <Option value="featured">{t.ui.sortFeatured}</Option>
-            <Option value="recent">{t.ui.sortRecent}</Option>
-            <Option value="name">{t.ui.sortName}</Option>
-          </Dropdown>
+          <div className={styles.sortButtons} role="group" aria-label={t.ui.sortFeatured}>
+            {([
+              ["featured", t.ui.sortFeatured],
+              ["recent", t.ui.sortRecent],
+              ["name", t.ui.sortName],
+            ] as const).map(([value, label]) => (
+              <Button
+                key={value}
+                appearance={sort === value ? "primary" : "secondary"}
+                aria-pressed={sort === value}
+                onClick={() => setSort(value)}
+              >
+                {label}
+              </Button>
+            ))}
+          </div>
         </Field>
         <Field className={styles.control} label={t.ui.filterTags}>
           <Dropdown
