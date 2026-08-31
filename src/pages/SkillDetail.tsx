@@ -8,6 +8,7 @@ import {
 import { Link, useParams } from "react-router-dom";
 import type { SkillGroup, SkillItem } from "../content/types";
 import { useT } from "../i18n/LanguageContext";
+import { StatusView } from "../components/StatusView";
 
 const useStyles = makeStyles({
   root: {
@@ -46,12 +47,7 @@ export function SkillDetail() {
 
   if (!found) {
     return (
-      <div className={styles.root}>
-        <Link to="/skills" className={styles.back}>
-          ← {skillsLabel}
-        </Link>
-        <Title2>404</Title2>
-      </div>
+      <StatusView title="404" message={t.ui.pageNotFound} backLabel={skillsLabel} backTo="/skills" homeLabel={t.ui.backHome} />
     );
   }
 

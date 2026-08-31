@@ -44,6 +44,12 @@
       <statusCompleted>已完成</statusCompleted>
       <statusOptimizing>优化中</statusOptimizing>
       <statusInProgress>进行中</statusInProgress>
+      <pageNotFound>页面不存在</pageNotFound>
+      <backHome>返回首页</backHome>
+      <noResults>没有找到匹配的项目</noResults>
+      <searchProjects>搜索项目</searchProjects>
+      <clearFilters>清除筛选</clearFilters>
+      <readMore>查看详情</readMore>
       <switchLanguage>切换语言</switchLanguage>
       <switchTheme>切换主题</switchTheme>
       <menu>菜单</menu>
@@ -215,6 +221,12 @@
       <statusCompleted>Completed</statusCompleted>
       <statusOptimizing>Optimizing</statusOptimizing>
       <statusInProgress>In progress</statusInProgress>
+      <pageNotFound>Page not found</pageNotFound>
+      <backHome>Back home</backHome>
+      <noResults>No matching projects</noResults>
+      <searchProjects>Search projects</searchProjects>
+      <clearFilters>Clear filters</clearFilters>
+      <readMore>View details</readMore>
       <switchLanguage>Switch language</switchLanguage>
       <switchTheme>Switch theme</switchTheme>
       <menu>Menu</menu>
@@ -387,6 +399,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>已完成</statusCompleted>
       <statusOptimizing>優化中</statusOptimizing>
       <statusInProgress>進行中</statusInProgress>
+      <pageNotFound>頁面不存在</pageNotFound>
+      <backHome>返回首頁</backHome>
+      <noResults>找不到符合的項目</noResults>
+      <searchProjects>搜尋項目</searchProjects>
+      <clearFilters>清除篩選</clearFilters>
+      <readMore>查看詳情</readMore>
       <switchLanguage>切換語言</switchLanguage>
       <switchTheme>切換主題</switchTheme>
       <menu>選單</menu>
@@ -547,6 +565,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>已完成</statusCompleted>
       <statusOptimizing>優化中</statusOptimizing>
       <statusInProgress>進行中</statusInProgress>
+      <pageNotFound>頁面不存在</pageNotFound>
+      <backHome>返回首頁</backHome>
+      <noResults>找不到符合的專案</noResults>
+      <searchProjects>搜尋專案</searchProjects>
+      <clearFilters>清除篩選</clearFilters>
+      <readMore>查看詳情</readMore>
       <switchLanguage>切換語言</switchLanguage>
       <switchTheme>切換主題</switchTheme>
       <menu>選單</menu>
@@ -707,6 +731,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>Terminé</statusCompleted>
       <statusOptimizing>En optimisation</statusOptimizing>
       <statusInProgress>En cours</statusInProgress>
+      <pageNotFound>Page introuvable</pageNotFound>
+      <backHome>Retour à l'accueil</backHome>
+      <noResults>Aucun projet trouvé</noResults>
+      <searchProjects>Rechercher des projets</searchProjects>
+      <clearFilters>Effacer les filtres</clearFilters>
+      <readMore>Voir les détails</readMore>
       <switchLanguage>Changer de langue</switchLanguage>
       <switchTheme>Changer de thème</switchTheme>
       <menu>Menu</menu>
@@ -867,6 +897,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>Abgeschlossen</statusCompleted>
       <statusOptimizing>Wird optimiert</statusOptimizing>
       <statusInProgress>In Arbeit</statusInProgress>
+      <pageNotFound>Seite nicht gefunden</pageNotFound>
+      <backHome>Zur Startseite</backHome>
+      <noResults>Keine passenden Projekte</noResults>
+      <searchProjects>Projekte suchen</searchProjects>
+      <clearFilters>Filter löschen</clearFilters>
+      <readMore>Details ansehen</readMore>
       <switchLanguage>Sprache wechseln</switchLanguage>
       <switchTheme>Design wechseln</switchTheme>
       <menu>Menü</menu>
@@ -1027,6 +1063,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>Завершён</statusCompleted>
       <statusOptimizing>Оптимизируется</statusOptimizing>
       <statusInProgress>В процессе</statusInProgress>
+      <pageNotFound>Страница не найдена</pageNotFound>
+      <backHome>На главную</backHome>
+      <noResults>Подходящих проектов нет</noResults>
+      <searchProjects>Поиск проектов</searchProjects>
+      <clearFilters>Сбросить фильтры</clearFilters>
+      <readMore>Подробнее</readMore>
       <switchLanguage>Сменить язык</switchLanguage>
       <switchTheme>Сменить тему</switchTheme>
       <menu>Меню</menu>
@@ -1187,6 +1229,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>完成</statusCompleted>
       <statusOptimizing>改善中</statusOptimizing>
       <statusInProgress>進行中</statusInProgress>
+      <pageNotFound>ページが見つかりません</pageNotFound>
+      <backHome>ホームに戻る</backHome>
+      <noResults>一致するプロジェクトがありません</noResults>
+      <searchProjects>プロジェクトを検索</searchProjects>
+      <clearFilters>フィルターをクリア</clearFilters>
+      <readMore>詳細を見る</readMore>
       <switchLanguage>言語を切り替え</switchLanguage>
       <switchTheme>テーマを切り替え</switchTheme>
       <menu>メニュー</menu>
@@ -1347,6 +1395,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>완료됨</statusCompleted>
       <statusOptimizing>개선 중</statusOptimizing>
       <statusInProgress>진행 중</statusInProgress>
+      <pageNotFound>페이지를 찾을 수 없습니다</pageNotFound>
+      <backHome>홈으로 돌아가기</backHome>
+      <noResults>일치하는 프로젝트가 없습니다</noResults>
+      <searchProjects>프로젝트 검색</searchProjects>
+      <clearFilters>필터 지우기</clearFilters>
+      <readMore>자세히 보기</readMore>
       <switchLanguage>언어 전환</switchLanguage>
       <switchTheme>테마 전환</switchTheme>
       <menu>메뉴</menu>
@@ -1507,6 +1561,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>成</statusCompleted>
       <statusOptimizing>修中</statusOptimizing>
       <statusInProgress>行中</statusInProgress>
+      <pageNotFound>頁不存</pageNotFound>
+      <backHome>返首</backHome>
+      <noResults>無相合之作</noResults>
+      <searchProjects>索作</searchProjects>
+      <clearFilters>除篩</clearFilters>
+      <readMore>觀詳</readMore>
       <switchLanguage>易言</switchLanguage>
       <switchTheme>易色</switchTheme>
       <menu>選單</menu>
@@ -1667,6 +1727,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>Concluído</statusCompleted>
       <statusOptimizing>Em otimização</statusOptimizing>
       <statusInProgress>Em andamento</statusInProgress>
+      <pageNotFound>Página não encontrada</pageNotFound>
+      <backHome>Voltar ao início</backHome>
+      <noResults>Nenhum projeto encontrado</noResults>
+      <searchProjects>Pesquisar projetos</searchProjects>
+      <clearFilters>Limpar filtros</clearFilters>
+      <readMore>Ver detalhes</readMore>
       <switchLanguage>Trocar idioma</switchLanguage>
       <switchTheme>Trocar tema</switchTheme>
       <menu>Menu</menu>
@@ -1827,6 +1893,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>Completado</statusCompleted>
       <statusOptimizing>En optimización</statusOptimizing>
       <statusInProgress>En curso</statusInProgress>
+      <pageNotFound>Página no encontrada</pageNotFound>
+      <backHome>Volver al inicio</backHome>
+      <noResults>No se encontraron proyectos</noResults>
+      <searchProjects>Buscar proyectos</searchProjects>
+      <clearFilters>Limpiar filtros</clearFilters>
+      <readMore>Ver detalles</readMore>
       <switchLanguage>Cambiar idioma</switchLanguage>
       <switchTheme>Cambiar tema</switchTheme>
       <menu>Menú</menu>
@@ -1987,6 +2059,12 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <statusCompleted>ᚠᚢᛚᛚ</statusCompleted>
       <statusOptimizing>ᚹᚨᚱᚲ ᚾᛖᚹ</statusOptimizing>
       <statusInProgress>ᚹᚨᚱᚲ ᛁᚾ ᛋᛏᛖᛞ</statusInProgress>
+      <pageNotFound>ᚾᛟ ᚠᚨᚢᚾᛞ</pageNotFound>
+      <backHome>ᛒᚨᚲᚲ ᚺᛟᛗᛖ</backHome>
+      <noResults>ᚾᛟ ᚹᚨᚱᚲ</noResults>
+      <searchProjects>ᛋᛖᚨᚱᚲᚺ ᚹᚨᚱᚲ</searchProjects>
+      <clearFilters>ᚲᛚᛖᚨᚱ</clearFilters>
+      <readMore>ᚹᛁᛖᚹ</readMore>
       <switchLanguage>ᛗᚨᛚ ᛋᚲᛁᛈᛏᚨ</switchLanguage>
       <switchTheme>ᚦᛖᛗᚨ ᛋᚲᛁᛈᛏᚨ</switchTheme>
       <menu>ᚹᚨᛚ</menu>

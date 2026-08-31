@@ -1,5 +1,4 @@
 import {
-  Body1,
   Caption1,
   Title2,
   makeStyles,
@@ -7,6 +6,8 @@ import {
 } from "@fluentui/react-components";
 import { Link, useParams } from "react-router-dom";
 import { useT } from "../i18n/LanguageContext";
+import { RichText } from "../components/RichText";
+import { StatusView } from "../components/StatusView";
 
 const useStyles = makeStyles({
   root: {
@@ -36,17 +37,9 @@ export function BlogPost() {
   const blogLabel = t.nav.find((n) => n.id === "blog")?.label ?? "Blog";
 
   if (!post) {
-    return (
-      <div className={styles.root}>
-        <Link to="/blog" className={styles.back}>
-          ← {blogLabel}
-        </Link>
-        <Title2>404</Title2>
-      </div>
-    );
+    return <StatusView title="404" message={t.ui.pageNotFound} backLabel={blogLabel} backTo="/blog" homeLabel={t.ui.backHome} />;
   }
 
-  const paragraphs = post.body.split(/\n\n+/);
   return (
     <div className={styles.root}>
       <Link to="/blog" className={styles.back}>
@@ -54,9 +47,7 @@ export function BlogPost() {
       </Link>
       <Title2>{post.title}</Title2>
       <Caption1 className={styles.date}>{post.date}</Caption1>
-      {paragraphs.map((p, i) => (
-        <Body1 key={i}>{p}</Body1>
-      ))}
+      <RichText text={post.body} />
     </div>
   );
 }

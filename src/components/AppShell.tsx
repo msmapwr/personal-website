@@ -1,6 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { ThemeMode } from "../hooks/useThemeMode";
 import { useT } from "../i18n/LanguageContext";
@@ -106,12 +106,17 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
     restDelta: 0.001,
   });
   const progress = reduce ? scrollYProgress : scaleX;
+  const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const route = location.pathname.replace("/", "");
     const item = t.nav.find((n) => n.id === route);
     document.title = item ? `${item.label} · ${t.name}` : t.name;
   }, [location, t]);
+
+  useEffect(() => {
+    mainRef.current?.focus({ preventScroll: true });
+  }, [location.pathname]);
 
   return (
     <div className={styles.root}>
@@ -133,7 +138,7 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
           <ThemeSwitcher mode={mode} onModeChange={onModeChange} />
         </div>
       </header>
-      <main id="main" className={styles.main}>
+      <main id="main" ref={mainRef} tabIndex={-1} className={styles.main}>
         <Outlet />
       </main>
       <footer className={styles.footer}>

@@ -16,6 +16,12 @@ export interface UiStrings {
   statusCompleted: string;
   statusOptimizing: string;
   statusInProgress: string;
+  pageNotFound: string;
+  backHome: string;
+  noResults: string;
+  searchProjects: string;
+  clearFilters: string;
+  readMore: string;
   switchLanguage: string;
   switchTheme: string;
   menu: string;

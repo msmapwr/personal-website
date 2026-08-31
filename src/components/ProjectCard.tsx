@@ -113,10 +113,20 @@ export function ProjectCard({ project }: { project: Project }) {
     <div
       ref={rootRef}
       className={styles.wrap}
+      role="link"
+      tabIndex={0}
+      aria-label={`${project.name}: ${project.tagline}`}
       onMouseMove={handleMove}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
       onClick={() => navigate(`/projects/${project.id}`)}
+      onKeyDown={(e) => {
+        if (e.target !== e.currentTarget) return;
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          navigate(`/projects/${project.id}`);
+        }
+      }}
     >
       <Card className={styles.card}>
         {image && (

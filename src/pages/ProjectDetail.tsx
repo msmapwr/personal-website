@@ -9,6 +9,7 @@ import {
 import { ArrowUpRight20Regular, Code20Regular } from "@fluentui/react-icons";
 import { Link, useParams } from "react-router-dom";
 import { projectImages } from "../content/projectImages";
+import { StatusView } from "../components/StatusView";
 import { useT } from "../i18n/LanguageContext";
 
 const useStyles = makeStyles({
@@ -62,12 +63,7 @@ export function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className={styles.root}>
-        <Link to="/projects" className={styles.back}>
-          ← {projectsLabel}
-        </Link>
-        <Title2>404</Title2>
-      </div>
+      <StatusView title="404" message={t.ui.pageNotFound} backLabel={projectsLabel} backTo="/projects" homeLabel={t.ui.backHome} />
     );
   }
 
@@ -78,8 +74,11 @@ export function ProjectDetail() {
       </Link>
       <Title2>{project.name}</Title2>
       <Subtitle2>{project.tagline}</Subtitle2>
+      <Badge appearance="tint" color={project.status === "completed" ? "success" : project.status === "in-progress" ? "warning" : "informative"}>
+        {project.status === "completed" ? t.ui.statusCompleted : project.status === "in-progress" ? t.ui.statusInProgress : t.ui.statusOptimizing}
+      </Badge>
       {images.map((img) => (
-        <img key={img} src={img} alt={project.name} className={styles.image} />
+        <img key={img} src={img} alt={`${project.name} screenshot`} className={styles.image} loading="lazy" decoding="async" />
       ))}
       <Body1>{project.description}</Body1>
       <div className={styles.tags}>
