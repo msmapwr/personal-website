@@ -6,6 +6,15 @@ export interface Language {
 export interface UiStrings {
   demo: string;
   learning: string;
+  featuredProjects: string;
+  viewAllProjects: string;
+  sortFeatured: string;
+  sortRecent: string;
+  sortName: string;
+  filterTags: string;
+  allTags: string;
+  statusCompleted: string;
+  statusOptimizing: string;
   switchLanguage: string;
   switchTheme: string;
   menu: string;
@@ -67,6 +76,9 @@ export interface ContactContent {
 
 export interface Project {
   id: string;
+  featured: boolean;
+  status: "completed" | "optimizing";
+  updated: string;
   name: string;
   tagline: string;
   description: string;

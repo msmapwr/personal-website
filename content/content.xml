@@ -34,6 +34,15 @@
     <ui>
       <demo>在线演示</demo>
       <learning>学习中</learning>
+      <featuredProjects>精选项目</featuredProjects>
+      <viewAllProjects>查看全部项目</viewAllProjects>
+      <sortFeatured>精选</sortFeatured>
+      <sortRecent>最近更新</sortRecent>
+      <sortName>名称</sortName>
+      <filterTags>筛选标签</filterTags>
+      <allTags>全部项目</allTags>
+      <statusCompleted>已完成</statusCompleted>
+      <statusOptimizing>优化中</statusOptimizing>
       <switchLanguage>切换语言</switchLanguage>
       <switchTheme>切换主题</switchTheme>
       <menu>菜单</menu>
@@ -123,7 +132,7 @@
     </contact>
     <projects>
       <title>项目展示</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>第二绿洲</name>
         <tagline>月球领土争夺 · 回合制网页策略桌游 · 2～4 人对战</tagline>
         <description>《第二绿洲》是一款以月球殖民为背景的回合制网页策略游戏。玩家扮演不同国家的月球开发势力，在有限资源、随机事件与其他玩家的竞争中建立自己的领土。通过风险选择、开发链、抢夺与崩坏等机制，在终局结算中成为最大的月球势力。</description>
@@ -137,7 +146,7 @@
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>个人网站</name>
         <tagline>Fluent Design 风格的个人作品集网站</tagline>
         <description>你现在看到的这个网站。用微软 Fluent Design 风格做中英双语作品集，用 React 和 Fluent UI React 搭建，托管在 GitHub Pages。</description>
@@ -181,6 +190,15 @@
     <ui>
       <demo>Live Demo</demo>
       <learning>Learning</learning>
+      <featuredProjects>Featured project</featuredProjects>
+      <viewAllProjects>View all projects</viewAllProjects>
+      <sortFeatured>Featured</sortFeatured>
+      <sortRecent>Recently updated</sortRecent>
+      <sortName>Name</sortName>
+      <filterTags>Filter by tag</filterTags>
+      <allTags>All projects</allTags>
+      <statusCompleted>Completed</statusCompleted>
+      <statusOptimizing>Optimizing</statusOptimizing>
       <switchLanguage>Switch language</switchLanguage>
       <switchTheme>Switch theme</switchTheme>
       <menu>Menu</menu>
@@ -271,7 +289,7 @@
     </contact>
     <projects>
       <title>Projects</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Lunar territory · turn-based web strategy board game · 2 to 4 players</tagline>
         <description>The Second Oasis is a turn-based web strategy game about colonizing the moon. Each player runs a nation's lunar program, building territory with limited resources, random events, and other players in the way. Risk choices, development chains, and seize-and-collapse mechanics shape the game, and the largest lunar power wins at final settlement.</description>
@@ -285,7 +303,7 @@
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>Personal Website</name>
         <tagline>A Fluent Design personal portfolio website</tagline>
         <description>The site you're looking at. A bilingual portfolio in Microsoft's Fluent Design style, built with React and Fluent UI React and hosted on GitHub Pages.</description>
@@ -329,6 +347,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>在線演示</demo>
       <learning>學習中</learning>
+      <featuredProjects>精選項目</featuredProjects>
+      <viewAllProjects>查看全部項目</viewAllProjects>
+      <sortFeatured>精選</sortFeatured>
+      <sortRecent>最近更新</sortRecent>
+      <sortName>名稱</sortName>
+      <filterTags>篩選標籤</filterTags>
+      <allTags>全部項目</allTags>
+      <statusCompleted>已完成</statusCompleted>
+      <statusOptimizing>優化中</statusOptimizing>
       <switchLanguage>切換語言</switchLanguage>
       <switchTheme>切換主題</switchTheme>
       <menu>選單</menu>
@@ -419,7 +446,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>項目展示</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>第二綠洲</name>
         <tagline>月球領土爭奪 · 回合制網頁策略桌遊 · 2～4 人對戰</tagline>
         <description>《第二綠洲》係一款以月球殖民為背景嘅回合制網頁策略遊戲。玩家扮演唔同國家嘅月球開發勢力，喺有限資源、隨機事件同其他玩家嘅競爭中建立自己嘅領土。透過風險選擇、開發鏈、搶奪與崩壞等機制，喺終局結算中成為最大嘅月球勢力。</description>
@@ -433,7 +460,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>個人網站</name>
         <tagline>Fluent Design 風格嘅個人作品集網站</tagline>
         <description>你而家睇到嘅呢個網站。用微軟 Fluent Design 風格做中英雙語作品集，用 React 同 Fluent UI React 搭建，託管喺 GitHub Pages。</description>
@@ -465,6 +492,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>線上展示</demo>
       <learning>學習中</learning>
+      <featuredProjects>精選專案</featuredProjects>
+      <viewAllProjects>查看全部專案</viewAllProjects>
+      <sortFeatured>精選</sortFeatured>
+      <sortRecent>最近更新</sortRecent>
+      <sortName>名稱</sortName>
+      <filterTags>篩選標籤</filterTags>
+      <allTags>全部專案</allTags>
+      <statusCompleted>已完成</statusCompleted>
+      <statusOptimizing>優化中</statusOptimizing>
       <switchLanguage>切換語言</switchLanguage>
       <switchTheme>切換主題</switchTheme>
       <menu>選單</menu>
@@ -555,7 +591,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>專案展示</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>第二綠洲</name>
         <tagline>月球領土爭奪 · 回合制網頁策略桌遊 · 2～4 人對戰</tagline>
         <description>《第二綠洲》是一款以月球殖民為背景的回合制網頁策略遊戲。玩家扮演不同國家的月球開發勢力，在有限資源、隨機事件與其他玩家的競爭中建立自己的領土。透過風險選擇、開發鏈、搶奪與崩壞等機制，在終局結算中成為最大的月球勢力。</description>
@@ -569,7 +605,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>個人網站</name>
         <tagline>Fluent Design 風格的個人作品集網站</tagline>
         <description>你現在看到的這個網站。用微軟 Fluent Design 風格做中英雙語作品集，用 React 和 Fluent UI React 搭建，託管在 GitHub Pages。</description>
@@ -601,6 +637,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>Démo en ligne</demo>
       <learning>En apprentissage</learning>
+      <featuredProjects>Projet à la une</featuredProjects>
+      <viewAllProjects>Voir tous les projets</viewAllProjects>
+      <sortFeatured>À la une</sortFeatured>
+      <sortRecent>Récents</sortRecent>
+      <sortName>Nom</sortName>
+      <filterTags>Filtrer par tag</filterTags>
+      <allTags>Tous les projets</allTags>
+      <statusCompleted>Terminé</statusCompleted>
+      <statusOptimizing>En optimisation</statusOptimizing>
       <switchLanguage>Changer de langue</switchLanguage>
       <switchTheme>Changer de thème</switchTheme>
       <menu>Menu</menu>
@@ -691,7 +736,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Projets</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Territoire lunaire · jeu de plateau web stratégique au tour par tour · 2 à 4 joueurs</tagline>
         <description>The Second Oasis est un jeu de stratégie web au tour par tour sur la colonisation de la Lune. Chaque joueur dirige le programme lunaire d'une nation, en bâtissant un territoire avec des ressources limitées, des événements aléatoires et d'autres joueurs. Les choix de risque, les chaînes de développement et la mécanique de saisie et d'effondrement façonnent la partie, et la plus grande puissance lunaire gagne au décompte final.</description>
@@ -705,7 +750,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>Site personnel</name>
         <tagline>Un portfolio personnel au style Fluent Design</tagline>
         <description>Le site que vous regardez. Un portfolio bilingue dans le style Fluent Design de Microsoft, construit avec React et Fluent UI React, hébergé sur GitHub Pages.</description>
@@ -737,6 +782,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>Live-Demo</demo>
       <learning>Lernen</learning>
+      <featuredProjects>Ausgewähltes Projekt</featuredProjects>
+      <viewAllProjects>Alle Projekte anzeigen</viewAllProjects>
+      <sortFeatured>Ausgewählt</sortFeatured>
+      <sortRecent>Zuletzt aktualisiert</sortRecent>
+      <sortName>Name</sortName>
+      <filterTags>Nach Tag filtern</filterTags>
+      <allTags>Alle Projekte</allTags>
+      <statusCompleted>Abgeschlossen</statusCompleted>
+      <statusOptimizing>Wird optimiert</statusOptimizing>
       <switchLanguage>Sprache wechseln</switchLanguage>
       <switchTheme>Design wechseln</switchTheme>
       <menu>Menü</menu>
@@ -827,7 +881,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Projekte</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Mondterritorium · rundenbasiertes Web-Strategiespiel · 2 bis 4 Spieler</tagline>
         <description>The Second Oasis ist ein rundenbasiertes Web-Strategiespiel über die Besiedlung des Mondes. Jeder Spieler leitet das Mondprogramm einer Nation und baut ein Territorium mit begrenzten Ressourcen, zufälligen Ereignissen und anderen Spielern auf. Risikoentscheidungen, Entwicklungsketten und die Erobern-und-Zusammenbruch-Mechanik prägen das Spiel, und die größte Mondmacht gewinnt bei der Endabrechnung.</description>
@@ -841,7 +895,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>Persönliche Website</name>
         <tagline>Ein persönliches Portfolio im Fluent-Design-Stil</tagline>
         <description>Die Website, die du gerade ansiehst. Ein zweisprachiges Portfolio im Fluent-Design-Stil von Microsoft, gebaut mit React und Fluent UI React, gehostet auf GitHub Pages.</description>
@@ -873,6 +927,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>Демо</demo>
       <learning>Изучаю</learning>
+      <featuredProjects>Избранный проект</featuredProjects>
+      <viewAllProjects>Все проекты</viewAllProjects>
+      <sortFeatured>Избранные</sortFeatured>
+      <sortRecent>Недавние</sortRecent>
+      <sortName>Название</sortName>
+      <filterTags>Фильтр по тегу</filterTags>
+      <allTags>Все проекты</allTags>
+      <statusCompleted>Завершён</statusCompleted>
+      <statusOptimizing>Оптимизируется</statusOptimizing>
       <switchLanguage>Сменить язык</switchLanguage>
       <switchTheme>Сменить тему</switchTheme>
       <menu>Меню</menu>
@@ -963,7 +1026,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Проекты</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Лунная территория · пошаговая веб-стратегия · 2–4 игрока</tagline>
         <description>The Second Oasis — пошаговая веб-стратегия о колонизации Луны. Каждый игрок руководит лунной программой своей страны, строя территорию в условиях ограниченных ресурсов, случайных событий и конкуренции других игроков. Выбор риска, цепочки развития и механика захвата и краха определяют игру, а побеждает крупнейшая лунная держава при финальном подсчёте.</description>
@@ -977,7 +1040,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>Личный сайт</name>
         <tagline>Личное портфолио в стиле Fluent Design</tagline>
         <description>Сайт, который вы сейчас смотрите. Двуязычное портфолио в стиле Fluent Design от Microsoft, созданное на React и Fluent UI React, размещённое на GitHub Pages.</description>
@@ -1009,6 +1072,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>オンラインデモ</demo>
       <learning>学習中</learning>
+      <featuredProjects>注目のプロジェクト</featuredProjects>
+      <viewAllProjects>すべてのプロジェクトを見る</viewAllProjects>
+      <sortFeatured>注目</sortFeatured>
+      <sortRecent>最近更新</sortRecent>
+      <sortName>名前</sortName>
+      <filterTags>タグで絞り込む</filterTags>
+      <allTags>すべてのプロジェクト</allTags>
+      <statusCompleted>完成</statusCompleted>
+      <statusOptimizing>改善中</statusOptimizing>
       <switchLanguage>言語を切り替え</switchLanguage>
       <switchTheme>テーマを切り替え</switchTheme>
       <menu>メニュー</menu>
@@ -1099,7 +1171,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>プロジェクト</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>月面領土争い · ターン制 Web 戦略ボードゲーム · 2〜4人対戦</tagline>
         <description>『The Second Oasis』は、月面植民を舞台にしたターン制の Web 戦略ゲームです。各プレイヤーは異なる国の月開発勢力を率い、限られた資源・ランダムイベント・他プレイヤーとの競争の中で領土を築きます。リスク選択、開発チェーン、奪取と崩壊の仕組みがゲームを形作り、最終決算で最大の月面勢力となった者が勝利します。</description>
@@ -1113,7 +1185,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>個人サイト</name>
         <tagline>Fluent Design スタイルの個人ポートフォリオサイト</tagline>
         <description>今ご覧のこのサイト。Microsoft の Fluent Design スタイルで作ったバイリンガルのポートフォリオで、React と Fluent UI React で構築し、GitHub Pages で公開しています。</description>
@@ -1145,6 +1217,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>온라인 데모</demo>
       <learning>학습 중</learning>
+      <featuredProjects>추천 프로젝트</featuredProjects>
+      <viewAllProjects>모든 프로젝트 보기</viewAllProjects>
+      <sortFeatured>추천</sortFeatured>
+      <sortRecent>최근 업데이트</sortRecent>
+      <sortName>이름</sortName>
+      <filterTags>태그로 필터</filterTags>
+      <allTags>모든 프로젝트</allTags>
+      <statusCompleted>완료됨</statusCompleted>
+      <statusOptimizing>개선 중</statusOptimizing>
       <switchLanguage>언어 전환</switchLanguage>
       <switchTheme>테마 전환</switchTheme>
       <menu>메뉴</menu>
@@ -1235,7 +1316,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>프로젝트</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>달 영토 쟁탈 · 턴제 웹 전략 보드게임 · 2~4인 대전</tagline>
         <description>《The Second Oasis》는 달 식민지를 배경으로 한 턴제 웹 전략 게임입니다. 각 플레이어는 서로 다른 국가의 달 개발 세력을 이끌며, 제한된 자원·무작위 이벤트·다른 플레이어와의 경쟁 속에서 영토를 건설합니다. 리스크 선택, 개발 체인, 탈취와 붕괴 메커니즘이 게임을 만들고, 최종 정산에서 가장 큰 달 세력이 승리합니다.</description>
@@ -1249,7 +1330,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>개인 웹사이트</name>
         <tagline>Fluent Design 스타일의 개인 포트폴리오 사이트</tagline>
         <description>지금 보고 있는 이 사이트. Microsoft의 Fluent Design 스타일로 만든 이중 언어 포트폴리오로, React와 Fluent UI React로 구축해 GitHub Pages에 호스팅했습니다.</description>
@@ -1281,6 +1362,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>在線演示</demo>
       <learning>學中</learning>
+      <featuredProjects>所重之作</featuredProjects>
+      <viewAllProjects>觀諸作</viewAllProjects>
+      <sortFeatured>重者</sortFeatured>
+      <sortRecent>新修</sortRecent>
+      <sortName>名</sortName>
+      <filterTags>擇類</filterTags>
+      <allTags>諸作</allTags>
+      <statusCompleted>成</statusCompleted>
+      <statusOptimizing>修中</statusOptimizing>
       <switchLanguage>易言</switchLanguage>
       <switchTheme>易色</switchTheme>
       <menu>選單</menu>
@@ -1371,7 +1461,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>所作</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>第二綠洲</name>
         <tagline>月土之爭 · 回合網頁策略桌遊 · 二至四人對戰</tagline>
         <description>《第二綠洲》者，以月球殖民為景之回合網頁策略遊戲也。玩家各主一國之月事，於資源有限、事機無常、群雄相爭之間，建其疆土。以風險之擇、開發之鏈、搶奪與崩壞之制，終局結算，月土最廣者勝。</description>
@@ -1385,7 +1475,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>個人之站</name>
         <tagline>Fluent Design 風格之個人作品集網站</tagline>
         <description>今君所見之站也。以微軟 Fluent Design 之風，作中英雙語作品集，用 React 與 Fluent UI React 築之，託於 GitHub Pages。</description>
@@ -1417,6 +1507,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>Demo ao vivo</demo>
       <learning>Aprendendo</learning>
+      <featuredProjects>Projeto em destaque</featuredProjects>
+      <viewAllProjects>Ver todos os projetos</viewAllProjects>
+      <sortFeatured>Destaques</sortFeatured>
+      <sortRecent>Atualizados recentemente</sortRecent>
+      <sortName>Nome</sortName>
+      <filterTags>Filtrar por tag</filterTags>
+      <allTags>Todos os projetos</allTags>
+      <statusCompleted>Concluído</statusCompleted>
+      <statusOptimizing>Em otimização</statusOptimizing>
       <switchLanguage>Trocar idioma</switchLanguage>
       <switchTheme>Trocar tema</switchTheme>
       <menu>Menu</menu>
@@ -1507,7 +1606,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Projetos</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Território lunar · jogo de tabuleiro web estratégico por turnos · 2 a 4 jogadores</tagline>
         <description>The Second Oasis é um jogo de estratégia web por turnos sobre a colonização da Lua. Cada jogador comanda o programa lunar de uma nação, construindo território com recursos limitados, eventos aleatórios e outros jogadores. Escolhas de risco, cadeias de desenvolvimento e a mecânica de tomada e colapso moldam o jogo, e a maior potência lunar vence na contagem final.</description>
@@ -1521,7 +1620,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>Site pessoal</name>
         <tagline>Um portfólio pessoal no estilo Fluent Design</tagline>
         <description>O site que você está vendo. Um portfólio bilíngue no estilo Fluent Design da Microsoft, construído com React e Fluent UI React, hospedado no GitHub Pages.</description>
@@ -1553,6 +1652,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>Demo en vivo</demo>
       <learning>Aprendiendo</learning>
+      <featuredProjects>Proyecto destacado</featuredProjects>
+      <viewAllProjects>Ver todos los proyectos</viewAllProjects>
+      <sortFeatured>Destacados</sortFeatured>
+      <sortRecent>Actualizados recientemente</sortRecent>
+      <sortName>Nombre</sortName>
+      <filterTags>Filtrar por etiqueta</filterTags>
+      <allTags>Todos los proyectos</allTags>
+      <statusCompleted>Completado</statusCompleted>
+      <statusOptimizing>En optimización</statusOptimizing>
       <switchLanguage>Cambiar idioma</switchLanguage>
       <switchTheme>Cambiar tema</switchTheme>
       <menu>Menú</menu>
@@ -1643,7 +1751,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Proyectos</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Territorio lunar · juego de mesa web estratégico por turnos · 2 a 4 jugadores</tagline>
         <description>The Second Oasis es un juego de estrategia web por turnos sobre la colonización de la Luna. Cada jugador dirige el programa lunar de una nación, construyendo territorio con recursos limitados, eventos aleatorios y otros jugadores. Las elecciones de riesgo, las cadenas de desarrollo y la mecánica de captura y colapso dan forma al juego, y la mayor potencia lunar gana en el recuento final.</description>
@@ -1657,7 +1765,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>Sitio personal</name>
         <tagline>Un portafolio personal en estilo Fluent Design</tagline>
         <description>El sitio que estás viendo. Un portafolio bilingüe en el estilo Fluent Design de Microsoft, construido con React y Fluent UI React, alojado en GitHub Pages.</description>
@@ -1689,6 +1797,15 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     <ui>
       <demo>ᛚᚨᚢᚾ</demo>
       <learning>ᚾᚨᛗᚨ</learning>
+      <featuredProjects>ᛋᚲᛁᛚᛞ ᚹᚨᚱᚲ</featuredProjects>
+      <viewAllProjects>ᛋᛖᛖ ᚨᛚᛚ ᚹᚨᚱᚲ</viewAllProjects>
+      <sortFeatured>ᛋᚲᛁᛚᛞ</sortFeatured>
+      <sortRecent>ᚾᛖᚹ ᚹᚨᚱᚲ</sortRecent>
+      <sortName>ᚾᚨᛗᛖ</sortName>
+      <filterTags>ᚠᛁᛚᛏᛖᚱ</filterTags>
+      <allTags>ᚨᛚᛚ ᚹᚨᚱᚲ</allTags>
+      <statusCompleted>ᚠᚢᛚᛚ</statusCompleted>
+      <statusOptimizing>ᚹᚨᚱᚲ ᚾᛖᚹ</statusOptimizing>
       <switchLanguage>ᛗᚨᛚ ᛋᚲᛁᛈᛏᚨ</switchLanguage>
       <switchTheme>ᚦᛖᛗᚨ ᛋᚲᛁᛈᛏᚨ</switchTheme>
       <menu>ᚹᚨᛚ</menu>
@@ -1779,7 +1896,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>ᚹᛖᚱᚲ</title>
-      <project id="the-second-oasis">
+      <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>ᚦᛖ ᛊᛖᚲᛟᚾᛞ ᛟᚨᛊᛁᛊ</name>
         <tagline>ᛏᚢᚾᚷᛚ ᛚᚨᚾᛞ · ᚹᛖᛒ ᛊᛏᛖᚠᚾᚢ · 2–4 ᛊᛈᛁᛚᚨᚱᚨᚱ</tagline>
         <description>ᚦᛖ ᛊᛖᚲᛟᚾᛞ ᛟᚨᛊᛁᛊ ᛖᚱ ᚹᛖᛒ ᛊᛏᛖᚠᚾᚢ ᚢᛗ ᛏᚢᚾᚷᛚᛁᚾᚾ ᚺᚹᛖᚱ ᛊᛈᛁᛚᚨᚱᛁ ᛊᛏᛃᛟᚱᚾᚨ ᛚᚨᚾᛞᛊᛟᚺᚾᚢᚦᛁ ᛗᛖᛞ ᛏᚨᚲᛗᛟᚱᚲᚢᛞᛁᚱ ᚨᚢᛞᛚᛁᚾᛞ ᛏᛁᛚᚹᛁᛚᛃᚢᚾᚨᛞᛁ ᚨᛏᛒᚢᚱᚦᛁᚱ ᛟᚷ ᚨᛞᚱᛁᚱ ᛊᛈᛁᛚᚨᚱᚨᚱ</description>
@@ -1793,7 +1910,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/the-second-oasis</link>
         <demo>https://msmapwr.github.io/the-second-oasis/</demo>
       </project>
-      <project id="personal-website">
+      <project id="personal-website" status="optimizing" updated="2026-08-22">
         <name>ᛈᛖᚱᛊᛟᚾᚢᛚᛖᚷ ᚹᛖᛒᛊᛁᛞᚨ</name>
         <tagline>ᚠᛚᚢᛖᚾᛏ ᛞᛖᛊᛁᚷᚾ ᛈᛟᚱᛏᚠᛟᛚᛁᛟ</tagline>
         <description>ᚦᛖᛊᛊᛁ ᚹᛖᛒᛊᛁᛞᚨ ᛊᛖᛗ ᚦᚢ ᛊᛖᚱᚦ ᛏᚹᛁᛗᚨᛚᛊ ᛈᛟᚱᛏᚠᛟᛚᛁᛟ ᛁ ᚠᛚᚢᛖᚾᛏ ᛞᛖᛊᛁᚷᚾ ᛒᚢᛁᛚᛏ ᛗᛖᛞ ᚱᛖᚨᚲᛏ ᛟᚷ ᚠᛚᚢᛖᚾᛏ ᚢᛁ ᚱᛖᚨᚲᛏ ᚺᛟᛊᛏᛖᛞ ᚨ ᚷᛁᛏᚺᚢᛒ ᛈᚨᚷᛖᛊ</description>

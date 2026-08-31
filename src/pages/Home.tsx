@@ -9,6 +9,8 @@ import {
 import { ArrowRight20Regular, Mail20Regular } from "@fluentui/react-icons";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ProjectCard } from "../components/ProjectCard";
+import { Reveal } from "../components/Reveal";
 import { useT } from "../i18n/LanguageContext";
 import { brandRamp } from "../theme/fluentTheme";
 
@@ -61,6 +63,12 @@ const useStyles = makeStyles({
   link: {
     textDecoration: "none",
   },
+  featured: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "16px",
+    marginTop: "32px",
+  },
 });
 
 const container: Variants = {
@@ -78,49 +86,68 @@ const item: Variants = {
 export function Home() {
   const styles = useStyles();
   const reduce = useReducedMotion();
-  const { name, hero, avatar } = useT();
+  const t = useT();
+  const { name, hero, avatar } = t;
+  const featuredProject = t.projects.projects.find((project) => project.featured);
 
   return (
-    <motion.div
-      className={styles.hero}
-      variants={container}
-      initial={reduce ? false : "hidden"}
-      animate={reduce ? undefined : "show"}
-    >
+    <>
       <motion.div
-        className={styles.blob}
-        animate={reduce ? undefined : { scale: [1, 1.1, 1] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      />
-      {avatar && (
-        <motion.img
-          src={avatar}
-          alt={name}
-          className={styles.avatar}
-          variants={item}
+        className={styles.hero}
+        variants={container}
+        initial={reduce ? false : "hidden"}
+        animate={reduce ? undefined : "show"}
+      >
+        <motion.div
+          className={styles.blob}
+          animate={reduce ? undefined : { scale: [1, 1.1, 1] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
+        {avatar && (
+          <motion.img
+            src={avatar}
+            alt={name}
+            className={styles.avatar}
+            variants={item}
+          />
+        )}
+        <motion.div variants={item}>
+          <Display className={styles.name}>{name}</Display>
+        </motion.div>
+        <motion.div variants={item}>
+          <Title3>{hero.tagline}</Title3>
+        </motion.div>
+        <motion.div variants={item}>
+          <Body1 className={styles.subtitle}>{hero.subtitle}</Body1>
+        </motion.div>
+        <motion.div variants={item} className={styles.actions}>
+          <Link to="/projects" className={styles.link}>
+            <Button appearance="primary" icon={<ArrowRight20Regular />}>
+              {hero.actions.primary}
+            </Button>
+          </Link>
+          <Link to="/contact" className={styles.link}>
+            <Button appearance="secondary" icon={<Mail20Regular />}>
+              {hero.actions.secondary}
+            </Button>
+          </Link>
+        </motion.div>
+      </motion.div>
+      {featuredProject && (
+        <section className={styles.featured} aria-labelledby="featured-projects-title">
+          <Reveal>
+            <Title3 id="featured-projects-title">{t.ui.featuredProjects}</Title3>
+          </Reveal>
+          <Reveal>
+            <ProjectCard project={featuredProject} />
+          </Reveal>
+          <Link to="/projects" className={styles.link}>
+            <Button appearance="subtle" icon={<ArrowRight20Regular />}>
+              {t.ui.viewAllProjects}
+            </Button>
+          </Link>
+        </section>
       )}
-      <motion.div variants={item}>
-        <Display className={styles.name}>{name}</Display>
-      </motion.div>
-      <motion.div variants={item}>
-        <Title3>{hero.tagline}</Title3>
-      </motion.div>
-      <motion.div variants={item}>
-        <Body1 className={styles.subtitle}>{hero.subtitle}</Body1>
-      </motion.div>
-      <motion.div variants={item} className={styles.actions}>
-        <Link to="/projects" className={styles.link}>
-          <Button appearance="primary" icon={<ArrowRight20Regular />}>
-            {hero.actions.primary}
-          </Button>
-        </Link>
-        <Link to="/contact" className={styles.link}>
-          <Button appearance="secondary" icon={<Mail20Regular />}>
-            {hero.actions.secondary}
-          </Button>
-        </Link>
-      </motion.div>
-    </motion.div>
+    </>
   );
 }

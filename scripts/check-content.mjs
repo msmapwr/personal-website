@@ -81,8 +81,17 @@ function checkLocale(locale, index) {
   checkLocalAsset(locale.meta?.avatar, `${prefix}.meta.avatar`);
 
   const uiFields = [
-    "demo",
-    "learning",
+  "demo",
+  "learning",
+  "featuredProjects",
+  "viewAllProjects",
+  "sortFeatured",
+  "sortRecent",
+  "sortName",
+  "filterTags",
+  "allTags",
+  "statusCompleted",
+  "statusOptimizing",
     "switchLanguage",
     "switchTheme",
     "menu",
@@ -138,6 +147,13 @@ function checkLocale(locale, index) {
     required(project.name, `${projectPath}.name`);
     required(project.tagline, `${projectPath}.tagline`);
     required(project.description, `${projectPath}.description`);
+    required(project.updated, `${projectPath}.@updated`);
+    if (project.status !== "completed" && project.status !== "optimizing") {
+      fail(`${projectPath}.@status 必须为 completed 或 optimizing`);
+    }
+    if (project.featured !== undefined && project.featured !== "true" && project.featured !== "false") {
+      fail(`${projectPath}.@featured 必须为 true 或 false`);
+    }
     if (asArray(project.tags?.tag).length === 0) fail(`${projectPath}.tags 至少需要一个 tag`);
     validUrl(project.link, `${projectPath}.link`);
     if (text(project.demo)) validUrl(project.demo, `${projectPath}.demo`);
