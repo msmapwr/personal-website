@@ -95,7 +95,11 @@ export function ProjectCard({ project }: { project: Project }) {
   const images = projectImages[project.id] ?? [];
   const image = images[0];
   const statusLabel =
-    project.status === "completed" ? ui.statusCompleted : ui.statusOptimizing;
+    project.status === "completed"
+      ? ui.statusCompleted
+      : project.status === "in-progress"
+        ? ui.statusInProgress
+        : ui.statusOptimizing;
 
   const handleMove = (e: MouseEvent<HTMLDivElement>) => {
     const el = rootRef.current;
@@ -123,7 +127,16 @@ export function ProjectCard({ project }: { project: Project }) {
         <CardHeader
           header={<Title3>{project.name}</Title3>}
           description={
-            <Badge appearance="tint" color={project.status === "completed" ? "success" : "informative"}>
+            <Badge
+              appearance="tint"
+              color={
+                project.status === "completed"
+                  ? "success"
+                  : project.status === "in-progress"
+                    ? "warning"
+                    : "informative"
+              }
+            >
               {statusLabel}
             </Badge>
           }

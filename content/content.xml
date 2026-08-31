@@ -43,6 +43,7 @@
       <allTags>全部项目</allTags>
       <statusCompleted>已完成</statusCompleted>
       <statusOptimizing>优化中</statusOptimizing>
+      <statusInProgress>进行中</statusInProgress>
       <switchLanguage>切换语言</switchLanguage>
       <switchTheme>切换主题</switchTheme>
       <menu>菜单</menu>
@@ -158,6 +159,20 @@
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>机械动力：平流层</name>
+        <tagline>Create 工厂自动化与物理飞行的 Minecraft 整合包</tagline>
+        <description>以机械动力、机械动力：航空学和 Sable 为核心的 Minecraft 1.21.1 NeoForge 整合包。结合地面工厂自动化与物理驱动的飞空艇、飞机和载具，并加入电力、推进、装饰、火炮和性能优化模组。</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>博客</title>
@@ -199,6 +214,7 @@
       <allTags>All projects</allTags>
       <statusCompleted>Completed</statusCompleted>
       <statusOptimizing>Optimizing</statusOptimizing>
+      <statusInProgress>In progress</statusInProgress>
       <switchLanguage>Switch language</switchLanguage>
       <switchTheme>Switch theme</switchTheme>
       <menu>Menu</menu>
@@ -315,6 +331,20 @@
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>Blog</title>
@@ -356,6 +386,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>全部項目</allTags>
       <statusCompleted>已完成</statusCompleted>
       <statusOptimizing>優化中</statusOptimizing>
+      <statusInProgress>進行中</statusInProgress>
       <switchLanguage>切換語言</switchLanguage>
       <switchTheme>切換主題</switchTheme>
       <menu>選單</menu>
@@ -472,6 +503,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>博客</title>
@@ -501,6 +546,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>全部專案</allTags>
       <statusCompleted>已完成</statusCompleted>
       <statusOptimizing>優化中</statusOptimizing>
+      <statusInProgress>進行中</statusInProgress>
       <switchLanguage>切換語言</switchLanguage>
       <switchTheme>切換主題</switchTheme>
       <menu>選單</menu>
@@ -617,6 +663,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>部落格</title>
@@ -646,6 +706,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>Tous les projets</allTags>
       <statusCompleted>Terminé</statusCompleted>
       <statusOptimizing>En optimisation</statusOptimizing>
+      <statusInProgress>En cours</statusInProgress>
       <switchLanguage>Changer de langue</switchLanguage>
       <switchTheme>Changer de thème</switchTheme>
       <menu>Menu</menu>
@@ -762,6 +823,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>Blog</title>
@@ -791,6 +866,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>Alle Projekte</allTags>
       <statusCompleted>Abgeschlossen</statusCompleted>
       <statusOptimizing>Wird optimiert</statusOptimizing>
+      <statusInProgress>In Arbeit</statusInProgress>
       <switchLanguage>Sprache wechseln</switchLanguage>
       <switchTheme>Design wechseln</switchTheme>
       <menu>Menü</menu>
@@ -907,6 +983,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>Blog</title>
@@ -936,6 +1026,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>Все проекты</allTags>
       <statusCompleted>Завершён</statusCompleted>
       <statusOptimizing>Оптимизируется</statusOptimizing>
+      <statusInProgress>В процессе</statusInProgress>
       <switchLanguage>Сменить язык</switchLanguage>
       <switchTheme>Сменить тему</switchTheme>
       <menu>Меню</menu>
@@ -1052,6 +1143,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>Блог</title>
@@ -1081,6 +1186,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>すべてのプロジェクト</allTags>
       <statusCompleted>完成</statusCompleted>
       <statusOptimizing>改善中</statusOptimizing>
+      <statusInProgress>進行中</statusInProgress>
       <switchLanguage>言語を切り替え</switchLanguage>
       <switchTheme>テーマを切り替え</switchTheme>
       <menu>メニュー</menu>
@@ -1197,6 +1303,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>ブログ</title>
@@ -1226,6 +1346,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>모든 프로젝트</allTags>
       <statusCompleted>완료됨</statusCompleted>
       <statusOptimizing>개선 중</statusOptimizing>
+      <statusInProgress>진행 중</statusInProgress>
       <switchLanguage>언어 전환</switchLanguage>
       <switchTheme>테마 전환</switchTheme>
       <menu>메뉴</menu>
@@ -1342,6 +1463,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>블로그</title>
@@ -1371,6 +1506,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>諸作</allTags>
       <statusCompleted>成</statusCompleted>
       <statusOptimizing>修中</statusOptimizing>
+      <statusInProgress>行中</statusInProgress>
       <switchLanguage>易言</switchLanguage>
       <switchTheme>易色</switchTheme>
       <menu>選單</menu>
@@ -1487,6 +1623,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>誌</title>
@@ -1516,6 +1666,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>Todos os projetos</allTags>
       <statusCompleted>Concluído</statusCompleted>
       <statusOptimizing>Em otimização</statusOptimizing>
+      <statusInProgress>Em andamento</statusInProgress>
       <switchLanguage>Trocar idioma</switchLanguage>
       <switchTheme>Trocar tema</switchTheme>
       <menu>Menu</menu>
@@ -1632,6 +1783,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>Blog</title>
@@ -1661,6 +1826,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>Todos los proyectos</allTags>
       <statusCompleted>Completado</statusCompleted>
       <statusOptimizing>En optimización</statusOptimizing>
+      <statusInProgress>En curso</statusInProgress>
       <switchLanguage>Cambiar idioma</switchLanguage>
       <switchTheme>Cambiar tema</switchTheme>
       <menu>Menú</menu>
@@ -1777,6 +1943,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
     </projects>
     <posts>
       <title>Blog</title>
@@ -1806,6 +1986,7 @@ I will keep optimizing and adding content. This site will keep growing.</body>
       <allTags>ᚨᛚᛚ ᚹᚨᚱᚲ</allTags>
       <statusCompleted>ᚠᚢᛚᛚ</statusCompleted>
       <statusOptimizing>ᚹᚨᚱᚲ ᚾᛖᚹ</statusOptimizing>
+      <statusInProgress>ᚹᚨᚱᚲ ᛁᚾ ᛋᛏᛖᛞ</statusInProgress>
       <switchLanguage>ᛗᚨᛚ ᛋᚲᛁᛈᛏᚨ</switchLanguage>
       <switchTheme>ᚦᛖᛗᚨ ᛋᚲᛁᛈᛏᚨ</switchTheme>
       <menu>ᚹᚨᛚ</menu>
@@ -1921,6 +2102,20 @@ I will keep optimizing and adding content. This site will keep growing.</body>
           <tag>TypeScript</tag>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+      <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
+        <name>Create: Stratosphere</name>
+        <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
+        <description>A Minecraft 1.21.1 NeoForge modpack built around Create, Create: Aeronautics, and Sable. It combines ground-level factory automation with airships, aeroplanes, and vehicles, plus power, propulsion, decoration, weapons, and performance mods.</description>
+        <tags>
+          <tag>Minecraft 1.21.1</tag>
+          <tag>NeoForge</tag>
+          <tag>Create</tag>
+          <tag>Create: Aeronautics</tag>
+          <tag>Sable</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
+        <demo>https://modrinth.com/modpack/create-stratosphere</demo>
       </project>
     </projects>
     <posts>

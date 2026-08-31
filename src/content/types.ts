@@ -15,6 +15,7 @@ export interface UiStrings {
   allTags: string;
   statusCompleted: string;
   statusOptimizing: string;
+  statusInProgress: string;
   switchLanguage: string;
   switchTheme: string;
   menu: string;
@@ -77,7 +78,7 @@ export interface ContactContent {
 export interface Project {
   id: string;
   featured: boolean;
-  status: "completed" | "optimizing";
+  status: "completed" | "optimizing" | "in-progress";
   updated: string;
   name: string;
   tagline: string;

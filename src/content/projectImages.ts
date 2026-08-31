@@ -9,4 +9,8 @@ export const projectImages: Record<string, string[]> = {
     "images/the-second-oasis/ingame.png",
   ],
   "personal-website": ["images/personal-website/personal-website.png"],
+  "create-stratosphere": [
+    "images/create-stratosphere/main.png",
+    "images/create-stratosphere/flight.png",
+  ],
 };

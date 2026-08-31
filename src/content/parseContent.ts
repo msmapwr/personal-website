@@ -39,6 +39,7 @@ function parseLocale(loc: Element): LocaleContent {
     allTags: firstText(ui, "allTags"),
     statusCompleted: firstText(ui, "statusCompleted"),
     statusOptimizing: firstText(ui, "statusOptimizing"),
+    statusInProgress: firstText(ui, "statusInProgress"),
     switchLanguage: firstText(ui, "switchLanguage"),
     switchTheme: firstText(ui, "switchTheme"),
     menu: firstText(ui, "menu"),

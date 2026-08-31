@@ -92,6 +92,7 @@ function checkLocale(locale, index) {
   "allTags",
   "statusCompleted",
   "statusOptimizing",
+  "statusInProgress",
     "switchLanguage",
     "switchTheme",
     "menu",
@@ -148,8 +149,8 @@ function checkLocale(locale, index) {
     required(project.tagline, `${projectPath}.tagline`);
     required(project.description, `${projectPath}.description`);
     required(project.updated, `${projectPath}.@updated`);
-    if (project.status !== "completed" && project.status !== "optimizing") {
-      fail(`${projectPath}.@status 必须为 completed 或 optimizing`);
+    if (!["completed", "optimizing", "in-progress"].includes(project.status)) {
+      fail(`${projectPath}.@status 必须为 completed、optimizing 或 in-progress`);
     }
     if (project.featured !== undefined && project.featured !== "true" && project.featured !== "false") {
       fail(`${projectPath}.@featured 必须为 true 或 false`);

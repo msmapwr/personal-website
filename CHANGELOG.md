@@ -11,6 +11,7 @@
 - 统一 GitHub Pages 项目站点地址、SEO canonical 与 Open Graph 元数据说明
 - 构建前自动校验多语言内容、ID、外链和内容源引用的本地资源
 - 首页新增一个精选项目区，项目列表支持状态展示、精选/最近更新/名称排序和标签筛选
+- 新增进行中的 Minecraft 整合包项目 Create: Stratosphere，并加入 GitHub、Modrinth 和项目截图
 
 ## [1.5.1] - 2026-08-22
 
