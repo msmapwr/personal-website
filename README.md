@@ -26,7 +26,8 @@
 ```bash
 npm install
 npm run dev      # 开发预览 http://localhost:5173
-npm run build    # 生产构建到 dist/
+npm run check-content  # 校验多语言内容、链接和本地资源
+npm run build    # 类型检查、内容校验并生产构建到 dist/
 ```
 
 > 本机沙箱环境下 `npm run dev`/`build` 需要完整权限（esbuild 需 spawn 子进程）；正式构建走 GitHub Actions，无此限制。
@@ -53,6 +54,8 @@ npm run build    # 生产构建到 dist/
 所有页面文字都在 `content/content.xml`，**按语言分块**：`<languages>` 列出可用语言，每个 `<locale id="...">` 是该语言的完整文案快照。当前语言选择会保存到 localStorage，改完文案刷新页面即生效，无需改代码。
 
 新增语言：在 `<languages>` 加一条，再复制一个 `<locale>` 块翻译即可。新增项目：见 [docs/add-project.md](docs/add-project.md)。
+
+内容修改后请执行 `npm run check-content`。该检查会验证 XML 格式、语言和内容 ID 一致性、必填字段、外链格式及 `content.xml` 中引用的本地资源。
 
 ## 部署
 

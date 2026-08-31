@@ -191,7 +191,7 @@ personal-website-main/
 
 - [ ] 统一最终部署地址、base、sitemap、canonical、Open Graph 和 README；
 - [ ] 更新本计划，使文档反映博客、详情页和 PWA 的现状；
-- [ ] 增加 XML 内容完整性检查；
+- [x] 增加 XML 内容完整性检查；
 - [ ] 确认 GitHub Actions 可以稳定构建和部署；
 - [ ] 统一 404、空数据、无图片和无演示链接的处理方式。
 
@@ -244,7 +244,7 @@ docs(site): align deployment and project documentation
 #### 任务
 
 - [ ] 明确项目、技能和博客的必填字段；
-- [ ] 检查每个 locale 是否包含相同的导航、项目、技能和文章 ID；
+- [ ] 检查每个 locale 是否包含相同的导航、项目和技能 ID；博客文章允许按语言逐步发布。
 - [ ] 检查 ID 是否重复；
 - [ ] 检查项目链接、演示链接和图片引用；
 - [ ] 检查必填文案是否为空；
@@ -333,9 +333,9 @@ docs(site): align deployment and project documentation
 #### 任务
 
 - [ ] 为 `parseContent` 增加单元测试；
-- [ ] 增加 `npm run check-content` 内容完整性检查；
-- [ ] 增加 `npm run typecheck` 类型检查命令；
-- [ ] 将类型检查、内容检查和生产构建接入 GitHub Actions；
+- [x] 增加 `npm run check-content` 内容完整性检查；
+- [x] 增加 `npm run typecheck` 类型检查命令；
+- [x] 将类型检查、内容检查和生产构建接入 GitHub Actions；
 - [ ] 视项目规模引入浏览器测试，优先覆盖导航、语言切换、主题切换、详情页和未知 ID；
 - [ ] 建立发布前手动回归清单。
 

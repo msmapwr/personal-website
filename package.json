@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit",
+    "check-content": "node scripts/check-content.mjs",
+    "build": "npm run typecheck && npm run check-content && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -20,6 +22,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^4.0.0",
+    "fast-xml-parser": "^5.11.1",
     "typescript": "^5.0.0",
     "vite": "^5.0.0"
   }

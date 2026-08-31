@@ -31,6 +31,8 @@
 4. `id` 用项目名（kebab-case），各语言必须一致；`<demo>` 可选，无在线演示就删除该行。
 5. 保存后刷新网页（或重新构建），新卡片自动出现。
 
+6. 执行 `npm run check-content`，确认所有语言的项目 ID 一致、链接格式有效，且 XML 没有结构错误。
+
 ## 新增语言
 
 1. 在 `<languages>` 里加一条 `<language id="xx" label="语言名" />`。
