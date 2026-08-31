@@ -4,6 +4,12 @@
 
 当前版本 **1.5.1**。
 
+## [Unreleased]
+
+### 变更
+
+- 统一 GitHub Pages 项目站点地址、SEO canonical 与 Open Graph 元数据说明
+
 ## [1.5.1] - 2026-08-22
 
 ### 修复

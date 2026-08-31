@@ -57,8 +57,9 @@ npm run build    # 生产构建到 dist/
 ## 部署
 
 由 `.github/workflows/deploy.yml` 在 push 到 `main` 时自动构建并部署到 GitHub Pages。
+站点固定使用 GitHub Pages 项目站点路径；`vite.config.ts` 中的相对 `base`、PWA 资源和 sitemap 都以该路径为基准。
 
-- 项目站点（默认）：<https://msmapwr.github.io/personal-website/>
+- 线上地址：<https://msmapwr.github.io/personal-website/>
 
 ## 版本
 
