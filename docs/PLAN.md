@@ -556,6 +556,7 @@ git diff --check
 - [x] 记录当前构建产物、JS chunk 和图片资源大小；
 - [x] 增加 `npm run report:performance` 静态体积报告；
 - [x] 建立 `docs/performance-baseline.md`；
+- [x] 使用 Playwright Chromium 通过生产预览服务器记录首页导航耗时、FCP、资源数量和传输大小；
 - [ ] 使用固定浏览器和网络条件记录 Lighthouse、LCP、CLS、INP、TBT；
 - [ ] 使用 Chrome Performance 记录首页滚动、项目筛选、卡片 hover 和主题切换；
 - [ ] 为初始 JS、最大 chunk、图片总大小和关键指标设 CI 阈值；

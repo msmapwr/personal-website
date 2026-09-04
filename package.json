@@ -9,6 +9,7 @@
     "check-content": "node scripts/check-content.mjs",
     "test": "vitest run src",
     "test:browser": "playwright test",
+    "test:performance": "npm run build && node scripts/run-performance-test.mjs",
     "generate-feed": "node scripts/generate-feed.mjs",
     "check-bundle": "node scripts/check-bundle.mjs",
     "report:performance": "node scripts/report-performance.mjs",

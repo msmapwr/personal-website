@@ -9,6 +9,7 @@
 ```powershell
 npm run build
 npm run report:performance
+npm run test:performance
 ```
 
 当前主要数据：
@@ -23,6 +24,30 @@ npm run report:performance
 | 图片资源总大小 | 约 3.38 MB |
 | 最大 PNG | 1.56 MB |
 | 最大 WebP | 183.3 KB |
+
+## 本地生产预览浏览器采样
+
+2026-09-05 使用 Chromium 通过生产预览服务器采集：
+
+| 指标 | 采样值 |
+|---|---:|
+| DOMContentLoaded | 36.5 ms |
+| load | 36.9 ms |
+| First Contentful Paint | 84 ms |
+| 资源数量 | 7 |
+| 浏览器报告传输大小 | 285.8 KB |
+
+该采样只代表本机生产预览环境，不代表真实用户网络。后续 Lighthouse 阶段需要固定 CPU、网络、视口和浏览器版本后再设置严格预算。
+
+## 浏览器基线采集
+
+使用 Playwright Chromium 运行：
+
+```powershell
+npm run test:performance
+```
+
+测试会先构建生产版本，再通过 Vite preview 启动生产资源，输出 `PERFORMANCE_BASELINE` 记录，包含首页的 DOMContentLoaded、load、FCP、资源数量和浏览器报告的传输字节数。无头浏览器可能不提供 FCP Paint Timing，因此 FCP 为 0 时只能说明该指标不可用，不能当作真实的零耗时。正式预算仍应在部署后的固定浏览器、网络和设备条件下建立。
 
 ## 目前已知情况
 
