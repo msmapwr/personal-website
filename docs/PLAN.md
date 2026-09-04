@@ -526,3 +526,180 @@ git diff --check
 ```
 
 构建体积目前最大的资源约为 528 KiB，低于 600 KiB 预算但仍会给出接近预算的提醒。后续如继续优化，可将 Fluent UI 组件按页面进一步拆分，避免为了压缩体积牺牲现有交互一致性。
+
+## 19. 1.7.0 全面性能与动效改进计划
+
+本计划以当前 1.6.0 为基线，重点解决首屏加载偏重、动画系统分散、交互反馈不统一和移动端性能缺少量化验证的问题。实施时必须保持 React 18、Vite、Fluent UI、Framer Motion、Hash 路由、13 种语言和 GitHub Pages 部署方式兼容。
+
+### 19.1 目标与非目标
+
+目标：
+
+- 降低首屏 JavaScript、图片和运行时解析成本；
+- 建立可复用的动画 token 和页面级动效规则；
+- 让动画只承担层级提示、状态反馈和空间连续性，不成为装饰噪音；
+- 在桌面、平板、手机、浅色、深色、键盘和 reduced motion 环境下保持一致；
+- 用 CI 阻止 bundle、图片、CLS 和交互性能回归。
+
+非目标：
+
+- 不更换 React/Vite/Fluent UI 技术栈；
+- 不为了追求复杂视觉而新增 GSAP 等大型动画依赖；
+- 不启用访问统计；
+- 不牺牲键盘操作、页面可读性或 200% 缩放支持；
+- 不把所有页面改成持续滚动动画或全屏吸附式布局。
+
+### 19.2 阶段 A：性能基线与预算（当前开始）
+
+状态：进行中。
+
+- [x] 记录当前构建产物、JS chunk 和图片资源大小；
+- [x] 增加 `npm run report:performance` 静态体积报告；
+- [x] 建立 `docs/performance-baseline.md`；
+- [ ] 使用固定浏览器和网络条件记录 Lighthouse、LCP、CLS、INP、TBT；
+- [ ] 使用 Chrome Performance 记录首页滚动、项目筛选、卡片 hover 和主题切换；
+- [ ] 为初始 JS、最大 chunk、图片总大小和关键指标设 CI 阈值；
+- [ ] 区分首屏资源、异步资源和非关键资源，避免只看整个 `dist` 总大小。
+
+验收标准：
+
+- 每次优化前后都有可比较数据；
+- 性能报告不修改源码或构建产物；
+- 超过预算时 CI 明确失败并输出超标文件；
+- 性能数据记录测试设备、浏览器、网络和日期。
+
+### 19.3 阶段 B：路由和依赖加载优化
+
+目标：减少首页初始下载和解析工作。
+
+- [ ] 将页面改为 `React.lazy` 路由级加载；
+- [ ] 为懒加载增加稳定的加载占位，不产生跳动或白屏；
+- [ ] 将博客、项目详情和技能详情从首页关键路径中移出；
+- [ ] 分析 Fluent UI chunk，移除不必要组件和图标导入；
+- [ ] 评估 Fluent UI、图标和 Framer Motion 的异步 chunk 划分；
+- [ ] 保持页面切换后焦点回到 `main`；
+- [ ] 检查首屏内容不会因为懒加载而影响可读性和搜索引擎抓取。
+
+验收标准：
+
+- 首页只加载首页必需代码；
+- 最大 JS chunk 目标约 400 KiB；
+- 首屏 JS gzip 比 1.6.0 基线减少至少 30%；
+- 路由、语言切换、主题切换和刷新均无资源路径错误。
+
+### 19.4 阶段 C：图片和布局稳定性
+
+- [ ] 为所有图片补充确定的宽高或 aspect-ratio；
+- [ ] 为项目图片生成 320/640/1024 宽度版本；
+- [ ] 使用 AVIF → WebP → PNG 的 picture 回退链；
+- [ ] 首页首屏图片按实际优先级预加载，其余图片 lazy load；
+- [ ] 项目详情页增加图片加载失败状态和说明文字；
+- [ ] 检查图片在深色主题下的边缘、对比度和裁剪；
+- [ ] 重新评估 Service Worker 对新旧图片版本的缓存策略。
+
+验收标准：
+
+- 图片加载不会造成明显 CLS；
+- 移动端不会下载桌面端不需要的大图；
+- 图片压缩后文字、UI 截图和 Minecraft 画面仍清晰；
+- 旧 PNG 资源在需要时仍可回退。
+
+### 19.5 阶段 D：统一动画系统
+
+新增 `src/theme/motion.ts`，集中定义：
+
+- `duration.fast`：120–160 ms，用于 hover 和按下反馈；
+- `duration.normal`：180–260 ms，用于状态和主题变化；
+- `duration.enter`：300–400 ms，用于区块进入；
+- `distance.small`：8px；`distance.medium`：16px；
+- `ease.standard`：自然减速；`ease.emphasized`：用于首页重点内容；
+- 列表 stagger 每项 20–40 ms，最多影响 6–8 项。
+
+动画规则：
+
+- 优先使用 `transform` 和 `opacity`；
+- 不动画 `width`、`height`、`top`、`left`；
+- 不为装饰元素使用无限循环动画；
+- 页面进入动画只播放一次；
+- 动画时长随交互重要性变化，不全站使用同一时长；
+- 所有动画提供 `prefers-reduced-motion` 静态状态；
+- 只对当前可见内容播放动画，后台标签页暂停非必要动画。
+
+验收标准：
+
+- 动画不会阻塞点击、键盘导航或页面滚动；
+- reduced motion 下没有持续 blob、位移或缩放动画；
+- 动画前后布局尺寸不发生意外变化；
+- 中端移动设备滚动无明显卡顿。
+
+### 19.6 阶段 E：首页和滚动动效
+
+- [ ] 重构 `Reveal`，默认位移控制在 8–16px；
+- [ ] 使用 `once: true` 避免反复滚动重复播放；
+- [ ] 长列表不对每一项做长时间 stagger；
+- [ ] 首页 Hero 文案采用短距离、短时长交错进入；
+- [ ] blob 仅使用 transform/opacity，并在不可见时暂停；
+- [ ] 移动端降低背景动画频率和视觉强度；
+- [ ] 首屏重要内容不依赖动画结束后才可见；
+- [ ] 检查滚动进度条不会造成高频主线程工作。
+
+### 19.7 阶段 F：项目卡片和交互动画
+
+- [ ] 将鼠标跟随光效从 React 高频 state 更新改为 CSS 自定义属性；
+- [ ] 使用 `requestAnimationFrame` 合并 pointer 更新；
+- [ ] 触屏设备关闭 pointer 光效；
+- [ ] hover 上移控制在 2–4px；
+- [ ] focus 使用清晰边框，不依赖 hover；
+- [ ] press 缩放控制在 0.98 左右；
+- [ ] 搜索输入增加 100–200ms debounce，避免大型列表重复计算；
+- [ ] 对实际 Profiler 证明昂贵的纯组件使用 `React.memo`，不全局滥用 memo。
+
+### 19.8 阶段 G：页面、主题和导航过渡
+
+- [ ] 增加轻量路由过渡：旧内容快速退出，新内容自然进入；
+- [ ] 路由过渡不阻塞浏览器后退和链接激活；
+- [ ] 主题切换只过渡颜色、背景和边框，不整体缩放页面；
+- [ ] 移动端导航打开和关闭使用 transform/opacity；
+- [ ] 菜单关闭时焦点回收至触发按钮；
+- [ ] Escape、Tab、Enter、Space 行为加入 Playwright 测试；
+- [ ] 检查导航动画在 200% 缩放时不遮挡内容。
+
+### 19.9 阶段 H：PWA、缓存和运行时开销
+
+- [ ] 按 HTML、JS/CSS、图片、RSS 分别设计缓存策略；
+- [ ] 每次发布更新缓存版本；
+- [ ] 缓存更新时不阻塞页面首次交互；
+- [ ] 页面隐藏、切换路由和卸载组件时清理动画监听器；
+- [ ] 检查 Framer Motion、IntersectionObserver 和 pointer listener 是否泄漏；
+- [ ] 添加离线页面与资源加载失败提示。
+
+### 19.10 阶段 I：测试、CI 和发布
+
+- [ ] 扩展 Vitest：排序、搜索、RichText、图片映射和 RSS；
+- [ ] 扩展 Playwright：主题、语言、键盘、移动视口和 reduced motion；
+- [ ] 增加 Lighthouse CI 或等价固定环境测试；
+- [ ] CI 检查 JS/CSS/图片预算；
+- [ ] CI 上传失败时的 Playwright trace 和性能报告；
+- [ ] 更新 README、CHANGELOG 和本文件；
+- [ ] 分小更新提交，每个提交独立可回滚；
+- [ ] 最终确认 GitHub Pages 线上地址和 Service Worker 更新。
+
+### 19.11 推荐提交拆分
+
+```text
+perf(site): establish performance baseline
+perf(bundle): split route and ui chunks
+perf(images): add responsive image sources
+refactor(motion): add shared animation tokens
+perf(interactions): reduce pointer and list rerenders
+feat(motion): add accessible page transitions
+test(site): expand performance and browser coverage
+docs(plan): record 1.7 performance roadmap
+```
+
+### 19.12 版本路线
+
+- `1.7.0-alpha`：完成基线、代码分割和图片策略验证；
+- `1.7.0-beta`：完成动画系统、卡片交互和主题/导航过渡；
+- `1.7.0`：完成 CI 性能门禁、完整回归和线上验证；
+- `1.8.0`：根据真实访问数据决定是否增加更复杂的内容功能，不默认增加视觉复杂度。

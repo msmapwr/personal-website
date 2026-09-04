@@ -11,6 +11,7 @@
     "test:browser": "playwright test",
     "generate-feed": "node scripts/generate-feed.mjs",
     "check-bundle": "node scripts/check-bundle.mjs",
+    "report:performance": "node scripts/report-performance.mjs",
     "build": "npm run typecheck && npm run check-content && npm run test && npm run generate-feed && vite build && npm run check-bundle",
     "preview": "vite preview"
   },

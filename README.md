@@ -85,6 +85,7 @@ npm run build
 ```bash
 npm run test
 npm run test:browser
+npm run report:performance
 ```
 
 首次运行浏览器测试前，需要安装 Chromium：
@@ -92,6 +93,8 @@ npm run test:browser
 ```bash
 npx playwright install chromium
 ```
+
+`npm run report:performance` 需要先完成生产构建，会输出 JS/CSS 和图片资源的总大小、gzip 估算以及最大的资源，方便比较性能优化前后的变化。
 
 构建会依次执行 TypeScript 类型检查、多语言内容检查和 Vite 生产构建。
 
