@@ -10,7 +10,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           react: ["react", "react-dom", "react-router-dom"],
-          fluent: ["@fluentui/react-components", "@fluentui/react-icons"],
+          fluent: ["@fluentui/react-components"],
+          icons: ["@fluentui/react-icons"],
           motion: ["framer-motion"],
         },
       },

@@ -577,7 +577,7 @@ git diff --check
 - [x] 为懒加载增加稳定的加载占位，不产生跳动或白屏；
 - [ ] 将博客、项目详情和技能详情从首页关键路径中移出；
 - [ ] 分析 Fluent UI chunk，移除不必要组件和图标导入；
-- [ ] 评估 Fluent UI、图标和 Framer Motion 的异步 chunk 划分；
+- [x] 评估 Fluent UI、图标和 Framer Motion 的异步 chunk 划分；
 - [x] 保持页面切换后焦点回到 `main`；
 - [ ] 检查首屏内容不会因为懒加载而影响可读性和搜索引擎抓取。
 
@@ -587,6 +587,8 @@ git diff --check
 - 最大 JS chunk 目标约 400 KiB；
 - 首屏 JS gzip 比 1.6.0 基线减少至少 30%；
 - 路由、语言切换、主题切换和刷新均无资源路径错误。
+
+当前阶段结果：Fluent UI 与图标已经拆成独立缓存 chunk，最大 JS chunk 从约 537 KiB 降至约 492 KiB；后续仍需评估是否能继续减少 Fluent UI 本身的实际使用量。
 
 ### 19.4 阶段 C：图片和布局稳定性
 
