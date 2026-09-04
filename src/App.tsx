@@ -1,19 +1,26 @@
 import { FluentProvider } from "@fluentui/react-components";
+import { lazy, Suspense, type ReactNode } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { AppShell } from "./components/AppShell";
 import { useThemeMode } from "./hooks/useThemeMode";
 import { LanguageProvider } from "./i18n/LanguageContext";
-import { About } from "./pages/About";
-import { Blog } from "./pages/Blog";
-import { BlogPost } from "./pages/BlogPost";
-import { Contact } from "./pages/Contact";
-import { Home } from "./pages/Home";
-import { ProjectDetail } from "./pages/ProjectDetail";
-import { Projects } from "./pages/Projects";
-import { NotFound } from "./pages/NotFound";
-import { SkillDetail } from "./pages/SkillDetail";
-import { Skills } from "./pages/Skills";
+import { RouteLoading } from "./components/RouteLoading";
 import { darkTheme, lightTheme } from "./theme/fluentTheme";
+
+const Home = lazy(() => import("./pages/Home").then(({ Home }) => ({ default: Home })));
+const About = lazy(() => import("./pages/About").then(({ About }) => ({ default: About })));
+const Projects = lazy(() => import("./pages/Projects").then(({ Projects }) => ({ default: Projects })));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail").then(({ ProjectDetail }) => ({ default: ProjectDetail })));
+const Skills = lazy(() => import("./pages/Skills").then(({ Skills }) => ({ default: Skills })));
+const SkillDetail = lazy(() => import("./pages/SkillDetail").then(({ SkillDetail }) => ({ default: SkillDetail })));
+const Contact = lazy(() => import("./pages/Contact").then(({ Contact }) => ({ default: Contact })));
+const Blog = lazy(() => import("./pages/Blog").then(({ Blog }) => ({ default: Blog })));
+const BlogPost = lazy(() => import("./pages/BlogPost").then(({ BlogPost }) => ({ default: BlogPost })));
+const NotFound = lazy(() => import("./pages/NotFound").then(({ NotFound }) => ({ default: NotFound })));
+
+function LazyRoute({ children }: { children: ReactNode }) {
+  return <Suspense fallback={<RouteLoading />}>{children}</Suspense>;
+}
 
 export function App() {
   const { mode, resolved, setMode } = useThemeMode();
@@ -24,16 +31,16 @@ export function App() {
         <HashRouter>
           <Routes>
             <Route element={<AppShell mode={mode} onModeChange={setMode} />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/:id" element={<ProjectDetail />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/skills/:id" element={<SkillDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:id" element={<BlogPost />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="/" element={<LazyRoute><Home /></LazyRoute>} />
+              <Route path="/about" element={<LazyRoute><About /></LazyRoute>} />
+              <Route path="/projects" element={<LazyRoute><Projects /></LazyRoute>} />
+              <Route path="/projects/:id" element={<LazyRoute><ProjectDetail /></LazyRoute>} />
+              <Route path="/skills" element={<LazyRoute><Skills /></LazyRoute>} />
+              <Route path="/skills/:id" element={<LazyRoute><SkillDetail /></LazyRoute>} />
+              <Route path="/contact" element={<LazyRoute><Contact /></LazyRoute>} />
+              <Route path="/blog" element={<LazyRoute><Blog /></LazyRoute>} />
+              <Route path="/blog/:id" element={<LazyRoute><BlogPost /></LazyRoute>} />
+              <Route path="*" element={<LazyRoute><NotFound /></LazyRoute>} />
             </Route>
           </Routes>
         </HashRouter>
