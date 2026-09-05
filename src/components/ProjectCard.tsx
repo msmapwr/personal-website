@@ -12,7 +12,7 @@ import {
   tokens,
 } from "@fluentui/react-components";
 import { ArrowUpRight20Regular, Code20Regular } from "@fluentui/react-icons";
-import { useRef, useState, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { ResponsiveImage } from "./ResponsiveImage";
 import { projectImages } from "../content/projectImages";
@@ -92,6 +92,9 @@ export function ProjectCard({ project }: { project: Project }) {
   const { ui } = useT();
   const navigate = useNavigate();
   const rootRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<number | null>(null);
+  const pointerRef = useRef({ x: 0, y: 0 });
+  const rectRef = useRef<DOMRect | null>(null);
   const [active, setActive] = useState(false);
   const images = projectImages[project.id] ?? [];
   const image = images[0];
@@ -104,11 +107,32 @@ export function ProjectCard({ project }: { project: Project }) {
 
   const handleMove = (e: MouseEvent<HTMLDivElement>) => {
     const el = rootRef.current;
-    if (!el) return;
-    const r = el.getBoundingClientRect();
-    el.style.setProperty("--fx", `${e.clientX - r.left}px`);
-    el.style.setProperty("--fy", `${e.clientY - r.top}px`);
+    const rect = rectRef.current;
+    if (!el || !rect || frameRef.current !== null) return;
+    pointerRef.current = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    frameRef.current = requestAnimationFrame(() => {
+      const { x, y } = pointerRef.current;
+      el.style.setProperty("--fx", `${x}px`);
+      el.style.setProperty("--fy", `${y}px`);
+      frameRef.current = null;
+    });
   };
+
+  const handleEnter = () => {
+    rectRef.current = rootRef.current?.getBoundingClientRect() ?? null;
+    setActive(true);
+  };
+
+  const handleLeave = () => {
+    if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
+    frameRef.current = null;
+    rectRef.current = null;
+    setActive(false);
+  };
+
+  useEffect(() => () => {
+    if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
+  }, []);
 
   return (
     <div
@@ -118,8 +142,8 @@ export function ProjectCard({ project }: { project: Project }) {
       tabIndex={0}
       aria-label={`${project.name}: ${project.tagline}`}
       onMouseMove={handleMove}
-      onMouseEnter={() => setActive(true)}
-      onMouseLeave={() => setActive(false)}
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
       onClick={() => navigate(`/projects/${project.id}`)}
       onKeyDown={(e) => {
         if (e.target !== e.currentTarget) return;

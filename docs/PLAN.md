@@ -641,15 +641,15 @@ git diff --check
 - [x] 使用 `once: true` 避免反复滚动重复播放；
 - [ ] 长列表不对每一项做长时间 stagger；
 - [ ] 首页 Hero 文案采用短距离、短时长交错进入；
-- [ ] blob 仅使用 transform/opacity，并在不可见时暂停；
+- [x] blob 仅使用 transform/opacity，并在不可见时暂停；
 - [ ] 移动端降低背景动画频率和视觉强度；
 - [ ] 首屏重要内容不依赖动画结束后才可见；
 - [ ] 检查滚动进度条不会造成高频主线程工作。
 
 ### 19.7 阶段 F：项目卡片和交互动画
 
-- [ ] 将鼠标跟随光效从 React 高频 state 更新改为 CSS 自定义属性；
-- [ ] 使用 `requestAnimationFrame` 合并 pointer 更新；
+- [x] 将鼠标跟随光效从 React 高频 state 更新改为 CSS 自定义属性；
+- [x] 使用 `requestAnimationFrame` 合并 pointer 更新；
 - [ ] 触屏设备关闭 pointer 光效；
 - [ ] hover 上移控制在 2–4px；
 - [ ] focus 使用清晰边框，不依赖 hover；

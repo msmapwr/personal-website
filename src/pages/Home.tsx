@@ -8,6 +8,7 @@ import {
 } from "@fluentui/react-components";
 import { ArrowRight20Regular, Mail20Regular } from "@fluentui/react-icons";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ProjectCard } from "../components/ProjectCard";
 import { Reveal } from "../components/Reveal";
@@ -86,9 +87,18 @@ const item: Variants = {
 export function Home() {
   const styles = useStyles();
   const reduce = useReducedMotion();
+  const [pageVisible, setPageVisible] = useState(
+    () => document.visibilityState !== "hidden",
+  );
   const t = useT();
   const { name, hero, avatar } = t;
   const featuredProject = t.projects.projects.find((project) => project.featured);
+
+  useEffect(() => {
+    const handleVisibility = () => setPageVisible(document.visibilityState !== "hidden");
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => document.removeEventListener("visibilitychange", handleVisibility);
+  }, []);
 
   return (
     <>
@@ -100,7 +110,7 @@ export function Home() {
       >
         <motion.div
           className={styles.blob}
-          animate={reduce ? undefined : { scale: [1, 1.1, 1] }}
+          animate={reduce || !pageVisible ? undefined : { scale: [1, 1.1, 1] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         {avatar && (
