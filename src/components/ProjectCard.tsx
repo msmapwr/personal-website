@@ -132,7 +132,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <Card className={styles.card}>
         {image && (
           <CardPreview>
-            <ResponsiveImage src={image} alt={project.name} className={styles.preview} loading="lazy" decoding="async" />
+            <ResponsiveImage src={image} alt={project.name} className={styles.preview} loading="lazy" decoding="async" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1100px) 45vw, 480px" />
           </CardPreview>
         )}
         <CardHeader

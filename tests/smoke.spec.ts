@@ -4,6 +4,9 @@ test("home page exposes the featured project", async ({ page }) => {
   await page.goto("/#/");
   await expect(page.locator("main")).toContainText("The Second Oasis");
   await expect(page.locator("main")).toContainText("Featured project");
+  await expect(page.locator('picture source[type="image/avif"]').first()).toHaveAttribute("srcset", /-640\.avif/);
+  const loadedImage = await page.locator("main picture img").first().evaluate((image) => image.currentSrc);
+  expect(loadedImage).toMatch(/\.avif$/);
 });
 
 test("projects can be searched and cleared", async ({ page }) => {

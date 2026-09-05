@@ -79,7 +79,7 @@ export function ProjectDetail() {
         {project.status === "completed" ? t.ui.statusCompleted : project.status === "in-progress" ? t.ui.statusInProgress : t.ui.statusOptimizing}
       </Badge>
       {images.map((img) => (
-        <ResponsiveImage key={img} src={img} alt={`${project.name} screenshot`} className={styles.image} loading="lazy" decoding="async" />
+        <ResponsiveImage key={img} src={img} alt={`${project.name} screenshot`} className={styles.image} loading="lazy" decoding="async" sizes="(max-width: 820px) calc(100vw - 48px), 820px" />
       ))}
       <Body1>{project.description}</Body1>
       <div className={styles.tags}>
