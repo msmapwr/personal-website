@@ -1,5 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { ThemeMode } from "../hooks/useThemeMode";
@@ -7,6 +7,7 @@ import { useT } from "../i18n/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Navigation } from "./Navigation";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { motionTokens } from "../theme/motion";
 
 interface AppShellProps {
   mode: ThemeMode;
@@ -85,6 +86,9 @@ const useStyles = makeStyles({
     margin: "0 auto",
     padding: "40px 24px",
   },
+  page: {
+    width: "100%",
+  },
   footer: {
     borderTop: `1px solid ${tokens.colorNeutralStroke2}`,
     padding: "24px",
@@ -139,7 +143,18 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
         </div>
       </header>
       <main id="main" ref={mainRef} tabIndex={-1} className={styles.main}>
-        <Outlet />
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={location.pathname}
+            className={styles.page}
+            initial={reduce ? false : { opacity: 0, y: motionTokens.distance.small }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={reduce ? undefined : { opacity: 0, y: -motionTokens.distance.small }}
+            transition={{ duration: reduce ? 0 : motionTokens.duration.normal, ease: motionTokens.easing }}
+          >
+            <Outlet />
+          </motion.div>
+        </AnimatePresence>
       </main>
       <footer className={styles.footer}>
         © {new Date().getFullYear()} {t.name}

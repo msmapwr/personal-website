@@ -17,7 +17,13 @@ body {
 
 /* 主题切换时页面背景平滑过渡（深色细节优化） */
 .fui-FluentProvider {
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fui-FluentProvider {
+    transition: none;
+  }
 }
 
 button:active {
