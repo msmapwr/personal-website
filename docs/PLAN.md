@@ -609,7 +609,7 @@ git diff --check
 
 ### 19.5 阶段 D：统一动画系统
 
-新增 `src/theme/motion.ts`，集中定义：
+已新增 `src/theme/motion.ts`，集中定义：
 
 - `duration.fast`：120–160 ms，用于 hover 和按下反馈；
 - `duration.normal`：180–260 ms，用于状态和主题变化；
@@ -637,8 +637,8 @@ git diff --check
 
 ### 19.6 阶段 E：首页和滚动动效
 
-- [ ] 重构 `Reveal`，默认位移控制在 8–16px；
-- [ ] 使用 `once: true` 避免反复滚动重复播放；
+- [x] 重构 `Reveal`，默认位移控制在 8–16px；
+- [x] 使用 `once: true` 避免反复滚动重复播放；
 - [ ] 长列表不对每一项做长时间 stagger；
 - [ ] 首页 Hero 文案采用短距离、短时长交错进入；
 - [ ] blob 仅使用 transform/opacity，并在不可见时暂停；
