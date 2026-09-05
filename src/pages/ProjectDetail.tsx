@@ -11,6 +11,7 @@ import { Link, useParams } from "react-router-dom";
 import { projectImages } from "../content/projectImages";
 import { StatusView } from "../components/StatusView";
 import { useT } from "../i18n/LanguageContext";
+import { ResponsiveImage } from "../components/ResponsiveImage";
 
 const useStyles = makeStyles({
   root: {
@@ -78,7 +79,7 @@ export function ProjectDetail() {
         {project.status === "completed" ? t.ui.statusCompleted : project.status === "in-progress" ? t.ui.statusInProgress : t.ui.statusOptimizing}
       </Badge>
       {images.map((img) => (
-        <img key={img} src={img} alt={`${project.name} screenshot`} className={styles.image} loading="lazy" decoding="async" />
+        <ResponsiveImage key={img} src={img} alt={`${project.name} screenshot`} className={styles.image} loading="lazy" decoding="async" />
       ))}
       <Body1>{project.description}</Body1>
       <div className={styles.tags}>

@@ -14,6 +14,7 @@ import {
 import { ArrowUpRight20Regular, Code20Regular } from "@fluentui/react-icons";
 import { useRef, useState, type MouseEvent } from "react";
 import { useNavigate } from "react-router-dom";
+import { ResponsiveImage } from "./ResponsiveImage";
 import { projectImages } from "../content/projectImages";
 import type { Project } from "../content/types";
 import { useT } from "../i18n/LanguageContext";
@@ -131,7 +132,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <Card className={styles.card}>
         {image && (
           <CardPreview>
-            <img src={image} alt={project.name} className={styles.preview} />
+            <ResponsiveImage src={image} alt={project.name} className={styles.preview} loading="lazy" decoding="async" />
           </CardPreview>
         )}
         <CardHeader

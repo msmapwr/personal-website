@@ -151,7 +151,7 @@ src/i18n/LanguageContext.tsx 返回当前语言内容
 
 ## 项目图片
 
-项目图片没有放在 XML 中，因为图片不需要翻译。项目 ID 与图片路径的对应关系集中在 `src/content/projectImages.ts`。当前页面优先使用 WebP，PNG 原图仍保留，方便兼容、重新压缩或后续生成其他格式。
+项目图片没有放在 XML 中，因为图片不需要翻译。项目 ID 与图片路径的对应关系集中在 `src/content/projectImages.ts`。当前页面通过 `ResponsiveImage` 按 AVIF → WebP → PNG 顺序加载，PNG 原图仍保留，方便兼容、重新压缩或后续生成其他尺寸。图片组件同时用于项目卡片和详情页，避免两处加载策略不一致。
 
 新增项目图片时：
 
