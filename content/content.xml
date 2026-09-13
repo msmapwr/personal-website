@@ -169,6 +169,19 @@
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>WinUI 3 与 Windows Fluent 设计的 Minecraft 桌面启动器</tagline>
+        <description>一个面向 Windows 的 Minecraft 桌面启动器，基于 WinUI 3 和 Windows App SDK 构建，使用 Fluent Design 与 Mica 等原生视觉效果。项目围绕 Minecraft 版本、实例、Java、账户、Mod、资源包、Shader、启动参数和日志管理逐步完善，并采用 C#、.NET 8、MVVM 与 CommunityToolkit.Mvvm。</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
         <name>机械动力：平流层</name>
         <tagline>Create 工厂自动化与物理飞行的 Minecraft 整合包</tagline>
@@ -351,6 +364,19 @@
     </contact>
     <projects>
       <title>Projects</title>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Lunar territory · turn-based web strategy board game · 2 to 4 players</tagline>
@@ -559,6 +585,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>項目展示</title>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>第二綠洲</name>
         <tagline>月球領土爭奪 · 回合制網頁策略桌遊 · 2～4 人對戰</tagline>
@@ -755,6 +794,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>專案展示</title>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>第二綠洲</name>
         <tagline>月球領土爭奪 · 回合制網頁策略桌遊 · 2～4 人對戰</tagline>
@@ -951,6 +1003,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Projets</title>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Territoire lunaire · jeu de plateau web stratégique au tour par tour · 2 à 4 joueurs</tagline>
@@ -1147,6 +1212,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Projekte</title>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Mondterritorium · rundenbasiertes Web-Strategiespiel · 2 bis 4 Spieler</tagline>
@@ -1343,6 +1421,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Проекты</title>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Лунная территория · пошаговая веб-стратегия · 2–4 игрока</tagline>
@@ -1539,6 +1630,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>プロジェクト</title>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>月面領土争い · ターン制 Web 戦略ボードゲーム · 2〜4人対戦</tagline>
@@ -1735,6 +1839,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>프로젝트</title>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>달 영토 쟁탈 · 턴제 웹 전략 보드게임 · 2~4인 대전</tagline>
@@ -1957,6 +2074,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
         <name>Create: Stratosphere</name>
         <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
@@ -2152,6 +2282,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
           <tag>TypeScript</tag>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
       </project>
       <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
         <name>Create: Stratosphere</name>
@@ -2349,6 +2492,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
       </project>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
+      </project>
       <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
         <name>Create: Stratosphere</name>
         <tagline>A Minecraft modpack combining Create automation with physics-driven flight</tagline>
@@ -2544,6 +2700,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
           <tag>TypeScript</tag>
         </tags>
         <link>https://github.com/msmapwr/personal-website</link>
+      </project>
+      <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
+        <name>Minecraft Fluent Launcher</name>
+        <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
+        <description>A Windows desktop Minecraft launcher built with WinUI 3 and Windows App SDK, using Fluent Design and native visuals such as Mica. The project is gradually adding support for Minecraft versions, instances, Java, accounts, mods, resource packs, shaders, launch arguments, files, downloads, logs, and settings, with C#, .NET 8, MVVM, and CommunityToolkit.Mvvm.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>Windows App SDK</tag>
+          <tag>.NET 8</tag>
+          <tag>MVVM</tag>
+        </tags>
+        <link>https://github.com/msmapwr/Minecraft-Fluent-Launcher</link>
       </project>
       <project id="create-stratosphere" status="in-progress" updated="2026-08-30">
         <name>Create: Stratosphere</name>

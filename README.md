@@ -35,6 +35,7 @@ msmapwr 的个人作品集与开发记录网站。
 - Create: Stratosphere：进行中的 Minecraft 整合包项目；
 - Charloom（字织）：持续优化的 Windows 原生离线 ASCII / ANSI 创作工具；
 - 群岛回波：开发中的 Godot 海空战术游戏原型。
+- Minecraft Fluent Launcher：进行中的 WinUI 3 Minecraft 桌面启动器项目。
 
 ## 设计方向
 
@@ -164,7 +165,7 @@ src/i18n/LanguageContext.tsx 返回当前语言内容
 5. 运行内容检查和生产构建；
 6. 检查图片在浅色、深色和手机布局下的显示效果。
 
-当前项目图片包括第二绿洲、个人网站、Create: Stratosphere 和 Charloom（字织） 的截图。
+当前项目图片包括第二绿洲、个人网站、Create: Stratosphere 和 Charloom（字织）的截图；暂时没有截图的项目使用 `public/images/no-photo.svg` 占位图。
 
 ## 主题和语言切换
 

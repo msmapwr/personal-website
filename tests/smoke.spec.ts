@@ -12,6 +12,7 @@ test("home page exposes the featured project", async ({ page }) => {
 test("projects can be searched and cleared", async ({ page }) => {
   await page.goto("/#/projects");
   const search = page.getByRole("textbox").first();
+  await expect(page.locator("main")).toContainText("Minecraft Fluent Launcher");
   await search.fill("Create: Stratosphere");
   await expect(page.locator("main")).toContainText("Create: Stratosphere");
   await search.fill("不存在的项目");
@@ -31,4 +32,24 @@ test("blog detail renders rich text content", async ({ page }) => {
   await page.goto("/#/blog");
   await page.locator("main a").first().click();
   await expect(page.locator("main")).toContainText(/网站|site/i);
+});
+
+test("mobile navigation returns focus to the main content", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/#/");
+  const menuButton = page.getByRole("button", { name: /菜单|Menu/i });
+  await expect(menuButton).toBeVisible();
+  await menuButton.click();
+  await expect(page.getByRole("menuitem", { name: /项目|Projects/i })).toBeVisible();
+  await page.getByRole("menuitem", { name: /项目|Projects/i }).click();
+  await expect(page).toHaveURL(/#\/projects$/);
+  await expect(page.locator("main")).toBeFocused();
+});
+
+test("reduced motion keeps the page immediately usable", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/#/");
+  await expect(page.locator("main")).toBeVisible();
+  await page.getByRole("link", { name: /View Projects|查看项目/i }).click();
+  await expect(page.locator("main")).toBeFocused();
 });

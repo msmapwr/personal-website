@@ -14,4 +14,5 @@ export const projectImages: Record<string, string[]> = {
     "images/create-stratosphere/main.png",
     "images/create-stratosphere/flight.png",
   ],
+  "minecraft-fluent-launcher": ["images/no-photo.svg"],
 };

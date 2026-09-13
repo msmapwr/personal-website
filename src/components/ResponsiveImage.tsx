@@ -15,6 +15,10 @@ const dimensions: Record<string, [number, number]> = {
 
 /** 优先 AVIF，其次 WebP，最终回退到传入的 PNG/JPEG 资源。 */
 export function ResponsiveImage({ src, ...props }: ResponsiveImageProps) {
+  if (!/\.(png|jpe?g|webp)$/i.test(src)) {
+    return <img src={src} {...props} />;
+  }
+
   const base = src.replace(/\.(png|jpe?g|webp)$/i, "");
   const webpSet = `${base}-640.webp 640w, ${base}-1024.webp 1024w`;
   const avifSet = `${base}-640.avif 640w, ${base}-1024.avif 1024w`;
