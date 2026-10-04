@@ -2,7 +2,7 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/) 规范，版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)。
 
-当前版本 **1.6.1**。
+当前版本 **1.6.2**。
 
 ## [Unreleased]
 
@@ -18,6 +18,12 @@
 - 增加生产预览浏览器性能采样命令，记录导航、FCP 和资源传输基线
 - 开始 1.7.0 性能与动效改良路线，记录构建和图片性能基线
 - 新增 `npm run report:performance` 静态资源体积报告
+
+## [1.6.2] - 2026-10-04
+
+### 新增
+
+- 为全部 13 种语言的 AsciiStudio 项目添加网站入口：https://msmapwr.github.io/personal-website/
 
 ## [1.6.1] - 2026-10-04
 
