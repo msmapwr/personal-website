@@ -34,6 +34,9 @@ test("versioned startup cache preserves unrelated origin caches", async ({ page 
 test("visited routes reload offline and reconnect clears the notice", async ({ page, context }) => {
   await ready(page);
   await page.goto("/#/projects");
+  // Reload while online so the controlled page caches its route resources and
+  // assertions target the settled page rather than the outgoing animation tree.
+  await page.reload();
   await expect(page.locator("main")).toContainText("AsciiStudio");
   const screenshot = page.locator('img[src="images/ascii-studio/ascii-studio.png"]');
   await screenshot.scrollIntoViewIfNeeded();
