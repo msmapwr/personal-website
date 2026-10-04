@@ -46,7 +46,7 @@ test("visited routes reload offline and reconnect clears the notice", async ({ p
   // Reload while online so the controlled page caches its route resources and
   // assertions target the settled page rather than the outgoing animation tree.
   await page.reload();
-  await expect(page.locator("main")).toContainText("AsciiStudio");
+  await expect(page.locator("main")).toContainText("Charloom");
   const screenshot = page.locator('img[src="images/ascii-studio/ascii-studio.png"]');
   await screenshot.scrollIntoViewIfNeeded();
   await expect(screenshot).toBeVisible();
@@ -61,7 +61,7 @@ test("visited routes reload offline and reconnect clears the notice", async ({ p
   });
   await context.setOffline(true);
   await page.reload();
-  await expect(page.locator("main")).toContainText("AsciiStudio");
+  await expect(page.locator("main")).toContainText("Charloom");
   await expect(page.getByRole("status")).toContainText("You are offline");
   await context.setOffline(false);
   await page.evaluate(() => {

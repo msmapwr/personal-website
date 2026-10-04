@@ -2,9 +2,16 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/) 规范，版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)。
 
-当前版本 **1.7.0-alpha.1**。
+当前版本 **1.7.0-alpha.2**。
 
 ## [Unreleased]
+
+## [1.7.0-alpha.2] - 2026-10-04
+
+### 变更
+
+- AsciiStudio 项目展示名称改为 Charloom（字织），13 种语言同步更新名称及说明 Windows 离线 ASCII / ANSI 创作用途的副标题
+- 保留 `ascii-studio` 项目 ID、源码链接和截图路径，使现有详情链接继续可用
 
 ## [1.7.0-alpha.1] - 2026-10-04
 

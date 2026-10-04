@@ -724,3 +724,9 @@ docs(plan): record 1.7 performance roadmap
 本轮本地验收：一次 `npm run build` 通过，包含类型检查、13 语言内容检查、3 项 Vitest 测试、RSS 与资源预算检查。生产浏览器批次使用已安装的 Edge 执行 8 项检查，其中离线刷新发现 `Vary: Origin` 导致模块预缓存未命中；修复后仅重新生成 worker 并重跑受影响的 4 项 PWA 检查，全部通过。4 项基础 smoke 已通过，无需重复。最大 JS chunk 为 492.3 KiB，Fluent UI 的 400 KiB 目标仍待后续优化。
 
 CI 中另外修正了两项跨环境测试问题：先在线刷新项目页，避免定位到路由退出动画中即将卸载的截图；网络状态文案测试明确控制 `navigator.onLine` 信号与 online/offline 事件，同时继续用 Playwright `setOffline` 阻断真实请求来验证缓存。网络传输模拟与操作系统连接状态分开控制，全部图片、离线内容和重连提示断言保持不变。
+
+`1.7.0-alpha.1` 在提交 `c8a1f3a` 的 GitHub Actions 中通过构建、8 项 Linux Chromium 浏览器检查及 Pages 部署。
+
+### 19.14 1.7.0-alpha.2：Charloom 项目名称
+
+按用户新命名，将项目展示名称更新为 Charloom（字织），中文副标题为“把字符织成画面 · Windows 离线 ASCII / ANSI 创作工具”，同步 13 语言、README 及浏览器断言。项目 ID、资源文件和源码 URL 继续使用 `ascii-studio`，保留旧详情地址。此次仅内容和版本修改，本地运行内容检查，CI 统一完成发布验收，不在本地再次运行已经通过的完整测试批次。
