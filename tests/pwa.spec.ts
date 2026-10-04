@@ -32,6 +32,15 @@ test("versioned startup cache preserves unrelated origin caches", async ({ page 
 });
 
 test("visited routes reload offline and reconnect clears the notice", async ({ page, context }) => {
+  // DevTools transport emulation and navigator.onLine are independent on some
+  // headless platforms. Control the connectivity signal while still blocking
+  // real network requests through setOffline to exercise the production cache.
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "onLine", {
+      configurable: true,
+      get: () => sessionStorage.getItem("test-offline") !== "true",
+    });
+  });
   await ready(page);
   await page.goto("/#/projects");
   // Reload while online so the controlled page caches its route resources and
@@ -46,11 +55,19 @@ test("visited routes reload offline and reconnect clears the notice", async ({ p
   await expect.poll(() => screenshot.evaluate((image: HTMLImageElement) => image.naturalWidth)).toBeGreaterThan(0);
   expect(await screenshot.evaluate((image: HTMLImageElement) => image.currentSrc)).toMatch(/ascii-studio-(640|1024)\.avif$/);
   await page.waitForLoadState("networkidle");
+  await page.evaluate(() => {
+    sessionStorage.setItem("test-offline", "true");
+    window.dispatchEvent(new Event("offline"));
+  });
   await context.setOffline(true);
   await page.reload();
   await expect(page.locator("main")).toContainText("AsciiStudio");
   await expect(page.getByRole("status")).toContainText("You are offline");
   await context.setOffline(false);
+  await page.evaluate(() => {
+    sessionStorage.removeItem("test-offline");
+    window.dispatchEvent(new Event("online"));
+  });
   await expect(page.getByRole("status")).toHaveCount(0);
 });
 
