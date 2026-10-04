@@ -8,6 +8,7 @@ const dimensions: Record<string, [number, number]> = {
   "images/the-second-oasis/mainmenu.png": [1904, 947],
   "images/the-second-oasis/ingame.png": [1904, 945],
   "images/personal-website/personal-website.png": [1101, 501],
+  "images/ascii-studio/ascii-studio.png": [1862, 1079],
   "images/create-stratosphere/main.png": [1366, 768],
   "images/create-stratosphere/flight.png": [1366, 768],
 };
