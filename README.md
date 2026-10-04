@@ -32,7 +32,9 @@ msmapwr 的个人作品集与开发记录网站。
 
 - 第二绿洲：已完成的回合制网页策略桌游项目；
 - personal-website：正在优化的个人网站项目；
-- Create: Stratosphere：进行中的 Minecraft 整合包项目。
+- Create: Stratosphere：进行中的 Minecraft 整合包项目；
+- AsciiStudio：持续优化的 Windows 原生离线 ASCII / ANSI 创作工具；
+- 群岛回波：开发中的 Godot 海空战术游戏原型。
 
 ## 设计方向
 
