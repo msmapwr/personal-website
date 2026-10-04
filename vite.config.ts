@@ -6,6 +6,7 @@ export default defineConfig({
   // 相对 base，兼容根地址与子路径部署（GitHub Pages）
   base: "./",
   build: {
+    manifest: true,
     rollupOptions: {
       output: {
         manualChunks: {

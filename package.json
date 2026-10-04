@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "private": true,
-  "version": "1.6.2",
+  "version": "1.7.0-alpha.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,11 +9,12 @@
     "check-content": "node scripts/check-content.mjs",
     "test": "vitest run src",
     "test:browser": "playwright test",
+    "test:production": "node scripts/run-performance-test.mjs tests/smoke.spec.ts tests/pwa.spec.ts",
     "test:performance": "npm run build && node scripts/run-performance-test.mjs",
     "generate-feed": "node scripts/generate-feed.mjs",
     "check-bundle": "node scripts/check-bundle.mjs",
     "report:performance": "node scripts/report-performance.mjs",
-    "build": "npm run typecheck && npm run check-content && npm run test && npm run generate-feed && vite build && npm run check-bundle",
+    "build": "npm run typecheck && npm run check-content && npm run test && npm run generate-feed && vite build && node scripts/generate-sw.mjs && npm run check-bundle",
     "preview": "vite preview"
   },
   "dependencies": {
