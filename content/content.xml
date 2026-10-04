@@ -179,6 +179,31 @@
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
       </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Windows 原生、离线的 ASCII / ANSI 创作工具</tagline>
+        <description>用 C# 和 WinUI 3 开发的 Windows 桌面工具，把图片或文字转换成字符画，转换与导出均在本机完成。支持彩色 ANSI、FIGlet 与系统字体排版，以及结果编辑、撤销重做和原图对比。作品可保存为 .asciiproj 项目，并导出为文本、图片、HTML、SVG 等格式。</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>群岛回波</name>
+        <tagline>以 CRT 舰桥终端为核心的海空战术游戏原型</tagline>
+        <description>用 Godot 4 和 GDScript 开发的海空战术游戏原型，在 16:9 舰桥控制台中呈现可交互的 CRT 战术终端。玩家通过雷达扫描或目视侦察识别目标，调整母舰航向与航速，进行舰炮交战，并驾驶侦察机出击、攻击和返航。当前围绕首关的搜索、交战、回收与结算流程开发，更多关卡、平衡与完整战役系统仍在后续计划中。</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
+      </project>
     </projects>
     <posts>
       <title>博客</title>
@@ -356,6 +381,31 @@
         </tags>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>A native, offline ASCII / ANSI creation tool for Windows</tagline>
+        <description>A Windows desktop tool built with C# and WinUI 3 that turns images or text into character art, with conversion and export performed locally. It supports colour ANSI, FIGlet and system-font layouts, result editing, undo and redo, and comparisons with the original image. Save work as .asciiproj projects or export it as text, images, HTML, SVG and other formats.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>Echoes of the Archipelago</name>
+        <tagline>A naval and air tactical game prototype built around a CRT bridge terminal</tagline>
+        <description>A naval and air tactical game prototype built with Godot 4 and GDScript, featuring an interactive CRT terminal inside a 16:9 bridge console. Players identify contacts through radar scans or visual reconnaissance, steer the mothership, engage with deck guns, and pilot a scout aircraft through sorties, attacks and return flights. Development currently focuses on the first mission’s search, combat, recovery and debriefing loop; more missions, balancing and a full campaign remain planned.</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
       </project>
     </projects>
     <posts>
@@ -535,6 +585,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
       </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Windows 原生、離線的 ASCII / ANSI 創作工具</tagline>
+        <description>以 C# 與 WinUI 3 開發的 Windows 桌面工具，將圖片或文字轉換成字符畫，轉換與匯出均在本機完成。支援彩色 ANSI、FIGlet 與系統字體排版，以及結果編輯、復原重做和原圖比較。作品可儲存為 .asciiproj 專案，並匯出為文字、圖片、HTML、SVG 等格式。</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>群島回波</name>
+        <tagline>以 CRT 艦橋終端為核心的海空戰術遊戲原型</tagline>
+        <description>以 Godot 4 與 GDScript 開發的海空戰術遊戲原型，在 16:9 艦橋控制台中呈現可互動的 CRT 戰術終端。玩家透過雷達掃描或目視偵察識別目標，調整母艦航向與航速，進行艦炮交戰，並駕駛偵察機出擊、攻擊和返航。目前圍繞首關的搜索、交戰、回收與結算流程開發，更多關卡、平衡與完整戰役系統仍在後續計劃中。</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
+      </project>
     </projects>
     <posts>
       <title>博客</title>
@@ -700,6 +775,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Windows 原生、離線的 ASCII / ANSI 創作工具</tagline>
+        <description>以 C# 與 WinUI 3 開發的 Windows 桌面工具，將圖片或文字轉換成字元畫，轉換與匯出均在本機完成。支援彩色 ANSI、FIGlet 與系統字型排版，以及結果編輯、復原重做和原圖比較。作品可儲存為 .asciiproj 專案，並匯出為文字、圖片、HTML、SVG 等格式。</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>群島回波</name>
+        <tagline>以 CRT 艦橋終端為核心的海空戰術遊戲原型</tagline>
+        <description>以 Godot 4 與 GDScript 開發的海空戰術遊戲原型，在 16:9 艦橋控制台中呈現可互動的 CRT 戰術終端。玩家透過雷達掃描或目視偵察辨識目標，調整母艦航向與航速，進行艦炮交戰，並駕駛偵察機出擊、攻擊和返航。目前圍繞首關的搜索、交戰、回收與結算流程開發，更多關卡、平衡與完整戰役系統仍在後續規劃中。</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
       </project>
     </projects>
     <posts>
@@ -867,6 +967,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
       </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Un outil Windows natif et hors ligne pour créer des œuvres ASCII / ANSI</tagline>
+        <description>Développé en C# avec WinUI 3, cet outil de bureau transforme les images et les textes en art de caractères, avec conversion et export locaux. Il propose les couleurs ANSI, la mise en page FIGlet et les polices système, ainsi que la retouche, l’annulation et la comparaison avec l’original. Les créations peuvent être enregistrées en projets .asciiproj ou exportées en texte, images, HTML, SVG et autres formats.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>Échos de l’archipel</name>
+        <tagline>Un prototype tactique naval et aérien autour d’un terminal CRT de passerelle</tagline>
+        <description>Développé avec Godot 4 et GDScript, ce prototype propose un terminal CRT interactif dans une console de passerelle au format 16:9. Le joueur identifie les contacts par radar ou reconnaissance visuelle, dirige le navire, utilise les canons de pont et pilote un avion de reconnaissance pour attaquer puis rentrer. Le développement se concentre sur la première mission, de la recherche au débriefing ; les missions supplémentaires, l’équilibrage et une campagne complète sont prévus pour la suite.</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
+      </project>
     </projects>
     <posts>
       <title>Blog</title>
@@ -1032,6 +1157,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Ein natives Offline-Werkzeug für ASCII / ANSI-Kunst unter Windows</tagline>
+        <description>Das mit C# und WinUI 3 entwickelte Desktop-Werkzeug wandelt Bilder oder Text in Zeichenkunst um; Konvertierung und Export erfolgen lokal. Es unterstützt farbiges ANSI, FIGlet und Systemschrift-Layouts sowie Bearbeitung, Rückgängig/Wiederholen und Vergleiche mit dem Original. Werke lassen sich als .asciiproj-Projekte speichern oder als Text, Bilder, HTML, SVG und weitere Formate exportieren.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>Echos des Archipels</name>
+        <tagline>Ein See- und Lufttaktik-Prototyp mit CRT-Brückenterminal</tagline>
+        <description>Dieser mit Godot 4 und GDScript entwickelte Spielprototyp bietet ein interaktives CRT-Terminal in einer 16:9-Brückenkonsole. Spieler identifizieren Kontakte per Radar oder Sichtaufklärung, steuern das Mutterschiff, setzen Deckgeschütze ein und fliegen Aufklärungs-, Angriffs- und Rückkehreinsätze. Derzeit steht der Ablauf der ersten Mission von der Suche bis zur Auswertung im Mittelpunkt; weitere Missionen, Balancing und eine vollständige Kampagne sind geplant.</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
       </project>
     </projects>
     <posts>
@@ -1199,6 +1349,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
       </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Нативный офлайн-инструмент для создания ASCII / ANSI-графики в Windows</tagline>
+        <description>Настольное приложение на C# и WinUI 3 преобразует изображения и текст в символьную графику; обработка и экспорт выполняются локально. Поддерживаются цветной ANSI, FIGlet и системные шрифты, редактирование, отмена и повтор действий, сравнение с оригиналом. Работы можно сохранять в проектах .asciiproj или экспортировать в текст, изображения, HTML, SVG и другие форматы.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>Эхо архипелага</name>
+        <tagline>Прототип морской и воздушной тактической игры с ЭЛТ-терминалом на мостике</tagline>
+        <description>Прототип на Godot 4 и GDScript размещает интерактивный ЭЛТ-терминал в консоли мостика формата 16:9. Игрок опознаёт контакты радаром или визуальной разведкой, управляет кораблём, ведёт огонь из палубных орудий и пилотирует разведывательный самолёт при вылете, атаке и возвращении. Разработка сосредоточена на первой миссии — от поиска до возвращения и подведения итогов; новые миссии, балансировка и полная кампания запланированы на будущее.</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
+      </project>
     </projects>
     <posts>
       <title>Блог</title>
@@ -1364,6 +1539,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Windows ネイティブのオフライン ASCII / ANSI 制作ツール</tagline>
+        <description>C# と WinUI 3 で開発した Windows デスクトップツールで、画像や文字を文字アートに変換し、変換と書き出しをローカルで行います。カラー ANSI、FIGlet とシステムフォントによる組版、編集、元に戻す・やり直し、元画像との比較に対応しています。作品は .asciiproj プロジェクトとして保存でき、テキスト、画像、HTML、SVG などへ書き出せます。</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>群島の残響</name>
+        <tagline>CRT 艦橋端末を中心とした海空戦術ゲームのプロトタイプ</tagline>
+        <description>Godot 4 と GDScript で開発した海空戦術ゲームのプロトタイプで、16:9 の艦橋コンソールに操作可能な CRT 戦術端末を配置しています。プレイヤーはレーダーや目視偵察で目標を識別し、母艦の針路と速度を調整して艦砲戦を行い、偵察機で出撃・攻撃・帰還します。現在は最初の任務の捜索、交戦、回収、結果確認の流れを開発しており、追加任務、バランス調整、完全なキャンペーンは今後の計画です。</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
       </project>
     </projects>
     <posts>
@@ -1531,6 +1731,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
       </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Windows 네이티브 오프라인 ASCII / ANSI 창작 도구</tagline>
+        <description>C#과 WinUI 3로 개발한 Windows 데스크톱 도구로, 이미지나 텍스트를 문자 아트로 변환하며 변환과 내보내기는 로컬에서 수행합니다. 컬러 ANSI, FIGlet 및 시스템 글꼴 조판, 결과 편집, 실행 취소와 다시 실행, 원본 비교를 지원합니다. 작업을 .asciiproj 프로젝트로 저장하거나 텍스트, 이미지, HTML, SVG 등으로 내보낼 수 있습니다.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>군도의 메아리</name>
+        <tagline>CRT 함교 터미널을 중심으로 한 해공 전술 게임 프로토타입</tagline>
+        <description>Godot 4와 GDScript로 개발한 해공 전술 게임 프로토타입으로, 16:9 함교 콘솔에 조작 가능한 CRT 전술 터미널을 배치했습니다. 플레이어는 레이더나 육안 정찰로 표적을 식별하고, 모함의 항로와 속력을 조정해 함포전을 수행하며, 정찰기를 조종해 출격·공격·귀환합니다. 현재 첫 임무의 탐색, 교전, 회수와 결과 확인 흐름을 개발 중이며, 추가 임무와 밸런스 조정, 완전한 캠페인은 후속 계획에 있습니다.</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
+      </project>
     </projects>
     <posts>
       <title>블로그</title>
@@ -1696,6 +1921,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Windows 字畫之器，離線製 ASCII / ANSI</tagline>
+        <description>以 C#、WinUI 3 製桌面之器，化圖與文為字畫，轉製與匯出皆行於本機。可施 ANSI 彩色、FIGlet 及系統字體，亦可編修、撤銷、重作，比較原圖。作品可存為 .asciiproj，或出為文字、圖像、HTML、SVG 諸式。</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>群島回波</name>
+        <tagline>以 CRT 艦橋終端演海空戰術之原型</tagline>
+        <description>以 Godot 4、GDScript 製海空戰術原型，置可操之 CRT 終端於十六比九艦橋控制臺。玩家以雷達或目視辨敵，調母艦之航向與速，發艦炮，駕偵察機出擊、攻敵而返。今務首關之搜索、交戰、回收與結算，餘關、平衡及完整戰役尚待後作。</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
       </project>
     </projects>
     <posts>
@@ -1863,6 +2113,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
       </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Uma ferramenta nativa e offline de criação ASCII / ANSI para Windows</tagline>
+        <description>Desenvolvida em C# e WinUI 3, esta ferramenta de desktop transforma imagens ou texto em arte de caracteres, com conversão e exportação locais. Oferece ANSI colorido, composição com FIGlet e fontes do sistema, edição, desfazer e refazer, e comparação com o original. As obras podem ser guardadas como projetos .asciiproj ou exportadas como texto, imagens, HTML, SVG e outros formatos.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>Ecos do Arquipélago</name>
+        <tagline>Um protótipo tático naval e aéreo centrado num terminal CRT de ponte</tagline>
+        <description>Criado com Godot 4 e GDScript, este protótipo apresenta um terminal CRT interativo numa consola de ponte em formato 16:9. O jogador identifica contactos por radar ou reconhecimento visual, dirige o navio, utiliza os canhões de convés e pilota um avião de reconhecimento em saídas, ataques e regressos. O desenvolvimento concentra-se no ciclo da primeira missão, da busca à recuperação e avaliação; mais missões, equilíbrio e uma campanha completa estão previstos para o futuro.</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
+      </project>
     </projects>
     <posts>
       <title>Blog</title>
@@ -2029,6 +2304,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
       </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>AsciiStudio</name>
+        <tagline>Una herramienta nativa y sin conexión de creación ASCII / ANSI para Windows</tagline>
+        <description>Desarrollada con C# y WinUI 3, esta herramienta de escritorio convierte imágenes o texto en arte de caracteres, con conversión y exportación locales. Admite ANSI en color, composición con FIGlet y fuentes del sistema, edición, deshacer y rehacer, y comparación con el original. Las obras pueden guardarse como proyectos .asciiproj o exportarse como texto, imágenes, HTML, SVG y otros formatos.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>Ecos del Archipiélago</name>
+        <tagline>Un prototipo táctico naval y aéreo centrado en un terminal CRT de puente</tagline>
+        <description>Creado con Godot 4 y GDScript, este prototipo presenta un terminal CRT interactivo dentro de una consola de puente en formato 16:9. El jugador identifica contactos mediante radar o reconocimiento visual, dirige el buque, usa los cañones de cubierta y pilota un avión de reconocimiento en salidas, ataques y vuelos de regreso. El desarrollo se centra en el ciclo de la primera misión, desde la búsqueda hasta la recuperación y evaluación; más misiones, equilibrio y una campaña completa siguen en los planes futuros.</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
+      </project>
     </projects>
     <posts>
       <title>Blog</title>
@@ -2194,6 +2494,31 @@ I will keep optimizing and adding content. This site will keep growing.</body>
         </tags>
         <link>https://github.com/msmapwr/Create-Stratosphere-ModPack</link>
         <demo>https://modrinth.com/modpack/create-stratosphere</demo>
+      </project>
+      <project id="ascii-studio" status="optimizing" updated="2026-10-04">
+        <name>ᚨᛊᚲᛁᛁᛊᛏᚢᛞᛁᛟ</name>
+        <tagline>ᚨ ᚾᚨᛏᛁᚹᛖ, ᛟᚠᚠᛚᛁᚾᛖ ᚨᛊᚲᛁᛁ / ᚨᚾᛊᛁ ᚲᚱᛖᚨᛏᛁᛟᚾ ᛏᛟᛟᛚ ᚠᛟᚱ ᚹᛁᚾᛞᛟᚹᛊ</tagline>
+        <description>ᚨ ᚹᛁᚾᛞᛟᚹᛊ ᛞᛖᛊᚲᛏᛟᛈ ᛏᛟᛟᛚ ᛒᚢᛁᛚᛏ ᚹᛁᛏᚺ ᚲ# ᚨᚾᛞ ᚹᛁᚾᚢᛁ 3 ᛏᚺᚨᛏ ᛏᚢᚱᚾᛊ ᛁᛗᚨᚷᛖᛊ ᛟᚱ ᛏᛖᚲᛏ ᛁᚾᛏᛟ ᚲᚺᚨᚱᚨᚲᛏᛖᚱ ᚨᚱᛏ, ᚹᛁᛏᚺ ᚲᛟᚾᚹᛖᚱᛊᛁᛟᚾ ᚨᚾᛞ ᛖᚲᛈᛟᚱᛏ ᛈᛖᚱᚠᛟᚱᛗᛖᛞ ᛚᛟᚲᚨᛚᛚᛃ. ᛁᛏ ᛊᚢᛈᛈᛟᚱᛏᛊ ᚲᛟᛚᛟᚢᚱ ᚨᚾᛊᛁ, ᚠᛁᚷᛚᛖᛏ ᚨᚾᛞ ᛊᛃᛊᛏᛖᛗ-ᚠᛟᚾᛏ ᛚᚨᛃᛟᚢᛏᛊ, ᚱᛖᛊᚢᛚᛏ ᛖᛞᛁᛏᛁᚾᚷ, ᚢᚾᛞᛟ ᚨᚾᛞ ᚱᛖᛞᛟ, ᚨᚾᛞ ᚲᛟᛗᛈᚨᚱᛁᛊᛟᚾᛊ ᚹᛁᛏᚺ ᛏᚺᛖ ᛟᚱᛁᚷᛁᚾᚨᛚ ᛁᛗᚨᚷᛖ. ᛊᚨᚹᛖ ᚹᛟᚱᚲ ᚨᛊ .ᚨᛊᚲᛁᛁᛈᚱᛟᛃ ᛈᚱᛟᛃᛖᚲᛏᛊ ᛟᚱ ᛖᚲᛈᛟᚱᛏ ᛁᛏ ᚨᛊ ᛏᛖᚲᛏ, ᛁᛗᚨᚷᛖᛊ, ᚺᛏᛗᛚ, ᛊᚹᚷ ᚨᚾᛞ ᛟᛏᚺᛖᚱ ᚠᛟᚱᛗᚨᛏᛊ.</description>
+        <tags>
+          <tag>C#</tag>
+          <tag>WinUI 3</tag>
+          <tag>.NET</tag>
+          <tag>ASCII</tag>
+          <tag>ANSI</tag>
+        </tags>
+        <link>https://github.com/msmapwr/ascii-studio</link>
+      </project>
+      <project id="archipelago-echoes" status="in-progress" updated="2026-10-04">
+        <name>ᛖᚲᚺᛟᛖᛊ ᛟᚠ ᛏᚺᛖ ᚨᚱᚲᚺᛁᛈᛖᛚᚨᚷᛟ</name>
+        <tagline>ᚨ ᚾᚨᚹᚨᛚ ᚨᚾᛞ ᚨᛁᚱ ᛏᚨᚲᛏᛁᚲᚨᛚ ᚷᚨᛗᛖ ᛈᚱᛟᛏᛟᛏᛃᛈᛖ ᛒᚢᛁᛚᛏ ᚨᚱᛟᚢᚾᛞ ᚨ ᚲᚱᛏ ᛒᚱᛁᛞᚷᛖ ᛏᛖᚱᛗᛁᚾᚨᛚ</tagline>
+        <description>ᚨ ᚾᚨᚹᚨᛚ ᚨᚾᛞ ᚨᛁᚱ ᛏᚨᚲᛏᛁᚲᚨᛚ ᚷᚨᛗᛖ ᛈᚱᛟᛏᛟᛏᛃᛈᛖ ᛒᚢᛁᛚᛏ ᚹᛁᛏᚺ ᚷᛟᛞᛟᛏ 4 ᚨᚾᛞ ᚷᛞᛊᚲᚱᛁᛈᛏ, ᚠᛖᚨᛏᚢᚱᛁᚾᚷ ᚨᚾ ᛁᚾᛏᛖᚱᚨᚲᛏᛁᚹᛖ ᚲᚱᛏ ᛏᛖᚱᛗᛁᚾᚨᛚ ᛁᚾᛊᛁᛞᛖ ᚨ 16:9 ᛒᚱᛁᛞᚷᛖ ᚲᛟᚾᛊᛟᛚᛖ. ᛈᛚᚨᛃᛖᚱᛊ ᛁᛞᛖᚾᛏᛁᚠᛃ ᚲᛟᚾᛏᚨᚲᛏᛊ ᛏᚺᚱᛟᚢᚷᚺ ᚱᚨᛞᚨᚱ ᛊᚲᚨᚾᛊ ᛟᚱ ᚹᛁᛊᚢᚨᛚ ᚱᛖᚲᛟᚾᚾᚨᛁᛊᛊᚨᚾᚲᛖ, ᛊᛏᛖᛖᚱ ᛏᚺᛖ ᛗᛟᛏᚺᛖᚱᛊᚺᛁᛈ, ᛖᚾᚷᚨᚷᛖ ᚹᛁᛏᚺ ᛞᛖᚲᚲ ᚷᚢᚾᛊ, ᚨᚾᛞ ᛈᛁᛚᛟᛏ ᚨ ᛊᚲᛟᚢᛏ ᚨᛁᚱᚲᚱᚨᚠᛏ ᛏᚺᚱᛟᚢᚷᚺ ᛊᛟᚱᛏᛁᛖᛊ, ᚨᛏᛏᚨᚲᚲᛊ ᚨᚾᛞ ᚱᛖᛏᚢᚱᚾ ᚠᛚᛁᚷᚺᛏᛊ. ᛞᛖᚹᛖᛚᛟᛈᛗᛖᚾᛏ ᚲᚢᚱᚱᛖᚾᛏᛚᛃ ᚠᛟᚲᚢᛊᛖᛊ ᛟᚾ ᛏᚺᛖ ᚠᛁᚱᛊᛏ ᛗᛁᛊᛊᛁᛟᚾ’ᛊ ᛊᛖᚨᚱᚲᚺ, ᚲᛟᛗᛒᚨᛏ, ᚱᛖᚲᛟᚹᛖᚱᛃ ᚨᚾᛞ ᛞᛖᛒᚱᛁᛖᚠᛁᚾᚷ ᛚᛟᛟᛈ; ᛗᛟᚱᛖ ᛗᛁᛊᛊᛁᛟᚾᛊ, ᛒᚨᛚᚨᚾᚲᛁᚾᚷ ᚨᚾᛞ ᚨ ᚠᚢᛚᛚ ᚲᚨᛗᛈᚨᛁᚷᚾ ᚱᛖᛗᚨᛁᚾ ᛈᛚᚨᚾᚾᛖᛞ.</description>
+        <tags>
+          <tag>Godot 4</tag>
+          <tag>GDScript</tag>
+          <tag>2D</tag>
+          <tag>CRT</tag>
+        </tags>
+        <link>https://github.com/msmapwr/archipelago-echoes</link>
       </project>
     </projects>
     <posts>
