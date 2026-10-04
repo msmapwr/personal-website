@@ -27,6 +27,10 @@ export interface UiStrings {
   menu: string;
   close: string;
   skipToContent: string;
+  offlineNotice: string;
+  routeLoadFailed: string;
+  routeLoadHelp: string;
+  retry: string;
 }
 
 export interface NavItem {

@@ -8,6 +8,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Navigation } from "./Navigation";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { motionTokens } from "../theme/motion";
+import { OfflineNotice } from "./OfflineNotice";
 
 interface AppShellProps {
   mode: ThemeMode;
@@ -143,6 +144,7 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
         </div>
       </header>
       <main id="main" ref={mainRef} tabIndex={-1} className={styles.main}>
+        <OfflineNotice />
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={location.pathname}

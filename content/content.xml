@@ -55,6 +55,10 @@
       <menu>菜单</menu>
       <close>关闭</close>
       <skipToContent>跳到主内容</skipToContent>
+      <offlineNotice>当前处于离线状态，可继续浏览已缓存的内容。</offlineNotice>
+      <routeLoadFailed>页面加载失败</routeLoadFailed>
+      <routeLoadHelp>此页面暂时无法加载。请检查网络后重试，或返回首页。</routeLoadHelp>
+      <retry>重试</retry>
     </ui>
     <nav>
       <item id="home">首页</item>
@@ -259,6 +263,10 @@
     
       <close>Close</close>
       <skipToContent>Skip to main content</skipToContent>
+      <offlineNotice>You are offline. Previously cached content is still available.</offlineNotice>
+      <routeLoadFailed>Page could not be loaded</routeLoadFailed>
+      <routeLoadHelp>This page is temporarily unavailable. Check your connection and retry, or return home.</routeLoadHelp>
+      <retry>Retry</retry>
     </ui>
     <nav>
       <item id="home">Home</item>
@@ -463,6 +471,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>關閉</close>
       <skipToContent>跳至主要內容</skipToContent>
+      <offlineNotice>目前處於離線狀態，可繼續瀏覽已快取的內容。</offlineNotice>
+      <routeLoadFailed>頁面載入失敗</routeLoadFailed>
+      <routeLoadHelp>此頁面暫時無法載入。請檢查網絡後重試，或返回首頁。</routeLoadHelp>
+      <retry>重試</retry>
     </ui>
     <nav>
       <item id="home">首頁</item>
@@ -655,6 +667,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>關閉</close>
       <skipToContent>跳到主要內容</skipToContent>
+      <offlineNotice>目前處於離線狀態，可繼續瀏覽已快取的內容。</offlineNotice>
+      <routeLoadFailed>頁面載入失敗</routeLoadFailed>
+      <routeLoadHelp>此頁面暫時無法載入。請檢查網路後重試，或返回首頁。</routeLoadHelp>
+      <retry>重試</retry>
     </ui>
     <nav>
       <item id="home">首頁</item>
@@ -847,6 +863,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>Fermer</close>
       <skipToContent>Aller au contenu principal</skipToContent>
+      <offlineNotice>Vous êtes hors ligne. Le contenu déjà mis en cache reste disponible.</offlineNotice>
+      <routeLoadFailed>Impossible de charger la page</routeLoadFailed>
+      <routeLoadHelp>Cette page est temporairement indisponible. Vérifiez votre connexion et réessayez, ou revenez à l’accueil.</routeLoadHelp>
+      <retry>Réessayer</retry>
     </ui>
     <nav>
       <item id="home">Accueil</item>
@@ -1039,6 +1059,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>Schließen</close>
       <skipToContent>Zum Hauptinhalt springen</skipToContent>
+      <offlineNotice>Du bist offline. Bereits zwischengespeicherte Inhalte sind weiterhin verfügbar.</offlineNotice>
+      <routeLoadFailed>Seite konnte nicht geladen werden</routeLoadFailed>
+      <routeLoadHelp>Diese Seite ist vorübergehend nicht verfügbar. Prüfe deine Verbindung und versuche es erneut oder kehre zur Startseite zurück.</routeLoadHelp>
+      <retry>Erneut versuchen</retry>
     </ui>
     <nav>
       <item id="home">Start</item>
@@ -1231,6 +1255,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>Закрыть</close>
       <skipToContent>Перейти к содержимому</skipToContent>
+      <offlineNotice>Вы не в сети. Ранее сохранённые материалы по-прежнему доступны.</offlineNotice>
+      <routeLoadFailed>Не удалось загрузить страницу</routeLoadFailed>
+      <routeLoadHelp>Страница временно недоступна. Проверьте соединение и повторите попытку или вернитесь на главную.</routeLoadHelp>
+      <retry>Повторить</retry>
     </ui>
     <nav>
       <item id="home">Главная</item>
@@ -1423,6 +1451,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>閉じる</close>
       <skipToContent>メインコンテンツへスキップ</skipToContent>
+      <offlineNotice>オフラインです。キャッシュ済みのコンテンツは引き続き閲覧できます。</offlineNotice>
+      <routeLoadFailed>ページを読み込めませんでした</routeLoadFailed>
+      <routeLoadHelp>このページは現在読み込めません。接続を確認して再試行するか、ホームに戻ってください。</routeLoadHelp>
+      <retry>再試行</retry>
     </ui>
     <nav>
       <item id="home">ホーム</item>
@@ -1615,6 +1647,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>닫기</close>
       <skipToContent>본문으로 건너뛰기</skipToContent>
+      <offlineNotice>오프라인 상태입니다. 캐시된 콘텐츠는 계속 볼 수 있습니다.</offlineNotice>
+      <routeLoadFailed>페이지를 불러오지 못했습니다</routeLoadFailed>
+      <routeLoadHelp>이 페이지를 현재 불러올 수 없습니다. 연결을 확인한 후 다시 시도하거나 홈으로 돌아가세요.</routeLoadHelp>
+      <retry>다시 시도</retry>
     </ui>
     <nav>
       <item id="home">홈</item>
@@ -1807,6 +1843,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>闔</close>
       <skipToContent>跳至主文</skipToContent>
+      <offlineNotice>今無網絡，已存之文仍可閱。</offlineNotice>
+      <routeLoadFailed>頁面未能載入</routeLoadFailed>
+      <routeLoadHelp>此頁暫不可載。請察網絡而重試，或返首頁。</routeLoadHelp>
+      <retry>重試</retry>
     </ui>
     <nav>
       <item id="home">首</item>
@@ -1999,6 +2039,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>Fechar</close>
       <skipToContent>Ir para o conteúdo principal</skipToContent>
+      <offlineNotice>Está offline. O conteúdo já guardado em cache continua disponível.</offlineNotice>
+      <routeLoadFailed>Não foi possível carregar a página</routeLoadFailed>
+      <routeLoadHelp>Esta página está temporariamente indisponível. Verifique a ligação e tente novamente, ou volte ao início.</routeLoadHelp>
+      <retry>Tentar novamente</retry>
     </ui>
     <nav>
       <item id="home">Início</item>
@@ -2191,6 +2235,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>Cerrar</close>
       <skipToContent>Ir al contenido principal</skipToContent>
+      <offlineNotice>No tienes conexión. El contenido almacenado en caché sigue disponible.</offlineNotice>
+      <routeLoadFailed>No se pudo cargar la página</routeLoadFailed>
+      <routeLoadHelp>Esta página no está disponible temporalmente. Comprueba la conexión y vuelve a intentarlo, o regresa al inicio.</routeLoadHelp>
+      <retry>Reintentar</retry>
     </ui>
     <nav>
       <item id="home">Inicio</item>
@@ -2383,6 +2431,10 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     
       <close>ᚱᚨᚢᚾᛞ</close>
       <skipToContent>ᛚᛖᛁᚦ</skipToContent>
+      <offlineNotice>ᛃᛟᚢ ᚨᚱᛖ ᛟᚠᚠᛚᛁᚾᛖ. ᛈᚱᛖᚹᛁᛟᚢᛊᛚᛃ ᚲᚨᚲᚺᛖᛞ ᚲᛟᚾᛏᛖᚾᛏ ᛁᛊ ᛊᛏᛁᛚᛚ ᚨᚹᚨᛁᛚᚨᛒᛚᛖ.</offlineNotice>
+      <routeLoadFailed>ᛈᚨᚷᛖ ᚲᛟᚢᛚᛞ ᚾᛟᛏ ᛒᛖ ᛚᛟᚨᛞᛖᛞ</routeLoadFailed>
+      <routeLoadHelp>ᛏᚺᛁᛊ ᛈᚨᚷᛖ ᛁᛊ ᛏᛖᛗᛈᛟᚱᚨᚱᛁᛚᛃ ᚢᚾᚨᚹᚨᛁᛚᚨᛒᛚᛖ. ᚲᚺᛖᚲᚲ ᛃᛟᚢᚱ ᚲᛟᚾᚾᛖᚲᛏᛁᛟᚾ ᚨᚾᛞ ᚱᛖᛏᚱᛃ, ᛟᚱ ᚱᛖᛏᚢᚱᚾ ᚺᛟᛗᛖ.</routeLoadHelp>
+      <retry>ᚱᛖᛏᚱᛃ</retry>
     </ui>
     <nav>
       <item id="home">ᚱᚨᚷᚾ</item>

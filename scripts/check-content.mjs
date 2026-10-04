@@ -98,6 +98,10 @@ function checkLocale(locale, index) {
     "menu",
     "close",
     "skipToContent",
+    "offlineNotice",
+    "routeLoadFailed",
+    "routeLoadHelp",
+    "retry",
   ];
   for (const field of uiFields) required(locale.ui?.[field], `${prefix}.ui.${field}`);
 

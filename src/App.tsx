@@ -1,10 +1,11 @@
 import { FluentProvider } from "@fluentui/react-components";
 import { lazy, Suspense, type ReactNode } from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
 import { AppShell } from "./components/AppShell";
 import { useThemeMode } from "./hooks/useThemeMode";
 import { LanguageProvider } from "./i18n/LanguageContext";
 import { RouteLoading } from "./components/RouteLoading";
+import { RouteErrorBoundary, RouteLoadError } from "./components/RouteErrorBoundary";
 import { darkTheme, lightTheme } from "./theme/fluentTheme";
 
 const Home = lazy(() => import("./pages/Home").then(({ Home }) => ({ default: Home })));
@@ -19,7 +20,12 @@ const BlogPost = lazy(() => import("./pages/BlogPost").then(({ BlogPost }) => ({
 const NotFound = lazy(() => import("./pages/NotFound").then(({ NotFound }) => ({ default: NotFound })));
 
 function LazyRoute({ children }: { children: ReactNode }) {
-  return <Suspense fallback={<RouteLoading />}>{children}</Suspense>;
+  const { pathname } = useLocation();
+  return (
+    <RouteErrorBoundary key={pathname} fallback={<RouteLoadError />}>
+      <Suspense fallback={<RouteLoading />}>{children}</Suspense>
+    </RouteErrorBoundary>
+  );
 }
 
 export function App() {

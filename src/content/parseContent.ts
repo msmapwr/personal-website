@@ -51,6 +51,10 @@ function parseLocale(loc: Element): LocaleContent {
     menu: firstText(ui, "menu"),
     close: firstText(ui, "close"),
     skipToContent: firstText(ui, "skipToContent"),
+    offlineNotice: firstText(ui, "offlineNotice"),
+    routeLoadFailed: firstText(ui, "routeLoadFailed"),
+    routeLoadHelp: firstText(ui, "routeLoadHelp"),
+    retry: firstText(ui, "retry"),
   };
 
   const nav: NavItem[] = Array.from(
