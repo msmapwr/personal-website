@@ -164,7 +164,7 @@ src/i18n/LanguageContext.tsx 返回当前语言内容
 5. 运行内容检查和生产构建；
 6. 检查图片在浅色、深色和手机布局下的显示效果。
 
-当前项目图片包括第二绿洲、个人网站和 Create: Stratosphere 的截图。
+当前项目图片包括第二绿洲、个人网站、Create: Stratosphere 和 AsciiStudio 的截图。
 
 ## 主题和语言切换
 
@@ -200,12 +200,25 @@ src/i18n/LanguageContext.tsx 返回当前语言内容
 
 网站包含 `public/manifest.json` 和 `public/sw.js`，支持安装到设备并提供离线访问能力。
 
-Service Worker 当前采用两种策略：
+Service Worker 按资源类型使用不同策略：
 
-- 页面导航使用网络优先，网络失败时回退到缓存，确保博客和页面更新可以及时获取；
-- 静态资源使用缓存优先，首次访问后可以在网络不可用时继续加载已缓存内容。
+- 页面导航、RSS 和 manifest 使用网络优先，网络失败时回退到缓存；
+- 带哈希的 JS/CSS 使用缓存优先，图片先返回缓存并在后台更新；
+- 只处理本站作用域内的 GET 请求，不缓存外部网站资源；
+- 静态资源无缓存时保留加载失败状态，不将 HTML 作为图片或脚本返回。
 
-如果调整缓存策略或缓存资源，需要同步检查缓存版本和更新流程。发布新版本后，应确认 Service Worker 能够激活并清理旧缓存。
+构建时，`scripts/generate-sw.mjs` 根据 `package.json` 版本和 Vite manifest 生成发布用的 `dist/sw.js`，预缓存首页及其必要脚本和样式。其他页面按访问情况缓存；未缓存的页面在离线时会显示重试和返回首页入口。页面离线时会提示可继续浏览已缓存的内容，恢复网络后提示自动消失。
+
+新 Service Worker 会等待旧版本控制的所有页面关闭后激活，不强制刷新当前页面。激活后只清理以 `personal-website-` 开头的旧缓存。发布时需更新版本号并通过标准构建生成对应 worker，不能直接将 `public/sw.js` 模板作为发布产物。
+
+验证按批次执行，避免每个 Small 重复构建和运行同一组测试：
+
+```bash
+npm run build
+npm run test:production
+```
+
+第一条包含类型检查、内容检查、单元测试和资源预算检查；第二条复用构建产物，统一执行浏览器 smoke 与 PWA 离线回归。Windows 本机如果未安装 Playwright Chromium，可以设置 `PLAYWRIGHT_CHANNEL=msedge` 使用已安装的 Edge；CI 仍使用 Playwright Chromium。性能专项测量只在相关优化时执行。
 
 ## 无障碍与响应式
 
