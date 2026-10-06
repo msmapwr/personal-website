@@ -54,7 +54,10 @@ const useStyles = makeStyles({
   },
   subtitle: {
     maxWidth: "680px",
-    color: tokens.colorNeutralForeground2,
+    color: "#000000",
+  },
+  tagline: {
+    color: "#000000",
   },
   actions: {
     display: "flex",
@@ -125,7 +128,7 @@ export function Home() {
           <Display className={styles.name}>{name}</Display>
         </motion.div>
         <motion.div variants={item}>
-          <Title3>{hero.tagline}</Title3>
+          <Title3 className={styles.tagline}>{hero.tagline}</Title3>
         </motion.div>
         <motion.div variants={item}>
           <Body1 className={styles.subtitle}>{hero.subtitle}</Body1>
