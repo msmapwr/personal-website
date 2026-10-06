@@ -7,7 +7,7 @@ import {
   Title2,
   makeStyles,
 } from "@fluentui/react-components";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ProjectCard } from "../components/ProjectCard";
 import { Reveal } from "../components/Reveal";
 import { useT } from "../i18n/LanguageContext";
@@ -59,7 +59,13 @@ export function Projects() {
   const { title, projects } = t.projects;
   const [sort, setSort] = useState<ProjectSort>("featured");
   const [tag, setTag] = useState("all");
+  const [searchInput, setSearchInput] = useState("");
   const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setQuery(searchInput), 150);
+    return () => window.clearTimeout(timer);
+  }, [searchInput]);
 
   const tags = useMemo(
     () => Array.from(new Set(projects.flatMap((project) => project.tags))).sort(),
@@ -89,9 +95,9 @@ export function Projects() {
       <div className={styles.controls}>
         <Field className={styles.search} label={t.ui.searchProjects}>
           <Input
-            value={query}
+            value={searchInput}
             placeholder={t.ui.searchProjects}
-            onChange={(_, data) => setQuery(data.value)}
+            onChange={(_, data) => setSearchInput(data.value)}
             aria-label={t.ui.searchProjects}
           />
         </Field>
@@ -127,15 +133,15 @@ export function Projects() {
             ))}
           </Dropdown>
         </Field>
-        {(query || tag !== "all") && (
-          <Button appearance="subtle" onClick={() => { setQuery(""); setTag("all"); }}>
+        {(searchInput || tag !== "all") && (
+          <Button appearance="subtle" onClick={() => { setSearchInput(""); setQuery(""); setTag("all"); }}>
             {t.ui.clearFilters}
           </Button>
         )}
       </div>
       <div className={styles.grid}>
         {visibleProjects.map((p, i) => (
-          <Reveal key={p.id} delay={i * 0.1} className={styles.cardReveal}>
+          <Reveal key={p.id} delay={Math.min(i * 0.04, 0.2)} className={styles.cardReveal}>
             <ProjectCard project={p} />
           </Reveal>
         ))}

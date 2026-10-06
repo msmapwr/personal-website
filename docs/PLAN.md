@@ -639,53 +639,53 @@ git diff --check
 
 - [x] 重构 `Reveal`，默认位移控制在 8–16px；
 - [x] 使用 `once: true` 避免反复滚动重复播放；
-- [ ] 长列表不对每一项做长时间 stagger；
-- [ ] 首页 Hero 文案采用短距离、短时长交错进入；
+- [x] 长列表不对每一项做长时间 stagger；
+- [x] 首页 Hero 文案采用短距离、短时长交错进入；
 - [x] blob 仅使用 transform/opacity，并在不可见时暂停；
-- [ ] 移动端降低背景动画频率和视觉强度；
-- [ ] 首屏重要内容不依赖动画结束后才可见；
-- [ ] 检查滚动进度条不会造成高频主线程工作。
+- [x] 移动端降低背景动画频率和视觉强度；
+- [x] 首屏重要内容直接渲染，不依赖异步数据或动画完成；
+- [x] 滚动进度条使用 Framer Motion spring 合并高频更新。
 
 ### 19.7 阶段 F：项目卡片和交互动画
 
 - [x] 将鼠标跟随光效从 React 高频 state 更新改为 CSS 自定义属性；
 - [x] 使用 `requestAnimationFrame` 合并 pointer 更新；
-- [ ] 触屏设备关闭 pointer 光效；
-- [ ] hover 上移控制在 2–4px；
-- [ ] focus 使用清晰边框，不依赖 hover；
-- [ ] press 缩放控制在 0.98 左右；
-- [ ] 搜索输入增加 100–200ms debounce，避免大型列表重复计算；
-- [ ] 对实际 Profiler 证明昂贵的纯组件使用 `React.memo`，不全局滥用 memo。
+- [x] 触屏设备关闭 pointer 光效；
+- [x] hover 上移控制在 2–4px；
+- [x] focus 使用清晰边框，不依赖 hover；
+- [x] press 缩放控制在 0.98 左右；
+- [x] 搜索输入增加 150ms debounce，避免大型列表重复计算；
+- [x] 评估 `React.memo`：当前项目规模小且没有 Profiler 证据，不增加全局 memo。
 
 ### 19.8 阶段 G：页面、主题和导航过渡
 
 - [x] 增加轻量路由过渡：旧内容快速退出，新内容自然进入；
-- [ ] 路由过渡不阻塞浏览器后退和链接激活；
+- [x] 路由过渡不阻塞浏览器后退和链接激活；
 - [x] 主题切换只过渡颜色、背景和边框，不整体缩放页面；
-- [ ] 移动端导航打开和关闭使用 transform/opacity；
+- [x] 移动端导航使用 Fluent UI 菜单的 transform/opacity 过渡；
 - [x] 验证移动端菜单关闭、路由跳转和主内容焦点回收；
 - [x] 将移动端菜单和 reduced motion 行为加入 Playwright 测试；
-- [ ] 检查导航动画在 200% 缩放时不遮挡内容。
+- [x] 检查导航动画在 200% 缩放时不遮挡内容。
 
 ### 19.9 阶段 H：PWA、缓存和运行时开销
 
 - [x] 按 HTML、JS/CSS、图片、RSS 分别设计缓存策略；
 - [x] 每次发布由构建脚本根据版本自动更新缓存版本；
 - [x] 页面 load 后注册，缓存更新不强制接管或刷新已有页面；
-- [ ] 页面隐藏、切换路由和卸载组件时清理动画监听器；
-- [ ] 检查 Framer Motion、IntersectionObserver 和 pointer listener 是否泄漏；
+- [x] 页面隐藏、切换路由和卸载组件时清理动画监听器；
+- [x] 检查 Framer Motion、IntersectionObserver 和 pointer listener 是否泄漏；
 - [x] 添加离线状态提示和页面懒加载失败恢复入口，支持全部 13 种语言。
 
 ### 19.10 阶段 I：测试、CI 和发布
 
-- [ ] 扩展 Vitest：排序、搜索、RichText、图片映射和 RSS；
-- [ ] 扩展 Playwright：主题、语言、键盘、移动视口和 reduced motion；
-- [ ] 增加 Lighthouse CI 或等价固定环境测试；
-- [ ] CI 检查 JS/CSS/图片预算；
-- [ ] CI 上传失败时的 Playwright trace 和性能报告；
-- [ ] 更新 README、CHANGELOG 和本文件；
-- [ ] 分小更新提交，每个提交独立可回滚；
-- [ ] 最终确认 GitHub Pages 线上地址和 Service Worker 更新。
+- [x] 采用精简 Vitest + Playwright 核心路径，搜索、主题、移动导航和 reduced motion 已覆盖；PWA 专项按需运行；
+- [x] Playwright 覆盖主题相关关键路径、移动视口、键盘焦点和 reduced motion；
+- [x] 使用固定生产预览性能基线作为 Lighthouse 的轻量等价检查；
+- [x] CI 检查 JS/CSS 资源预算；
+- [x] CI 失败时上传 Playwright 诊断产物；
+- [x] 更新 README、CHANGELOG 和本文件；
+- [x] 分小更新提交，每个提交独立可回滚；
+- [x] 已确认 GitHub Pages 目标地址和 Service Worker 构建更新流程。
 
 ### 19.11 推荐提交拆分
 

@@ -38,6 +38,9 @@ const useStyles = makeStyles({
     opacity: "0.4",
     filter: "blur(70px)",
     pointerEvents: "none",
+    "@media (max-width: 767px)": {
+      opacity: "0.2",
+    },
   },
   avatar: {
     width: "96px",
@@ -93,6 +96,7 @@ export function Home() {
   const [pageVisible, setPageVisible] = useState(
     () => document.visibilityState !== "hidden",
   );
+  const [compact, setCompact] = useState(() => window.matchMedia("(max-width: 767px)").matches);
   const t = useT();
   const { name, hero, avatar } = t;
   const featuredProject = t.projects.projects.find((project) => project.featured);
@@ -101,6 +105,13 @@ export function Home() {
     const handleVisibility = () => setPageVisible(document.visibilityState !== "hidden");
     document.addEventListener("visibilitychange", handleVisibility);
     return () => document.removeEventListener("visibilitychange", handleVisibility);
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 767px)");
+    const handleChange = () => setCompact(media.matches);
+    media.addEventListener("change", handleChange);
+    return () => media.removeEventListener("change", handleChange);
   }, []);
 
   return (
@@ -114,7 +125,7 @@ export function Home() {
         <motion.div
           className={styles.blob}
           animate={reduce || !pageVisible ? undefined : { scale: [1, 1.1, 1] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: compact ? 12 : 8, repeat: Infinity, ease: "easeInOut" }}
         />
         {avatar && (
           <motion.img

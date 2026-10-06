@@ -44,6 +44,14 @@ jobs:
       - name: Run production browser and offline tests
         run: npm run test:production
 
+      - name: Upload browser diagnostics on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-test-results
+          path: test-results/
+          if-no-files-found: ignore
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

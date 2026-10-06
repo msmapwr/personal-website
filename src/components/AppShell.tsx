@@ -145,7 +145,7 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
       </header>
       <main id="main" ref={mainRef} tabIndex={-1} className={styles.main}>
         <OfflineNotice />
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="sync" initial={false}>
           <motion.div
             key={location.pathname}
             className={styles.page}

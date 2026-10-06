@@ -85,6 +85,13 @@ const useStyles = makeStyles({
     opacity: "1",
     boxShadow: "inset 0 0 0 1px rgba(0,120,212,0.35)",
   },
+  focus: {
+    ":focus-visible": {
+      outline: `2px solid ${tokens.colorBrandForeground1}`,
+      outlineOffset: "4px",
+      borderRadius: "12px",
+    },
+  },
 });
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -96,6 +103,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const pointerRef = useRef({ x: 0, y: 0 });
   const rectRef = useRef<DOMRect | null>(null);
   const [active, setActive] = useState(false);
+  const [canHover, setCanHover] = useState(() => window.matchMedia("(hover: hover) and (pointer: fine)").matches);
   const images = projectImages[project.id] ?? [];
   const image = images[0];
   const statusLabel =
@@ -134,16 +142,23 @@ export function ProjectCard({ project }: { project: Project }) {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
   }, []);
 
+  useEffect(() => {
+    const media = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const handleChange = () => setCanHover(media.matches);
+    media.addEventListener("change", handleChange);
+    return () => media.removeEventListener("change", handleChange);
+  }, []);
+
   return (
     <div
       ref={rootRef}
-      className={styles.wrap}
+      className={mergeClasses(styles.wrap, styles.focus)}
       role="link"
       tabIndex={0}
       aria-label={`${project.name}: ${project.tagline}`}
-      onMouseMove={handleMove}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
+      onMouseMove={canHover ? handleMove : undefined}
+      onMouseEnter={canHover ? handleEnter : undefined}
+      onMouseLeave={canHover ? handleLeave : undefined}
       onClick={() => navigate(`/projects/${project.id}`)}
       onKeyDown={(e) => {
         if (e.target !== e.currentTarget) return;
