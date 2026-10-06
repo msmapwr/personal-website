@@ -90,6 +90,7 @@ npm run build
 ```bash
 npm run test
 npm run test:browser
+npm run test:pwa
 npm run report:performance
 ```
 
@@ -217,6 +218,8 @@ Service Worker 按资源类型使用不同策略：
 ```bash
 npm run build
 npm run test:production
+# PWA 专项回归（需要时单独运行）
+npm run test:pwa
 ```
 
 第一条包含类型检查、内容检查、单元测试和资源预算检查；第二条复用构建产物，统一执行浏览器 smoke 与 PWA 离线回归。Windows 本机如果未安装 Playwright Chromium，可以设置 `PLAYWRIGHT_CHANNEL=msedge` 使用已安装的 Edge；CI 仍使用 Playwright Chromium。性能专项测量只在相关优化时执行。
