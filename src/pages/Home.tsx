@@ -26,6 +26,12 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "flex-start",
     gap: "16px",
+    border: `1px solid color-mix(in srgb, ${tokens.colorBrandForeground1} 18%, transparent)`,
+    boxShadow: tokens.shadow16,
+    isolation: "isolate",
+    "@media (max-width: 767px)": {
+      padding: "40px 24px",
+    },
   },
   blob: {
     position: "absolute",

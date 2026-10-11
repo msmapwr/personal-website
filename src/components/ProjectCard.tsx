@@ -34,6 +34,11 @@ const useStyles = makeStyles({
   },
   card: {
     height: "100%",
+    boxShadow: tokens.shadow4,
+    transition: "box-shadow 0.2s ease, border-color 0.2s ease",
+    ":hover": {
+      boxShadow: tokens.shadow16,
+    },
   },
   preview: {
     width: "100%",
