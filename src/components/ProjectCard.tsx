@@ -25,21 +25,10 @@ const useStyles = makeStyles({
     position: "relative",
     height: "100%",
     cursor: "pointer",
-    transition: "transform 0.2s ease",
-    ":hover": {
-      transform: "translateY(-4px)",
-    },
-    ":active": {
-      transform: "scale(0.98)",
-    },
   },
   card: {
     height: "100%",
     boxShadow: tokens.shadow4,
-    transition: "box-shadow 0.2s ease, border-color 0.2s ease",
-    ":hover": {
-      boxShadow: tokens.shadow16,
-    },
   },
   preview: {
     width: "100%",
@@ -84,12 +73,7 @@ const useStyles = makeStyles({
       "radial-gradient(320px circle at var(--fx, 50%) var(--fy, 50%), rgba(0,120,212,0.10), transparent 60%)",
     boxShadow: "inset 0 0 0 1px rgba(0,120,212,0)",
     opacity: "0",
-    transition: "opacity 0.2s ease, box-shadow 0.2s ease",
     pointerEvents: "none",
-  },
-  spotlightOn: {
-    opacity: "1",
-    boxShadow: "inset 0 0 0 1px rgba(0,120,212,0.35)",
   },
   focus: {
     ":focus-visible": {
@@ -108,7 +92,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const frameRef = useRef<number | null>(null);
   const pointerRef = useRef({ x: 0, y: 0 });
   const rectRef = useRef<DOMRect | null>(null);
-  const [active, setActive] = useState(false);
+  const spotlightRef = useRef<HTMLDivElement>(null);
   const [canHover, setCanHover] = useState(() => window.matchMedia("(hover: hover) and (pointer: fine)").matches);
   const images = projectImages[project.id] ?? [];
   const image = images[0];
@@ -135,7 +119,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
   const handleEnter = contextSafe(() => {
     rectRef.current = rootRef.current?.getBoundingClientRect() ?? null;
-    setActive(true);
+    gsap.to(spotlightRef.current, { autoAlpha: 1, boxShadow: "inset 0 0 0 1px rgba(0,120,212,0.35)", duration: 0.3, ease: "power2.out", overwrite: "auto" });
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       gsap.to(rootRef.current, {
         y: -6,
@@ -153,7 +137,7 @@ export function ProjectCard({ project }: { project: Project }) {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = null;
     rectRef.current = null;
-    setActive(false);
+    gsap.to(spotlightRef.current, { autoAlpha: 0, boxShadow: "inset 0 0 0 1px rgba(0,120,212,0)", duration: 0.4, ease: "power2.out", overwrite: "auto" });
     gsap.to(rootRef.current, {
       y: 0,
       rotationX: 0,
@@ -194,7 +178,7 @@ export function ProjectCard({ project }: { project: Project }) {
         }
       }}
     >
-      <Card className={styles.card}>
+      <Card className={styles.card} data-project-card>
         {image && (
           <CardPreview>
             <ResponsiveImage src={image} alt={project.name} className={styles.preview} loading="lazy" decoding="async" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1100px) 45vw, 480px" />
@@ -254,7 +238,8 @@ export function ProjectCard({ project }: { project: Project }) {
         </CardFooter>
       </Card>
       <div
-        className={mergeClasses(styles.spotlight, active && styles.spotlightOn)}
+        ref={spotlightRef}
+        className={styles.spotlight}
       />
     </div>
   );

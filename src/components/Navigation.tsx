@@ -11,12 +11,12 @@ import {
 } from "@fluentui/react-components";
 import { Navigation20Regular } from "@fluentui/react-icons";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useRef } from "react";
 import { useT } from "../i18n/LanguageContext";
 import { preloadRoute } from "../routeLoaders";
+import { gsap, useGSAP } from "../animation/gsap";
 
 const routeFor = (id: string) => (id === "home" ? "/" : `/${id}`);
-
-const warmRoute = (id: string) => () => preloadRoute(id);
 
 const useStyles = makeStyles({
   nav: {
@@ -37,13 +37,6 @@ const useStyles = makeStyles({
     fontSize: "14px",
     fontWeight: "500",
     color: tokens.colorNeutralForeground2,
-    transition:
-      "background-color 0.15s ease, color 0.15s ease, transform 0.15s ease",
-    ":hover": {
-      backgroundColor: tokens.colorNeutralBackground2,
-      color: tokens.colorNeutralForeground1,
-      transform: "translateY(-1px)",
-    },
     ":focus-visible": {
       outline: `2px solid ${tokens.colorBrandForeground1}`,
       outlineOffset: "2px",
@@ -53,11 +46,6 @@ const useStyles = makeStyles({
     color: tokens.colorBrandForeground1,
     backgroundColor: tokens.colorBrandBackground2,
     boxShadow: `inset 0 -2px 0 ${tokens.colorBrandForeground1}`,
-    ":hover": {
-      color: tokens.colorBrandForeground1,
-      backgroundColor: tokens.colorBrandBackground2,
-      transform: "none",
-    },
   },
   hamburger: {
     display: "none",
@@ -71,10 +59,34 @@ export function Navigation() {
   const styles = useStyles();
   const t = useT();
   const navigate = useNavigate();
+  const navRef = useRef<HTMLElement>(null);
+  const { contextSafe } = useGSAP(() => undefined, { scope: navRef });
+  const handleEnter = contextSafe((event: { currentTarget: HTMLAnchorElement }) => {
+    gsap.to(event.currentTarget, {
+      y: -1,
+      backgroundColor: tokens.colorNeutralBackground2,
+      color: tokens.colorNeutralForeground1,
+      duration: 0.22,
+      ease: "power2.out",
+      overwrite: "auto",
+    });
+  });
+  const handleLeave = contextSafe((event: { currentTarget: HTMLAnchorElement }) => {
+    gsap.to(event.currentTarget, {
+      y: 0,
+      backgroundColor: "transparent",
+      color: event.currentTarget.getAttribute("aria-current") === "page"
+        ? tokens.colorBrandForeground1
+        : tokens.colorNeutralForeground2,
+      duration: 0.3,
+      ease: "power2.out",
+      overwrite: "auto",
+    });
+  });
 
   return (
     <>
-      <nav className={styles.nav}>
+      <nav ref={navRef} className={styles.nav}>
         {t.nav.map((item) => (
           <NavLink
             key={item.id}
@@ -83,8 +95,10 @@ export function Navigation() {
             className={({ isActive }) =>
               mergeClasses(styles.link, isActive && styles.active)
             }
-            onMouseEnter={warmRoute(item.id)}
-            onFocus={warmRoute(item.id)}
+            onMouseEnter={(event) => { preloadRoute(item.id); handleEnter(event); }}
+            onMouseLeave={handleLeave}
+            onFocus={(event) => { preloadRoute(item.id); handleEnter(event); }}
+            onBlur={handleLeave}
           >
             {item.label}
           </NavLink>
@@ -105,8 +119,8 @@ export function Navigation() {
               <MenuItem
                 key={item.id}
                 onClick={() => navigate(routeFor(item.id))}
-                onMouseEnter={warmRoute(item.id)}
-                onFocus={warmRoute(item.id)}
+                onMouseEnter={() => preloadRoute(item.id)}
+                onFocus={() => preloadRoute(item.id)}
               >
                 {item.label}
               </MenuItem>

@@ -7,6 +7,8 @@ import {
 import { Reveal } from "../components/Reveal";
 import type { ContactItem } from "../content/types";
 import { useT } from "../i18n/LanguageContext";
+import { useRef } from "react";
+import { gsap, useGSAP } from "../animation/gsap";
 
 const kindIcon = {
   github: <Code20Regular />,
@@ -35,11 +37,6 @@ const useStyles = makeStyles({
     backgroundColor: tokens.colorNeutralBackground2,
     color: tokens.colorNeutralForeground1,
     textDecoration: "none",
-    transition: "background-color 0.15s ease, transform 0.15s ease",
-    ":hover": {
-      backgroundColor: tokens.colorNeutralBackground2Hover,
-      transform: "translateX(4px)",
-    },
     ":focus-visible": {
       outline: `2px solid ${tokens.colorBrandForeground1}`,
       outlineOffset: "2px",
@@ -48,10 +45,6 @@ const useStyles = makeStyles({
   icon: {
     display: "flex",
     color: tokens.colorBrandForeground1,
-    transition: "transform 0.15s ease",
-    ":hover": {
-      transform: "scale(1.1)",
-    },
   },
   label: {
     color: tokens.colorNeutralForeground2,
@@ -77,23 +70,40 @@ function valueFor(item: ContactItem): string {
 function ContactRow({ item }: { item: ContactItem }) {
   const styles = useStyles();
   const href = hrefFor(item);
+  const rowRef = useRef<HTMLElement | null>(null);
+  const iconRef = useRef<HTMLSpanElement>(null);
+  const setRowRef = (node: HTMLElement | null) => { rowRef.current = node; };
+  const { contextSafe } = useGSAP(() => undefined, { scope: rowRef });
+  const handleEnter = contextSafe(() => {
+    gsap.to(rowRef.current, { x: 6, backgroundColor: tokens.colorNeutralBackground2Hover, duration: 0.28, ease: "power3.out", overwrite: "auto" });
+    gsap.to(iconRef.current, { scale: 1.15, rotation: 4, duration: 0.35, ease: "back.out(2)", overwrite: "auto" });
+  });
+  const handleLeave = contextSafe(() => {
+    gsap.to(rowRef.current, { x: 0, backgroundColor: tokens.colorNeutralBackground2, duration: 0.35, ease: "power3.out", overwrite: "auto" });
+    gsap.to(iconRef.current, { scale: 1, rotation: 0, duration: 0.35, ease: "elastic.out(1, 0.5)", overwrite: "auto" });
+  });
   const inner = (
     <>
-      <span className={styles.icon}>{kindIcon[item.kind]}</span>
+      <span ref={iconRef} className={styles.icon}>{kindIcon[item.kind]}</span>
       <span className={styles.label}>{item.label}</span>
       <span className={styles.value}>{valueFor(item)}</span>
     </>
   );
 
   if (!href) {
-    return <div className={styles.row}>{inner}</div>;
+    return <div ref={setRowRef} className={styles.row} onMouseEnter={handleEnter} onMouseLeave={handleLeave} onFocus={handleEnter} onBlur={handleLeave}>{inner}</div>;
   }
 
   const external = item.kind !== "email";
   return (
     <a
       href={href}
+      ref={setRowRef}
       className={styles.row}
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+      onFocus={handleEnter}
+      onBlur={handleLeave}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
     >
       {inner}

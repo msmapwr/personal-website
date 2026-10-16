@@ -10,35 +10,12 @@ body,
   min-height: 100%;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "PingFang SC",
     "Microsoft YaHei", sans-serif;
 }
 
-/* 主题切换时页面背景平滑过渡（深色细节优化） */
-.fui-FluentProvider {
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .fui-FluentProvider {
-    transition: none;
-  }
-}
-
-button:active {
-  transform: scale(0.97);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   *,
   *::before,
   *::after {

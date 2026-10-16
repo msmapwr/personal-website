@@ -127,7 +127,7 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
 
   useEffect(() => {
     mainRef.current?.focus({ preventScroll: true });
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "auto" });
   }, [location.pathname]);
 
   useEffect(() => {
