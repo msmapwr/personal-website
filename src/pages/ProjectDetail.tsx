@@ -30,6 +30,10 @@ const useStyles = makeStyles({
   },
   image: {
     width: "100%",
+    maxWidth: "100%",
+    height: "auto",
+    aspectRatio: "auto",
+    objectFit: "contain",
     borderRadius: "12px",
     display: "block",
   },

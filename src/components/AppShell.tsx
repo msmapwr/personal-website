@@ -9,6 +9,7 @@ import { Navigation } from "./Navigation";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { motionTokens } from "../theme/motion";
 import { OfflineNotice } from "./OfflineNotice";
+import { preloadRoute } from "../routeLoaders";
 
 interface AppShellProps {
   mode: ThemeMode;
@@ -89,6 +90,7 @@ const useStyles = makeStyles({
   },
   page: {
     width: "100%",
+    willChange: "opacity, transform",
   },
   footer: {
     borderTop: `1px solid ${tokens.colorNeutralStroke2}`,
@@ -121,7 +123,24 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
 
   useEffect(() => {
     mainRef.current?.focus({ preventScroll: true });
-  }, [location.pathname]);
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  }, [location.pathname, reduce]);
+
+  useEffect(() => {
+    const connection = (navigator as Navigator & {
+      connection?: { saveData?: boolean; effectiveType?: string };
+    }).connection;
+    if (connection?.saveData || (connection?.effectiveType && connection.effectiveType !== "4g")) return;
+
+    const warm = () => ["home", "about", "projects", "skills", "contact", "blog"].forEach(preloadRoute);
+    const idleWindow = window as Window & {
+      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number;
+    };
+    const idle = idleWindow.requestIdleCallback
+      ? window.setTimeout(() => idleWindow.requestIdleCallback?.(warm, { timeout: 2000 }), 600)
+      : window.setTimeout(warm, 1200);
+    return () => window.clearTimeout(idle);
+  }, []);
 
   return (
     <div className={styles.root}>
@@ -151,8 +170,11 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
             className={styles.page}
             initial={reduce ? false : { opacity: 0, y: motionTokens.distance.small }}
             animate={{ opacity: 1, y: 0 }}
-            exit={reduce ? undefined : { opacity: 0, y: -motionTokens.distance.small }}
-            transition={{ duration: reduce ? 0 : motionTokens.duration.normal, ease: motionTokens.easing }}
+            exit={reduce ? undefined : { opacity: 0, y: -motionTokens.distance.small, scale: 0.995 }}
+            transition={{
+              duration: reduce ? 0 : motionTokens.duration.normal,
+              ease: motionTokens.easing,
+            }}
           >
             <Outlet />
           </motion.div>

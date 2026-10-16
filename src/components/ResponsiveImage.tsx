@@ -11,6 +11,7 @@ const dimensions: Record<string, [number, number]> = {
   "images/ascii-studio/ascii-studio.png": [1862, 1079],
   "images/create-stratosphere/main.png": [1366, 768],
   "images/create-stratosphere/flight.png": [1366, 768],
+  "images/archipelago-echoes/main.png": [1576, 889],
 };
 
 /** 优先 AVIF，其次 WebP，最终回退到传入的 PNG/JPEG 资源。 */

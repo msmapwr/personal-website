@@ -7,15 +7,16 @@ import { LanguageProvider } from "./i18n/LanguageContext";
 import { RouteLoading } from "./components/RouteLoading";
 import { RouteErrorBoundary, RouteLoadError } from "./components/RouteErrorBoundary";
 import { darkTheme, lightTheme } from "./theme/fluentTheme";
+import { routeLoaders } from "./routeLoaders";
 
-const Home = lazy(() => import("./pages/Home").then(({ Home }) => ({ default: Home })));
-const About = lazy(() => import("./pages/About").then(({ About }) => ({ default: About })));
-const Projects = lazy(() => import("./pages/Projects").then(({ Projects }) => ({ default: Projects })));
+const Home = lazy(routeLoaders.home);
+const About = lazy(routeLoaders.about);
+const Projects = lazy(routeLoaders.projects);
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail").then(({ ProjectDetail }) => ({ default: ProjectDetail })));
-const Skills = lazy(() => import("./pages/Skills").then(({ Skills }) => ({ default: Skills })));
+const Skills = lazy(routeLoaders.skills);
 const SkillDetail = lazy(() => import("./pages/SkillDetail").then(({ SkillDetail }) => ({ default: SkillDetail })));
-const Contact = lazy(() => import("./pages/Contact").then(({ Contact }) => ({ default: Contact })));
-const Blog = lazy(() => import("./pages/Blog").then(({ Blog }) => ({ default: Blog })));
+const Contact = lazy(routeLoaders.contact);
+const Blog = lazy(routeLoaders.blog);
 const BlogPost = lazy(() => import("./pages/BlogPost").then(({ BlogPost }) => ({ default: BlogPost })));
 const NotFound = lazy(() => import("./pages/NotFound").then(({ NotFound }) => ({ default: NotFound })));
 

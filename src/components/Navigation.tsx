@@ -12,8 +12,11 @@ import {
 import { Navigation20Regular } from "@fluentui/react-icons";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useT } from "../i18n/LanguageContext";
+import { preloadRoute } from "../routeLoaders";
 
 const routeFor = (id: string) => (id === "home" ? "/" : `/${id}`);
+
+const warmRoute = (id: string) => () => preloadRoute(id);
 
 const useStyles = makeStyles({
   nav: {
@@ -80,6 +83,8 @@ export function Navigation() {
             className={({ isActive }) =>
               mergeClasses(styles.link, isActive && styles.active)
             }
+            onMouseEnter={warmRoute(item.id)}
+            onFocus={warmRoute(item.id)}
           >
             {item.label}
           </NavLink>
@@ -100,6 +105,8 @@ export function Navigation() {
               <MenuItem
                 key={item.id}
                 onClick={() => navigate(routeFor(item.id))}
+                onMouseEnter={warmRoute(item.id)}
+                onFocus={warmRoute(item.id)}
               >
                 {item.label}
               </MenuItem>
