@@ -1,5 +1,4 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { ThemeMode } from "../hooks/useThemeMode";
@@ -7,9 +6,9 @@ import { useT } from "../i18n/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Navigation } from "./Navigation";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { motionTokens } from "../theme/motion";
 import { OfflineNotice } from "./OfflineNotice";
 import { preloadRoute } from "../routeLoaders";
+import { gsap, useGSAP } from "../animation/gsap";
 
 interface AppShellProps {
   mode: ThemeMode;
@@ -105,15 +104,20 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
   const styles = useStyles();
   const t = useT();
   const location = useLocation();
-  const reduce = useReducedMotion();
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-  const progress = reduce ? scrollYProgress : scaleX;
   const mainRef = useRef<HTMLElement>(null);
+  const progressRef = useRef<HTMLDivElement>(null);
+  const pageRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const mm = gsap.matchMedia();
+    mm.add({ reduceMotion: "(prefers-reduced-motion: reduce)" }, ({ conditions }) => {
+      gsap.fromTo(pageRef.current,
+        { autoAlpha: 0, y: conditions?.reduceMotion ? 0 : 12, scale: conditions?.reduceMotion ? 1 : 0.995 },
+        { autoAlpha: 1, y: 0, scale: 1, duration: conditions?.reduceMotion ? 0 : 0.55, ease: "power3.out", clearProps: "transform" },
+      );
+    });
+    return () => mm.revert();
+  }, { scope: pageRef, dependencies: [location.pathname], revertOnUpdate: true });
 
   useEffect(() => {
     const route = location.pathname.replace("/", "");
@@ -123,8 +127,27 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
 
   useEffect(() => {
     mainRef.current?.focus({ preventScroll: true });
-    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
-  }, [location.pathname, reduce]);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
+
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? window.scrollY / max : 0;
+      if (progressRef.current) gsap.set(progressRef.current, { scaleX: progress });
+    };
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
 
   useEffect(() => {
     const connection = (navigator as Navigator & {
@@ -147,9 +170,9 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
       <a href="#main" className={styles.skipLink}>
         {t.ui.skipToContent}
       </a>
-      <motion.div
+      <div
+        ref={progressRef}
         className={styles.progress}
-        style={{ scaleX: progress }}
         aria-hidden="true"
       />
       <header className={styles.header}>
@@ -164,21 +187,9 @@ export function AppShell({ mode, onModeChange }: AppShellProps) {
       </header>
       <main id="main" ref={mainRef} tabIndex={-1} className={styles.main}>
         <OfflineNotice />
-        <AnimatePresence mode="sync" initial={false}>
-          <motion.div
-            key={location.pathname}
-            className={styles.page}
-            initial={reduce ? false : { opacity: 0, y: motionTokens.distance.small }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={reduce ? undefined : { opacity: 0, y: -motionTokens.distance.small, scale: 0.995 }}
-            transition={{
-              duration: reduce ? 0 : motionTokens.duration.normal,
-              ease: motionTokens.easing,
-            }}
-          >
-            <Outlet />
-          </motion.div>
-        </AnimatePresence>
+        <div ref={pageRef} className={styles.page}>
+          <Outlet />
+        </div>
       </main>
       <footer className={styles.footer}>
         © {new Date().getFullYear()} {t.name}

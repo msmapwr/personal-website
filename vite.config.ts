@@ -13,7 +13,7 @@ export default defineConfig({
           react: ["react", "react-dom", "react-router-dom"],
           fluent: ["@fluentui/react-components"],
           icons: ["@fluentui/react-icons"],
-          motion: ["framer-motion"],
+          gsap: ["gsap", "@gsap/react"],
         },
       },
     },

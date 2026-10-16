@@ -7,9 +7,9 @@ import {
   tokens,
 } from "@fluentui/react-components";
 import { ArrowRight20Regular, Mail20Regular } from "@fluentui/react-icons";
-import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { gsap, useGSAP } from "../animation/gsap";
 import { ProjectCard } from "../components/ProjectCard";
 import { Reveal } from "../components/Reveal";
 import { useT } from "../i18n/LanguageContext";
@@ -84,73 +84,79 @@ const useStyles = makeStyles({
   },
 });
 
-const container: Variants = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.05, delayChildren: 0.03 },
-  },
-};
-
-const item: Variants = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.2, ease: "easeOut" } },
-};
-
 export function Home() {
   const styles = useStyles();
-  const reduce = useReducedMotion();
-  const [pageVisible, setPageVisible] = useState(
-    () => document.visibilityState !== "hidden",
-  );
-  const [compact, setCompact] = useState(() => window.matchMedia("(max-width: 767px)").matches);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const ambientRef = useRef<gsap.core.Tween | null>(null);
   const t = useT();
   const { name, hero, avatar } = t;
   const featuredProject = t.projects.projects.find((project) => project.featured);
 
+  useGSAP(() => {
+    const mm = gsap.matchMedia();
+    mm.add({
+      reduceMotion: "(prefers-reduced-motion: reduce)",
+      compact: "(max-width: 767px)",
+    }, ({ conditions }) => {
+      const reduceMotion = conditions?.reduceMotion;
+      const compact = conditions?.compact;
+      const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      if (reduceMotion) {
+        gsap.set("[data-hero-item]", { clearProps: "all" });
+        gsap.set("[data-hero-blob]", { clearProps: "all" });
+        return;
+      }
+
+      intro
+        .fromTo("[data-hero-blob]", { autoAlpha: 0, scale: 0.55, rotation: -18 }, { autoAlpha: compact ? 0.2 : 0.4, scale: 1, rotation: 0, duration: 1.2, ease: "power2.out" })
+        .fromTo("[data-hero-item]", { autoAlpha: 0, y: 26, rotateX: 8 }, { autoAlpha: 1, y: 0, rotateX: 0, duration: 0.65, stagger: 0.09, ease: "back.out(1.35)" }, "-=0.65");
+
+      ambientRef.current = gsap.to("[data-hero-blob]", {
+        scale: 1.12,
+        rotation: 14,
+        duration: compact ? 12 : 8,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+    }, heroRef);
+
+    return () => {
+      ambientRef.current?.kill();
+      ambientRef.current = null;
+      mm.revert();
+    };
+  }, { scope: heroRef });
+
   useEffect(() => {
-    const handleVisibility = () => setPageVisible(document.visibilityState !== "hidden");
+    const handleVisibility = () => ambientRef.current?.paused(document.visibilityState === "hidden");
     document.addEventListener("visibilitychange", handleVisibility);
     return () => document.removeEventListener("visibilitychange", handleVisibility);
   }, []);
 
-  useEffect(() => {
-    const media = window.matchMedia("(max-width: 767px)");
-    const handleChange = () => setCompact(media.matches);
-    media.addEventListener("change", handleChange);
-    return () => media.removeEventListener("change", handleChange);
-  }, []);
-
   return (
     <>
-      <motion.div
-        className={styles.hero}
-        variants={container}
-        initial={reduce ? false : "hidden"}
-        animate={reduce ? undefined : "show"}
-      >
-        <motion.div
-          className={styles.blob}
-          animate={reduce || !pageVisible ? undefined : { scale: [1, 1.1, 1] }}
-          transition={{ duration: compact ? 12 : 8, repeat: Infinity, ease: "easeInOut" }}
-        />
+      <div ref={heroRef} className={styles.hero}>
+        <div className={styles.blob} data-hero-blob aria-hidden="true" />
         {avatar && (
-          <motion.img
+          <img
             src={avatar}
             alt={name}
             className={styles.avatar}
-            variants={item}
+            data-hero-item
           />
         )}
-        <motion.div variants={item}>
+        <div data-hero-item>
           <Display className={styles.name}>{name}</Display>
-        </motion.div>
-        <motion.div variants={item}>
+        </div>
+        <div data-hero-item>
           <Title3 className={styles.tagline}>{hero.tagline}</Title3>
-        </motion.div>
-        <motion.div variants={item}>
+        </div>
+        <div data-hero-item>
           <Body1 className={styles.subtitle}>{hero.subtitle}</Body1>
-        </motion.div>
-        <motion.div variants={item} className={styles.actions}>
+        </div>
+        <div data-hero-item className={styles.actions}>
           <Link to="/projects" className={styles.link}>
             <Button appearance="primary" icon={<ArrowRight20Regular />}>
               {hero.actions.primary}
@@ -161,8 +167,8 @@ export function Home() {
               {hero.actions.secondary}
             </Button>
           </Link>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
       {featuredProject && (
         <section className={styles.featured} aria-labelledby="featured-projects-title">
           <Reveal>

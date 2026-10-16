@@ -18,6 +18,7 @@ import { ResponsiveImage } from "./ResponsiveImage";
 import { projectImages } from "../content/projectImages";
 import type { Project } from "../content/types";
 import { useT } from "../i18n/LanguageContext";
+import { gsap, useGSAP } from "../animation/gsap";
 
 const useStyles = makeStyles({
   wrap: {
@@ -111,6 +112,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const [canHover, setCanHover] = useState(() => window.matchMedia("(hover: hover) and (pointer: fine)").matches);
   const images = projectImages[project.id] ?? [];
   const image = images[0];
+  const { contextSafe } = useGSAP(() => undefined, { scope: rootRef });
   const statusLabel =
     project.status === "completed"
       ? ui.statusCompleted
@@ -131,17 +133,36 @@ export function ProjectCard({ project }: { project: Project }) {
     });
   };
 
-  const handleEnter = () => {
+  const handleEnter = contextSafe(() => {
     rectRef.current = rootRef.current?.getBoundingClientRect() ?? null;
     setActive(true);
-  };
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      gsap.to(rootRef.current, {
+        y: -6,
+        rotationX: 1.5,
+        rotationY: -1.5,
+        transformPerspective: 900,
+        duration: 0.45,
+        ease: "power3.out",
+        overwrite: "auto",
+      });
+    }
+  });
 
-  const handleLeave = () => {
+  const handleLeave = contextSafe(() => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = null;
     rectRef.current = null;
     setActive(false);
-  };
+    gsap.to(rootRef.current, {
+      y: 0,
+      rotationX: 0,
+      rotationY: 0,
+      duration: 0.55,
+      ease: "elastic.out(1, 0.45)",
+      overwrite: "auto",
+    });
+  });
 
   useEffect(() => () => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
