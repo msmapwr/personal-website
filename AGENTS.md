@@ -1763,3 +1763,4 @@ python scripts/fetch_repo.py https://github.com/owner/repository --output _tmp/r
 - `project_draft.status` 保持为空，状态必须由 Agent 根据 README、仓库实际情况和用户说明核实后填写。
 - GitHub 描述为空时，README 首段只作为文案参考；不得把自动提取结果当作已经确认的产品介绍。
 - 获取资料后继续遵循 `docs/add-project.md`：向 `content/content.xml` 的全部语言区块加入同一项目 ID，并同步更新 `CHANGELOG.md`；运行内容检查与必要验证。
+- 新增项目未提供配图时，在 `src/content/projectImages.ts` 中映射到 `images/no-photo.svg`，不要让卡片或详情页缺少图片区域。

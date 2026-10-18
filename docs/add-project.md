@@ -33,6 +33,8 @@
 
 6. 执行 `npm run check-content`，确认所有语言的项目 ID 一致、链接格式有效，且 XML 没有结构错误。
 
+7. 在 `src/content/projectImages.ts` 为新项目添加图片映射；如果用户没有提供项目图片，统一使用 `images/no-photo.svg` 作为卡片封面。
+
 ## 新增语言
 
 1. 在 `<languages>` 里加一条 `<language id="xx" label="语言名" />`。
