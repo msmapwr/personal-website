@@ -1743,3 +1743,23 @@ Msmapwr 项目的 Agent 开发模型：
 **核心原则只有一句话：**
 
 > **先理解，再确认；先拆解，再开发；先测试，再 Commit；先 Commit，再 Push；先完整验证，再 Release。**
+
+---
+
+# 46. 从 GitHub 获取项目资料
+
+添加作品集项目时，优先依据 README 和 GitHub 仓库元数据，不得根据仓库名猜测功能或技术栈。使用仓库自带的 Python 标准库脚本：
+
+```bash
+python scripts/fetch_repo.py https://github.com/owner/repository
+python scripts/fetch_repo.py owner/repository --format markdown
+python scripts/fetch_repo.py https://github.com/owner/repository --output _tmp/repo-info.json
+```
+
+脚本输出仓库名称、GitHub 描述、README 标题与全文、主页、默认分支、编程语言、Topics、许可证、Stars / Forks、更新时间，以及用于项目卡片的字段草稿。默认输出 JSON；`--format markdown` 输出便于阅读的摘要；`--output` 可将结果保存到指定文件。
+
+- 仅接受 `https://github.com/owner/repository` 或 `owner/repository` 格式；仅抓取公开仓库。
+- 脚本使用 Python 标准库和 GitHub REST API，不要求额外依赖。
+- `project_draft.status` 保持为空，状态必须由 Agent 根据 README、仓库实际情况和用户说明核实后填写。
+- GitHub 描述为空时，README 首段只作为文案参考；不得把自动提取结果当作已经确认的产品介绍。
+- 获取资料后继续遵循 `docs/add-project.md`：向 `content/content.xml` 的全部语言区块加入同一项目 ID，并同步更新 `CHANGELOG.md`；运行内容检查与必要验证。

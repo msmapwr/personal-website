@@ -40,13 +40,21 @@
 
 ## 获取项目信息
 
-- 项目简介、技术栈可从 GitHub 仓库 README 获取。
-- 辅助脚本 `scripts/fetch_repo.py` 可拉取指定仓库的 README 和元数据：
+- 项目名称、介绍、技术栈、链接和功能说明应优先以仓库 README 与 GitHub 元数据为依据。
+- 使用 `scripts/fetch_repo.py` 获取指定仓库的元数据、语言构成、README 全文，以及可用于项目卡片的字段草稿。脚本不会擅自确定项目状态：
 
 ```bash
-# 修改脚本里的 REPO 变量为「用户名/仓库名」，再运行：
-python scripts/fetch_repo.py
+# 输出结构化 JSON，方便 AI 助手继续整理项目文案
+python scripts/fetch_repo.py https://github.com/owner/repository
+
+# 输出易读的 Markdown，或指定保存路径
+python scripts/fetch_repo.py owner/repository --format markdown
+python scripts/fetch_repo.py https://github.com/owner/repository --output _tmp/repo-info.json
 ```
+
+- 输出中的 `project_draft` 是待审核素材，不是可直接照搬的最终文案。核对 README、演示地址和项目状态后，再为每种语言撰写名称、tagline、description 与标签。
+- GitHub 没有填写描述时，脚本会从 README 标题和首个正文段落提取参考内容；没有 README 时会保留空内容并提示，不编造介绍。
+- 仓库必须公开可访问。脚本仅使用 Python 标准库和 GitHub REST API，不需要额外安装依赖。
 
 ## 提交
 

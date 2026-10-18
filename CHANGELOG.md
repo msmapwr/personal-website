@@ -6,6 +6,11 @@
 
 ## [Unreleased]
 
+### 新增
+
+- 新增「双键 · 小鹤双拼练习」项目展示，补充中英及其他语言文案、GitHub 仓库和在线体验链接
+- 将 `scripts/fetch_repo.py` 改为可复用的 GitHub 项目资料提取工具，输出结构化元数据、README 全文及项目文案参考
+
 ### 变更
 
 - 动画系统迁移至 GSAP：Hero 时间线、ScrollTrigger 滚动揭示、卡片 3D 悬浮和路由过渡统一管理

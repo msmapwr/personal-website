@@ -143,6 +143,19 @@
     </contact>
     <projects>
       <title>项目展示</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>双键 · 小鹤双拼练习</name>
+        <tagline>打开即练的小鹤双拼训练与错题复习网站</tagline>
+        <description>面向小鹤双拼学习者的浏览器练习工具，涵盖声母、韵母、零声母、单字、高频词组和原创短文跟练，并提供自定义词库、错题复习与学习记录。学习数据保存在本地浏览器，可导入导出 JSON 备份，无需账号。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>小鹤双拼</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>第二绿洲</name>
         <tagline>月球领土争夺 · 回合制网页策略桌游 · 2～4 人对战</tagline>
@@ -364,6 +377,19 @@
     </contact>
     <projects>
       <title>Projects</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>Shuangjian · Xiaohe Double Pinyin Practice</name>
+        <tagline>An instant-use Xiaohe Double Pinyin trainer with focused review</tagline>
+        <description>A browser-based trainer for Xiaohe Double Pinyin, covering initials, finals, zero initials, characters, high-frequency phrases and original passages. It includes custom vocabulary, mistake review and progress history. Learning data stays in the local browser and can be backed up through JSON import and export, with no account required.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>Xiaohe Double Pinyin</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
         <name>Minecraft Fluent Launcher</name>
         <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
@@ -585,6 +611,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>項目展示</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>雙鍵 · 小鶴雙拼練習</name>
+        <tagline>開啟即用的小鶴雙拼訓練與錯題複習網站</tagline>
+        <description>為小鶴雙拼學習者而設的瀏覽器練習工具，涵蓋聲母、韻母、零聲母、單字、高頻詞組及原創短文跟練，並提供自訂詞庫、錯題複習與學習記錄。學習資料保存在本機瀏覽器，可匯入及匯出 JSON 備份，無須帳戶。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>小鶴雙拼</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
         <name>Minecraft Fluent Launcher</name>
         <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
@@ -794,6 +833,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>專案展示</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>雙鍵 · 小鶴雙拼練習</name>
+        <tagline>開啟即用的小鶴雙拼訓練與錯題複習網站</tagline>
+        <description>為小鶴雙拼學習者打造的瀏覽器練習工具，涵蓋聲母、韻母、零聲母、單字、高頻詞組與原創短文跟練，並提供自訂詞庫、錯題複習及學習紀錄。學習資料儲存在本機瀏覽器，可匯入及匯出 JSON 備份，不需帳號。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>小鶴雙拼</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
         <name>Minecraft Fluent Launcher</name>
         <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
@@ -1003,6 +1055,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Projets</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>Shuangjian · entraînement au pinyin double Xiaohe</name>
+        <tagline>Un entraîneur Xiaohe prêt à l’emploi avec révision ciblée</tagline>
+        <description>Un outil de pratique dans le navigateur pour apprendre le pinyin double Xiaohe : initiales, finales, initiales nulles, caractères, expressions fréquentes et textes originaux. Il propose un vocabulaire personnalisé, la révision des erreurs et un historique des progrès. Les données restent dans le navigateur et peuvent être sauvegardées au format JSON, sans compte.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>Pinyin double Xiaohe</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
         <name>Minecraft Fluent Launcher</name>
         <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
@@ -1212,6 +1277,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Projekte</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>Shuangjian · Xiaohe-Doppel-Pinyin-Training</name>
+        <tagline>Ein sofort nutzbarer Xiaohe-Trainer mit gezielter Wiederholung</tagline>
+        <description>Ein browserbasiertes Übungsprogramm für Xiaohe-Doppel-Pinyin mit Anlauten, Auslauten, Nullinitialen, Einzelzeichen, häufigen Wortgruppen und Originaltexten. Es bietet ein eigenes Wörterbuch, die Wiederholung von Fehlern und einen Lernverlauf. Die Lerndaten bleiben lokal im Browser und lassen sich als JSON sichern; ein Konto ist nicht erforderlich.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>Xiaohe-Doppel-Pinyin</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
         <name>Minecraft Fluent Launcher</name>
         <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
@@ -1421,6 +1499,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Проекты</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>Shuangjian · тренажёр двойного пиньиня Xiaohe</name>
+        <tagline>Готовый к работе тренажёр Xiaohe с повторением ошибок</tagline>
+        <description>Браузерный тренажёр двойного пиньиня Xiaohe: инициали, финали, нулевые инициали, отдельные иероглифы, частотные словосочетания и авторские тексты. В нём есть собственный словарь, повторение ошибок и история занятий. Данные хранятся локально в браузере и поддерживают резервное копирование в JSON; аккаунт не нужен.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>Двойной пиньинь Xiaohe</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
         <name>Minecraft Fluent Launcher</name>
         <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
@@ -1630,6 +1721,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>プロジェクト</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>双鍵 · 小鶴双拼練習</name>
+        <tagline>すぐに使える小鶴双拼トレーナーと苦手問題の復習</tagline>
+        <description>小鶴双拼を学ぶためのブラウザー練習ツールです。声母、韻母、ゼロ声母、単字、頻出フレーズ、オリジナル文章の練習に加え、カスタム単語帳、間違えた問題の復習、学習履歴に対応します。学習データはブラウザー内に保存され、JSON でバックアップでき、アカウントは不要です。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>小鶴双拼</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
         <name>Minecraft Fluent Launcher</name>
         <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
@@ -1839,6 +1943,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>프로젝트</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>Shuangjian · 샤오허 쌍핀 연습</name>
+        <tagline>바로 사용할 수 있는 샤오허 쌍핀 연습과 오답 복습</tagline>
+        <description>샤오허 쌍핀 학습을 위한 브라우저 연습 도구입니다. 성모, 운모, 무성모, 한자, 자주 쓰는 구문과 창작 문장 연습을 제공하며, 사용자 단어장, 오답 복습, 학습 기록도 지원합니다. 학습 데이터는 브라우저에 로컬 저장되고 JSON으로 백업할 수 있으며 계정이 필요하지 않습니다.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>샤오허 쌍핀</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="minecraft-fluent-launcher" status="in-progress" updated="2026-09-13">
         <name>Minecraft Fluent Launcher</name>
         <tagline>A WinUI 3 Minecraft launcher with Windows Fluent design</tagline>
@@ -2048,6 +2165,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>所作</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>雙鍵 · 小鶴雙拼習字</name>
+        <tagline>啟之即習之小鶴雙拼器，兼可溫故知錯</tagline>
+        <description>此為習小鶴雙拼之瀏覽器工具，涵聲母、韻母、零聲母、單字、常用詞組及原創短文。又可自建詞庫、重習錯題、觀學習記錄。學習資料存於本機瀏覽器，可匯出或匯入 JSON 備份，不須帳號。</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>小鶴雙拼</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>第二綠洲</name>
         <tagline>月土之爭 · 回合網頁策略桌遊 · 二至四人對戰</tagline>
@@ -2257,6 +2387,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Projetos</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>Shuangjian · prática de pinyin duplo Xiaohe</name>
+        <tagline>Treino Xiaohe pronto a usar com revisão direcionada</tagline>
+        <description>Uma ferramenta de prática no navegador para aprender pinyin duplo Xiaohe, com iniciais, finais, iniciais nulas, caracteres, expressões frequentes e textos originais. Inclui vocabulário personalizado, revisão de erros e histórico de aprendizagem. Os dados ficam guardados localmente no navegador e podem ser exportados ou importados em JSON, sem necessidade de conta.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>Pinyin duplo Xiaohe</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Território lunar · jogo de tabuleiro web estratégico por turnos · 2 a 4 jogadores</tagline>
@@ -2466,6 +2609,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>Proyectos</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>Shuangjian · práctica de pinyin doble Xiaohe</name>
+        <tagline>Entrenamiento Xiaohe listo para usar con repaso de errores</tagline>
+        <description>Una herramienta de práctica en el navegador para aprender pinyin doble Xiaohe, con iniciales, finales, iniciales nulas, caracteres, frases frecuentes y textos originales. Incluye vocabulario personalizado, repaso de errores e historial de aprendizaje. Los datos se guardan localmente en el navegador y se pueden importar o exportar como JSON, sin necesidad de una cuenta.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>Pinyin doble Xiaohe</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>The Second Oasis</name>
         <tagline>Territorio lunar · juego de mesa web estratégico por turnos · 2 a 4 jugadores</tagline>
@@ -2675,6 +2831,19 @@ I will keep optimizing and adding content. This site will keep growing.</body>
     </contact>
     <projects>
       <title>ᚹᛖᚱᚲ</title>
+      <project id="shuangpin" status="in-progress" updated="2026-10-18">
+        <name>Shuangjian · ᛊᛗᚨᛚᛚ ᚺᛖ ᛞᛟᚢᛒᛚᛖ ᛈᛁᚾᛃᛁᚾ</name>
+        <tagline>ᚨ ᚹᛖᛒ ᛏᚱᚨᛁᚾᛖᚱ ᚠᛟᚱ ᛊᛗᚨᛚᛚ ᚺᛖ ᛞᛟᚢᛒᛚᛖ ᛈᛁᚾᛃᛁᚾ ᚨᚾᛞ ᛗᛁᛊᛏᚨᚲᛖ ᚱᛖᚹᛁᛖᚹ</tagline>
+        <description>ᚨ ᛒᚱᛟᚹᛊᛖᚱ ᛈᚱᚨᚲᛏᛁᚲᛖ ᛏᛟᛟᛚ ᚠᛟᚱ ᛊᛗᚨᛚᛚ ᚺᛖ ᛞᛟᚢᛒᛚᛖ ᛈᛁᚾᛃᛁᚾ, ᚹᛁᚦ ᛁᚾᛁᛏᛁᚨᛚᛊ, ᚠᛁᚾᚨᛚᛊ, ᚲᚺᚨᚱᚨᚲᛏᛖᚱᛊ, ᛈᚺᚱᚨᛊᛖᛊ ᚨᚾᛞ ᛟᚱᛁᚷᛁᚾᚨᛚ ᛏᛖᛪᛏᛊ. ᛁᛏ ᛟᚠᚠᛖᚱᛊ ᚨ ᚲᚢᛊᛏᛟᛗ ᚹᛟᚱᛞ ᛚᛁᛊᛏ, ᛗᛁᛊᛏᚨᚲᛖ ᚱᛖᚹᛁᛖᚹ ᚨᚾᛞ ᛚᛟᚲᚨᛚ ᛈᚱᛟᚷᚱᛖᛊᛊ ᚺᛁᛊᛏᛟᚱᛃ. ᛞᚨᛏᚨ ᛊᛏᚨᛃᛊ ᛁᚾ ᚦᛖ ᛒᚱᛟᚹᛊᛖᚱ ᚨᚾᛞ ᚲᚨᚾ ᛒᛖ ᛒᚨᚲᚲᛖᛞ ᚢᛈ ᚹᛁᚦ ᛃᛊᛟᚾ; ᚾᛟ ᚨᚲᚲᛟᚢᚾᛏ ᚾᛖᛖᛞᛖᛞ.</description>
+        <tags>
+          <tag>TypeScript</tag>
+          <tag>Vite</tag>
+          <tag>GSAP</tag>
+          <tag>Xiaohe Double Pinyin</tag>
+        </tags>
+        <link>https://github.com/msmapwr/shuangpin</link>
+        <demo>https://shuangjian-xiaohe.msmapwr.chatgpt.site</demo>
+      </project>
       <project id="the-second-oasis" featured="true" status="completed" updated="2026-08-31">
         <name>ᚦᛖ ᛊᛖᚲᛟᚾᛞ ᛟᚨᛊᛁᛊ</name>
         <tagline>ᛏᚢᚾᚷᛚ ᛚᚨᚾᛞ · ᚹᛖᛒ ᛊᛏᛖᚠᚾᚢ · 2–4 ᛊᛈᛁᛚᚨᚱᚨᚱ</tagline>
